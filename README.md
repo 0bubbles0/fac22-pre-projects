@@ -4,7 +4,9 @@
 
 ### June - September 2021
 
-This repository will aim to contain:
+This repository is hosted on <https://0bubbles0.github.io/fac22-pre-projects/>.
+
+It will aim to contain:
 
 * **Notes**: from Sessions and own Research 
 * **Planning**: Tasks, To-do lists 
