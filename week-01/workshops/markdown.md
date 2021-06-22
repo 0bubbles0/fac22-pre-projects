@@ -38,11 +38,13 @@ or h2
 
 - > quote
 - `function newF (x) {...}`
+
 ```javascript
 function newF (x) {
   ...
 }
 ```
+
     function newF (x) {
       ...
     }
@@ -62,6 +64,7 @@ function newF (x) {
   [^1]: Be the footnote.
 
 ## Lists
+
 1. First
   - point
   + point
@@ -79,7 +82,6 @@ function newF (x) {
 ___
 term
 : definition
-- Table of Contents (internal links?)
 
 <dl>
   <dt>Term</dt>
@@ -87,6 +89,7 @@ term
 </dl>
 
 ## Table
+
 |Name|Place| right |
 | ---- |:----:| ---: |
 | Zeus | Olympus | 12
@@ -109,6 +112,7 @@ alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 - Emojis, gifs: :-)  :+1 :sparkles:
 
 ## Special GitHub
+
 - Gists, Issues, Pull Requests, Comments
 - @mentions, #refs
 - SHA-1 hashes

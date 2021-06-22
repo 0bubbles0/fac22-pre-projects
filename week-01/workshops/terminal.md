@@ -4,19 +4,22 @@
 
 - Questions
 - Reading List
-- Workshop: Linux Command Line Primer
+- Workshop: Linux Command Line Primer (Digital Ocean)
 
 ## Questions
+
 - **WSL**: where save files/clone | correctly use Terminal, VS Code to start Linux/open files
+
 ## Reading List
 
 - [x] Linux Command Line Primer Workshop: <https://www.digitalocean.com/community/tutorials/a-linux-command-line-primer>
 - [ ] Command explainer: <https://explainshell.com/explain?cmd=sudo+chown+-R+%24%28whoami%29+%24%28brew+--prefix%29%2F*>
 - [ ] Intro to Linux Terminal Workshop: <https://www.digitalocean.com/community/tutorials/an-introduction-to-the-linux-terminal>
+- [ ] Microsoft WSL Documentation: <https://docs.microsoft.com/en-us/windows/wsl/compare-versions#performance-across-os-file-systems>
 
 ## Workshop: Linux Command Line Primer
 
-### Digital Ocean (22/06/2021)
+### Digital Ocean (21/06/2021)
 
 1. **$** &rarr; **regular user** log-in
 1. **#**, **sudo**, pound symbol &rarr; **admin** log-in, **root** user, elevated privileges
@@ -31,9 +34,9 @@
 
 |Shortcuts|Description|Example|
 |--- | ---|---|
-|`TAB` | auto-completes|`$ cat he [TAB]`&rarr; `$ cat hello.txt`|
+|`[TAB]` | auto-completes|`$ cat he`&rarr; `[TAB]`&rarr; `$ cat hello.txt`|
 
-|File paths | Description|Example|
+|File paths | | |
 |--- | ---|---|
 ||**absolute**, full file path|`/home/bubbles/old-folder`|
 ||**relative** file path|`old-folder`|
@@ -42,21 +45,21 @@
 |`~`|**home** directory of machine|`here/home/bubbles`|
 |`/`|**root** directory of Linux server, different from root-user|`here/home/bubbles`|
 
-Flags | Description
---- | ---
-`-l` | long
-`-h` | same as `--human-readable`
-`-o` | output
-`-r` | recursion
-`-lh` | combined: long & human-readable
+|Flags | |
+|--- | ---|
+|`-l` | long|
+|`-h` | same as `--human-readable`|
+|`-o` | output|
+|`-r` | recursion|
+|`-lh` | combined: long & human-readable|
 
-Permissions | Description
---- | ---
-`d` | directory
-`-` | none
-`r` | read-only
-`w` | write/edit files
-`x` | run file, access directory
+|Permissions | |
+|--- | ---|
+|`d` | directory|
+|`-` | none|
+|`r` | read-only|
+|`w` | write/edit files|
+|`x` | run file, access directory|
 
 |File type|Permissions|Link count|Owner|Group|File size|Last modified|File name|
 |---|---|---|---|---|---|---|---|
@@ -74,15 +77,15 @@ Permissions | Description
 ||`touch`||file|**create** file||
 ||`echo`||"Hello" **>** file|**type** text into (new) file||
 ||`cat`||file|**show** content of file (con**cat**enate)||
-||`nano`||file.txt|**CLI**, edit file in Command-line with nano/Vim/Emacs|**^X** &rarr; `Strg x` &rarr; save/exit|
+||`nano`||file.txt|**CLI**, edit file in Command-line with nano/Vim/Emacs|`^X`&rarr; `Strg x` &rarr; save/exit|
 ||`mv`||file folder|**m**o**v**e file, can rename file during move|`$ mv file.txt newfolder/file-new-name.txt`|
 ||`cp`||file file|**c**o**p**y file original &rarr; target||
 ||`history`|||shows history of commands|**quick** with `&uarr;`|
 ||`curl`|`-o`|url|**pull** text from a web-file (**c**lient **URL**) & output text into an equal-named file||
-||`rm`|``|file|**r**e**m**ove file (**!!can't be undone!**)||
+||`rm`||file|**r**e**m**ove file (**!!can't be undone!!**)||
 ||`rm`|`-r`|folder|**r**e**m**ove with **r**ecursion &rarr; folder & all content||
-||`rmdir`|``|folder|**r**e**m**ove an empty **dir**ectory||
-||`exit`|``||finish terminal session (perhaps can't restore?)||
+||`rmdir`||folder|**r**e**m**ove an empty **dir**ectory||
+||`exit`|||finish terminal session (perhaps can't restore?)||
 
 <!--
 ||``|``||||
