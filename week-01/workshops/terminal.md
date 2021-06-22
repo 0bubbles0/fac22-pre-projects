@@ -29,6 +29,10 @@
 
 - **Cloud server**: can destroy progress & start fresh on a mistake. **NOT** on PC, more dangerous!!!
 
+|Shortcuts|Description|Example|
+|--- | ---|---|
+|`TAB` | auto-completes|`$ cat he [TAB]`&rarr; `$ cat hello.txt`|
+
 |File paths | Description|Example|
 |--- | ---|---|
 ||**absolute**, full file path|`/home/bubbles/old-folder`|
@@ -66,18 +70,21 @@ Permissions | Description
 ||`pwd`|||**p**resent **w**orking **d**irectory is displayed; admint &rarr;/root||
 ||`mkdir`||folder|**m**a**k**e **dir**ectory &rarr; new Folder||
 ||`ls`|`-lh`||**l**i**s**t files in current directory||
-||`cd`|``|folder|**c**hange **d**irectory &rarr; go to folder-file-path||
-||`touch`|``|file|||
-||`echo`|``|"Hello" `>` file|||
-||`nano`|``|file.txt|||
-||`mv`|``|file folder|||
-||`cp`|``|file file|||
-||`history`|``||||
-||`curl`|`-o`|url|||
-||`rm`|``|file|||
-||`rm`|`-r`|folder|||
-||`rmdir`|``|folder|||
+||`cd`||folder|**c**hange **d**irectory &rarr; go to folder-file-path||
+||`touch`||file|**create** file||
+||`echo`||"Hello" **>** file|**type** text into (new) file||
+||`cat`||file|**show** content of file (con**cat**enate)||
+||`nano`||file.txt|**CLI**, edit file in Command-line with nano/Vim/Emacs|**^X** &rarr; `Strg x` &rarr; save/exit|
+||`mv`||file folder|**m**o**v**e file, can rename file during move|`$ mv file.txt newfolder/file-new-name.txt`|
+||`cp`||file file|**c**o**p**y file original &rarr; target||
+||`history`|||shows history of commands|**quick** with `&uarr;`|
+||`curl`|`-o`|url|**pull** text from a web-file (**c**lient **URL**) & output text into an equal-named file||
+||`rm`|``|file|**r**e**m**ove file (**!!can't be undone!**)||
+||`rm`|`-r`|folder|**r**e**m**ove with **r**ecursion &rarr; folder & all content||
+||`rmdir`|``|folder|**r**e**m**ove an empty **dir**ectory||
+||`exit`|``||finish terminal session (perhaps can't restore?)||
+
+<!--
 ||``|``||||
 ||``|``||||
-||``|``||||
-||``|``||||
+-->
