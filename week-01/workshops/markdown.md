@@ -34,12 +34,8 @@ or h2
 - *italic* or _italic_
 - **_both_**
 - ~~mistake~~
-- [link](https://www.google.com/) or <https://www.google.com/> or https://www.google.com/
-- [link with Tooltip](https://www.google.com "Google's Homepage")
-- [I'm a reference-style link][Arbitrary case-insensitive reference text]
-- [I'm a relative reference to a repository file](../blob/master/LICENSE)
-- Have a footnote. [^1]
-  [^1]: Be the footnote.
+- <!--Comment-->
+
 - > quote
 - `function newF (x) {...}`
 ```javascript
@@ -50,6 +46,20 @@ function newF (x) {
     function newF (x) {
       ...
     }
+
+## Links
+
+- [link](https://www.google.com/) or <https://www.google.com/> or https://www.google.com/
+- [link with Tooltip](https://www.google.com "Google's Homepage")
+- [I'm a reference-style link][Arbitrary case-insensitive reference text]
+- [Table of Contents link](#Chapter-Heading-1)
+
+  Chapter Heading 1 (#Chapter-Heading-1)
+  
+- [I'm a relative reference to a repository file](../blob/master/LICENSE)
+- Have a footnote. [^1]
+
+  [^1]: Be the footnote.
 
 ## Lists
 1. First
