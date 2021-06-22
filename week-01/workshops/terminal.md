@@ -29,12 +29,22 @@
 
 - **Cloud server**: can destroy progress & start fresh on a mistake. **NOT** on PC, more dangerous!!!
 
+|File paths | Description|Example|
+|--- | ---|---|
+||**absolute**, full file path|`/home/bubbles/old-folder`|
+||**relative** file path|`old-folder`|
+|`.`|**current** directory||
+|`..`|**parent** directory|`../old-folder`|
+|`~`|**home** directory of machine|`here/home/bubbles`|
+|`/`|**root** directory of Linux server, different from root-user|`here/home/bubbles`|
+
 Flags | Description
 --- | ---
 `-l` | long
 `-h` | same as `--human-readable`
 `-o` | output
 `-r` | recursion
+`-lh` | combined: long & human-readable
 
 Permissions | Description
 --- | ---
@@ -44,8 +54,30 @@ Permissions | Description
 `w` | write/edit files
 `x` | run file, access directory
 
-File type|Permissions|Link count|Owner|Group|File size|Last modified|File name
----|---|---|---|---|---|---|---
-.| owner**group**othergroups | abs/rel paths |.|.|.|.|.
-`d`|`rwx`r-x`r-x`|2|bubbles|staff|4.0k|Jun 21 15:00|files
+|File type|Permissions|Link count|Owner|Group|File size|Last modified|File name|
+|---|---|---|---|---|---|---|---|
+|| owner **group** othergroups | abs/rel paths | | | | ||
+|`d`|`rwx`**r-x**`r-x`|2|bubbles|staff|4.0k|Jun 21 15:00|files|
 
+#### Commands
+
+|$|`command`|flags (opt)|file/folder/url ref|Description|Example|
+|---|---|---|---|---|---|
+||`pwd`|||**p**resent **w**orking **d**irectory is displayed; admint &rarr;/root||
+||`mkdir`||folder|**m**a**k**e **dir**ectory &rarr; new Folder||
+||`ls`|`-lh`||**l**i**s**t files in current directory||
+||`cd`|``|folder|**c**hange **d**irectory &rarr; go to folder-file-path||
+||`touch`|``|file|||
+||`echo`|``|"Hello" `>` file|||
+||`nano`|``|file.txt|||
+||`mv`|``|file folder|||
+||`cp`|``|file file|||
+||`history`|``||||
+||`curl`|`-o`|url|||
+||`rm`|``|file|||
+||`rm`|`-r`|folder|||
+||`rmdir`|``|folder|||
+||``|``||||
+||``|``||||
+||``|``||||
+||``|``||||
