@@ -7,7 +7,7 @@
 - Workshop: Linux Command Line Primer
 
 ## Questions
-
+- **WSL**: where save files/clone | correctly use Terminal, VS Code to start Linux/open files
 ## Reading List
 
 - [x] Linux Command Line Primer Workshop: <https://www.digitalocean.com/community/tutorials/a-linux-command-line-primer>
@@ -29,18 +29,14 @@
 
 - **Cloud server**: can destroy progress & start fresh on a mistake. **NOT** on PC, more dangerous!!!
 
-#### Flags
-
-Command | Description
+Flags | Description
 --- | ---
 `-l` | long
 `-h` | same as `--human-readable`
 `-o` | output
 `-r` | recursion
 
-#### Permissions
-
-Command | Description
+Permissions | Description
 --- | ---
 `d` | directory
 `-` | none
@@ -49,5 +45,7 @@ Command | Description
 `x` | run file, access directory
 
 File type|Permissions|Link count|Owner|Group|File size|Last modified|File name
-.| owner**group**othergroups | abs/rel paths |.|.|.|.|.
 ---|---|---|---|---|---|---|---
+.| owner**group**othergroups | abs/rel paths |.|.|.|.|.
+`d`|`rwx`r-x`r-x`|2|bubbles|staff|4.0k|Jun 21 15:00|files
+
