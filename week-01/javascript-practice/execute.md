@@ -4,10 +4,10 @@
 
 ## Contents
 
-- [Modern JavaScript](#Modern-JavaScript)
-- [Arrays](#Arrays)
+- [Modern JavaScript](#modern-javascript)
+- [Arrays](#arrays)
 
-## Modern JavaScript(#Modern-JavaScript)
+## Modern JavaScript(#modern-javascript)
 
 <https://www.executeprogram.com/courses/modern-javascript>
 
@@ -21,15 +21,15 @@
 | # | Lesson | Date |
 | ---: | --- | --- |
 | 1. | Strict Mode | Jun 18, Fr |
-| 1. | Let | Jun 21, Mon |
-| 1. | Const | Jun 22, Tue |
+| 2. | Let | Jun 21, Mon |
+| 3. | Const | Jun 22, Tue |
 <!--
 
 | | | |
 | | | |
  -->
 
-## Arrays (#Arrays)
+## Arrays (#arrays)
 
  
 

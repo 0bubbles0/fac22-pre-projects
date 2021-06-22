@@ -52,10 +52,10 @@ function newF (x) {
 - [link](https://www.google.com/) or <https://www.google.com/> or https://www.google.com/
 - [link with Tooltip](https://www.google.com "Google's Homepage")
 - [I'm a reference-style link][Arbitrary case-insensitive reference text]
-- [Table of Contents link](#Chapter-Heading-1)
+- [Table of Contents link](#chapter-heading-1)
 
-  Chapter Heading 1 (#Chapter-Heading-1)
-  
+  Chapter Heading 1 (#chapter-heading-1)
+
 - [I'm a relative reference to a repository file](../blob/master/LICENSE)
 - Have a footnote. [^1]
 
