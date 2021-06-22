@@ -1,0 +1,1 @@
+//Optional: Write Script: Generate 11 combinations, 4 groups, 3 people. Any 2 people share the same group exactly 2x. No 3 people are in the same group more than 1x. (might not be solvable)
