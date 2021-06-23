@@ -1,0 +1,18 @@
+body {
+  margin: 1em;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+input, span { 
+  display: block;
+  margin-bottom: 1vh;
+}
+
+footer {
+  border-top: 1px solid grey;
+  padding-top: 1vh;
+  text-align: center;
+}
