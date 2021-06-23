@@ -18,8 +18,8 @@
 -	arrays can be **sparse** &rarr; can have nothing at index 0, 1, …, 4, 7
 -	**for … in** &rarr; iterates over **object’s keys**, not its values (arrays are also objects, keys are their index, eg. ‘0’. For in skips sparse positions &rarr; can lead to bugs)
 -	**for…of** &rarr; iterates over **array’s values** (similar to for-each in other languages. Sparse positions are given undefined)
-  -	*Object* keys: `for (const key of Object.keys(obj)) { helpArr.push(key) }`
-  -	*String*: `for (const char of str)`
+  - *Object* keys: `for (const key of Object.keys(obj)) { helpArr.push(key) }`
+  - *String*: `for (const char of str)`
 
 
 ### Lessons
