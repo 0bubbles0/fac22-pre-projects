@@ -5,6 +5,7 @@
 - Questions
 - Reading List
 - Workshop: Linux Command Line Primer (Digital Ocean)
+- Git
 
 ## Questions
 
@@ -116,6 +117,14 @@
   - turn on **git**
   - create file
   - edit file (VS Code) &rarr; **add** &rarr; Staging Area &rarr; **commit** &rarr; Local Repository &rarr; **push** &rarr; Remote Repository (GitHub)
+  ||**Workflow Summary**|||||
+  |---|---|---|---|---|---|
+|`git`|`status`|``||view changes||
+|`git`|`add`|``|file|to Staging Area||
+|`git`|`commit`|`-m`(`-a`)|file|to Local Repo||
+|`git`|`log`|``|file|view commits (version history)||
+|`git`|`push`|``|file|to Remote Repo (GitHub)||
+
 
 |$|`command`|flags (opt)|file/folder/url ref|Description|Example|
 |---|---|---|---|---|---|
@@ -132,37 +141,52 @@
 ||`mkdir`||new-project|**m**a**k**e **dir**ectory &rarr; new-project||
 ||`cd`||new-project|**c**hange **d**irectory &rarr; go to new-project||
 |`git`|`init`|||**init**ialise a repository, start .git version-control-tracking|View .git with `$ ls -a`|
-||`rm`|`-rf`|.git|Removes git tracking||
+||`rm`|`-rf`|.git|**R**e**m**oves git tracking||
+||||`*.txt`|**select** all txt files||
+||||`.`|select entire directory||
+|||||**Prevent tracking** log files: `echo logs/ > .gitignore`<br>`code .gitignore`&rarr;VS Code<br>`main.log, *.log`&rarr; save, exit<br>`git status`<br>`git add .gitignore`<br>`git commit -m "Add gitignore"`||
+|||||**Prevent tracking** binary files: `echo hello > bin/app.bin`<br>`git rm -cached -r bin/`<br>`git commit -m`<br>`echo test > bin/app.bin`||
 ||**Copy online Repository**|||||
 ||``|``||**fork** &rarr; Copy into my account, change copy without affecting original||
 ||``|``||create **feature branch** &rarr; can eventually be merged again with main branch||
 ||``|``||**clone** &rarr; get copy of online repo on my PC||
 ||**Workflow Summary**|||||
 |`git`|`status`|``||view changes||
-|`git`|`add`|``||to Staging Area||
-|`git`|`commit`|``||to Local Repo||
-|`git`|`log`|``||view commits (version history)||
-|`git`|`push`|``||to Remote Repo (GitHub)||
-||**Manage files**|||||
+|`git`|`add`|``|file|to Staging Area||
+|`git`|`commit`|`-m`(`-a`)|file|to Local Repo||
+|`git`|`log`|``|file|view commits (version history)||
+|`git`|`push`|``|file|to Remote Repo (GitHub)||
+||**Edit**|||||
+||`echo Hello >`<br>`create`||file.txt|**Create** new file||
+||`echo world >>`||file.txt|**Modify** file||
+||`mv`||`a.txt newfolder/b.txt`|**Move**/**Rename** file only in Working area, then `$git add a.txt newfolder/b.txt`||
+|`git`|`mv`||`a.txt newfolder/b.txt`|**Move**/**Rename** file in Working & Stage||
+||`rm`||file1.txt|**R**e**m**ove file (in Working)||
+|`git`|`rm`|``|file1txt|**R**e**m**ove file (incl stage & commit)||
+|`git`|`clean`|`-fd`||**DANGER**: Remove all (even untracked files), no restore||
+||**View Changes**|||||
 ||`mkdir`, etc.|`--help`||Get **Help**||
 |`git`|`config`|`-h`||Quick Help summary||
+|`git`|?`ls-files`|||**list** files||
 |`git`|`status`|(`-s`)||Status (summary)||
-||``|``||**red M** &rarr; modified||
-||``|``||**green M** &rarr; ok||
-||``|``||**A** &rarr; added||
-||``|``||**??** &rarr; new file||
-||``|``||?**R** &rarr; renamed||
-||``|``||?**U** &rarr; untracked||
-||``|``||?**D** &rarr; deleted||
-||``|``||||
-||``|``||||
-||``|``||||
-||``|``||||
+||||red M|**red M** &rarr; modified||
+||||green M|**green M** &rarr; ok||
+||||A|**A** &rarr; added||
+||||??|**??** &rarr; new file||
+||||?R?|?**R** &rarr; renamed||
+||||?U?|?**U** &rarr; untracked||
+||||?D?|?**D** &rarr; deleted||
+|`git`|`log`|||View **commit history**||
 ||**Restore**|||||
-||**Ignore**|||||
-||**Project Directory**|||||
-||**Add**|||||
-||**Staging Area**|||||
+|`git`|`restore`||`a.txt`|In Working: Start over with version from Staging||
+|`git`|`restore`|`--staged`|`b.txt`|**Unstage**: restore file to previous version. Put changes into new file in Working||
+|`git`|`restore`|`--staged`|`c.txt`|**Untrack** file from Staging||
+|`git`|`restore`|`--source=HEAD~1`|`a.txt`|from commit history &rarr; Working/Staging||
+||``|``||||
+||``|``||||
+||**Working Area**|||Create (echo)<br>Modify (echo >>)<br>Discard local changes (git restore)<br>Stage(git add)<br>Commit(git commit -(a)m)||
+||**Local Repo**:|.git folder||||
+||**Staging Area**|index file||||
 ||**Commit**|||||
 ||**Commit History**|||||
 ||**Git Remote Repository**|||||
