@@ -19,10 +19,10 @@
 - [ ] Microsoft WSL Documentation: <https://docs.microsoft.com/en-us/windows/wsl/compare-versions#performance-across-os-file-systems>
 
 ### Git
-- [ ] Git Documentation: <https://git-scm.com/doc/ext>
-- [ ] Git Tutorial for Beginners - Learn Git in 1 Hour (*YouTube: Programming with Mosh*): <https://www.youtube.com/watch?v=8JJ101D3knE&list=PLwgjdOlNdEeAX4kwL9Mv-aNA0dZn5GeEv&index=9>
-- [ ] Working Directory vs. Local Repository (*Stackoverflow*): <https://stackoverflow.com/questions/21692155/whats-the-difference-between-working-directory-and-local-repository>
-- [ ] Stop/change git repository (*FCC*): <https://forum.freecodecamp.org/t/how-do-i-stop-or-change-the-git-repository-on-my-computer/138304>
+- [x] Git Documentation: <https://git-scm.com/doc/ext>
+- [x] Git Tutorial for Beginners - Learn Git in 1 Hour (*YouTube: Programming with Mosh*): <https://www.youtube.com/watch?v=8JJ101D3knE&list=PLwgjdOlNdEeAX4kwL9Mv-aNA0dZn5GeEv&index=9>
+- [x] Working Directory vs. Local Repository (*Stackoverflow*): <https://stackoverflow.com/questions/21692155/whats-the-difference-between-working-directory-and-local-repository>
+- [x] Stop/change git repository (*FCC*): <https://forum.freecodecamp.org/t/how-do-i-stop-or-change-the-git-repository-on-my-computer/138304>
 
 ## Workshop: Linux Command Line Primer
 
@@ -112,19 +112,38 @@
 
 - **Visual Tools**: KDiff3, P4Merge, WinMerge
 - **Git objects**: Commits, Blobs (Files), Trees (Directories), Tags
-- **Workflow**:
-  - **Project** folder: Create local | feature branch | clone
-  - turn on **git**
-  - create file
-  - edit file (VS Code) &rarr; **add** &rarr; Staging Area &rarr; **commit** &rarr; Local Repository &rarr; **push** &rarr; Remote Repository (GitHub)
-  ||**Workflow Summary**|||||
-  |---|---|---|---|---|---|
-|`git`|`status`|``||view changes||
-|`git`|`add`|``|file|to Staging Area||
-|`git`|`commit`|`-m`(`-a`)|file|to Local Repo||
-|`git`|`log`|``|file|view commits (version history)||
-|`git`|`push`|``|file|to Remote Repo (GitHub)||
 
+||**Workflow Summary**||||
+|---|---|---|---|---|
+||**Set up project**||||
+||`cd`||new-project|**c**hange **d**irectory &rarr; go to correct location|
+||`mkdir`||new-project|**m**a**k**e **dir**ectory &rarr; new-project|
+|``|``|``||**create locally**|
+|``|``|``||**clone**|
+|``|``|``||**download**|
+|``|``|``||**fork**|
+|``|``|``||make **feature branch**|
+|`git`|`init`|||**init**ialise a repository &rarr; start .git version-control-tracking|View .git with `$ ls -a`|
+||**Edit files**||||
+||`echo Hello >`<br>`create`||file.txt|**Create** new file|
+||`echo world >>`||file.txt|**Modify** file|
+||`mv`||`a.txt newfolder/b.txt`|**Move**/**Rename** file only in Working area, then `$git add a.txt newfolder/b.txt`|
+||`rm`||file1.txt|**R**e**m**ove file (in Working)|
+||**Versions**||||
+|`git`|`status`|``||view changes|
+|`git`|`add`|``|file|to Staging Area|
+|`git`|`commit`|`-m`(`-a`)|file|to Local Repo|
+|`git`|`log`|``|file|view commits (version history)|
+|`git`|`push`|``|file|to Remote Repo (GitHub)|
+||**Restore**||||
+|`git`|`restore`||`a.txt`|Discard Working: Start over with version from Staging|
+|`git`|`restore`|`--staged`|`b.txt c.txt`|**Unstage**: restore file to previous version. Put changes into new file in Working|
+|`git`|`restore`|`--staged`|`c.txt`|**Untrack** file from Staging|
+|`git`|`restore`|`--source=HEAD~1`|`a.txt`|from commit history &rarr; Working/Staging|
+
+
+
+### Commands in more Detail
 
 |$|`command`|flags (opt)|file/folder/url ref|Description|Example|
 |---|---|---|---|---|---|
@@ -144,18 +163,12 @@
 ||`rm`|`-rf`|.git|**R**e**m**oves git tracking||
 ||||`*.txt`|**select** all txt files||
 ||||`.`|select entire directory||
-|||||**Prevent tracking** log files: `echo logs/ > .gitignore`<br>`code .gitignore`&rarr;VS Code<br>`main.log, *.log`&rarr; save, exit<br>`git status`<br>`git add .gitignore`<br>`git commit -m "Add gitignore"`||
-|||||**Prevent tracking** binary files: `echo hello > bin/app.bin`<br>`git rm -cached -r bin/`<br>`git commit -m`<br>`echo test > bin/app.bin`||
+|||||**Prevent tracking** log files:<br>`echo logs/ > .gitignore`<br>`code .gitignore`&rarr;VS Code<br>`main.log, *.log`&rarr; save, exit<br>`git status`<br>`git add .gitignore`<br>`git commit -m "Add gitignore"`||
+|||||**Prevent tracking** binary files:<br>`echo hello > bin/app.bin`<br>`git rm -cached -r bin/`<br>`git commit -m`<br>`echo test > bin/app.bin`||
 ||**Copy online Repository**|||||
 ||``|``||**fork** &rarr; Copy into my account, change copy without affecting original||
 ||``|``||create **feature branch** &rarr; can eventually be merged again with main branch||
 ||``|``||**clone** &rarr; get copy of online repo on my PC||
-||**Workflow Summary**|||||
-|`git`|`status`|``||view changes||
-|`git`|`add`|``|file|to Staging Area||
-|`git`|`commit`|`-m`(`-a`)|file|to Local Repo||
-|`git`|`log`|``|file|view commits (version history)||
-|`git`|`push`|``|file|to Remote Repo (GitHub)||
 ||**Edit**|||||
 ||`echo Hello >`<br>`create`||file.txt|**Create** new file||
 ||`echo world >>`||file.txt|**Modify** file||
@@ -169,27 +182,53 @@
 |`git`|`config`|`-h`||Quick Help summary||
 |`git`|?`ls-files`|||**list** files||
 |`git`|`status`|(`-s`)||Status (summary)||
-||||red M|**red M** &rarr; modified||
-||||green M|**green M** &rarr; ok||
-||||A|**A** &rarr; added||
-||||??|**??** &rarr; new file||
-||||?R?|?**R** &rarr; renamed||
-||||?U?|?**U** &rarr; untracked||
-||||?D?|?**D** &rarr; deleted||
+||||red M|modified||
+||||green M|ok||
+||||A|added||
+||||??|new file||
+||||?R?|?renamed||
+||||?U?|?untracked||
+||||?D?|?deleted||
+|`git`|`diff`|||View **unstaged** items||
+|`git`|`diff -staged`|||Review changes in visual tool:<br>staged vs unstaged version<br>a/OldVersion b/NewVersion<br>@@ location -Old1Start, 3Length<br>-/dev/null &rarr; copy didn't exist||
+|`git`|`difftool`|(`-staged`)||View **stage** changes in VS Code||
 |`git`|`log`|||View **commit history**||
 ||**Restore**|||||
-|`git`|`restore`||`a.txt`|In Working: Start over with version from Staging||
-|`git`|`restore`|`--staged`|`b.txt`|**Unstage**: restore file to previous version. Put changes into new file in Working||
+|`git`|`restore`||`a.txt`|Discard Working: Start over with version from Staging||
+|`git`|`restore`|`--staged`|`b.txt c.txt`|**Unstage**: restore file to previous version. Put changes into new file in Working||
 |`git`|`restore`|`--staged`|`c.txt`|**Untrack** file from Staging||
 |`git`|`restore`|`--source=HEAD~1`|`a.txt`|from commit history &rarr; Working/Staging||
-||``|``||||
-||``|``||||
-||**Working Area**|||Create (echo)<br>Modify (echo >>)<br>Discard local changes (git restore)<br>Stage(git add)<br>Commit(git commit -(a)m)||
+||**AREAS**|||||
+||**Working Area**|||||
+||`echo Hello >`<br>`create`||file.txt|**Create** new file||
+|`git`|`add`|``|file|to Staging Area||
+|`git`|`commit`|(`-m`(`-a`) `"Message"`)|file|to Local Repo, skip Staging||
 ||**Local Repo**:|.git folder||||
-||**Staging Area**|index file||||
-||**Commit**|||||
+||**Staging Area**|index file||Prep for commit<br>After a commit, data will still be here||
+|`git`|`diff`|||View **unstaged** items||
+|`git`|`diff -staged`|||Review changes in visual tool:<br>staged vs unstaged version<br>a/OldVersion b/NewVersion<br>@@ location -Old1Start, 3Length<br>-/dev/null &rarr; copy didn't exist||
+|`git`|`difftool`|(`-staged`)||View **stage** changes in VS Code||
+|`git`|`restore`||`a.txt`|Discard Working: Start over with version from Staging||
+|`git`|`restore`|`--staged`|`c.txt`|**Untrack** file from Staging||
+|`git`|`restore`|`--staged`|`b.txt c.text`|**Unstage**: restore file to previous version. Put changes into new file in Working||
+|`git`|`commit`|(`-m`(`-a`) `"Message"`)|file|to Local Repo, skip Staging||
 ||**Commit History**|||||
+|`git`|`log`|||View **commit history**||
+|`git`|`log --oneline`|||**short** version||
+|`git`|`log --oneline --reverse`|||**short, chronological**||
+|`git`|`log --oneline --reverse`|||**short, chronological**||
+|`git`|`show`||`HEAD~1`<br>`0d1`|View **specific commit** by head or id-start||
+|`git`|`show`||`HEAD~1:.gitignore`|**final version**||
+|`git`|`ls-tree`||`HEAD~1`|**all files/directories** of the commit||
+|`git`|`restore`|`--source=HEAD~1`|`a.txt`|**Restore** from commit history &rarr; Working/Staging||
 ||**Git Remote Repository**|||||
+|`git`|`push`||``|**push** commit to GitHub||
+|``|``||``|**pull** ||
+|``|``||``|**pull request** ||
+|``|``||``|**publish** ||
+|``|``||``|**compare** ||
+|``|``||``|**merge branches** ||
+
 
 
 <!--
@@ -197,4 +236,11 @@
 ||``|``||||
 ||``|``||||
 ||``|``||||
+
+||**Workflow Summary**|||||
+|`git`|`status`|``||view changes||
+|`git`|`add`|``|file|to Staging Area||
+|`git`|`commit`|`-m`(`-a`) `"Message"`|file|to Local Repo||
+|`git`|`log`|``|file|view commits (version history)||
+|`git`|`push`|``|file|to Remote Repo (GitHub)||
 -->
