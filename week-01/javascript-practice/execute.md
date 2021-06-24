@@ -20,6 +20,13 @@
 -	**for…of** &rarr; iterates over **array’s values** (similar to for-each in other languages. Sparse positions are given undefined)
   - *Object* keys: `for (const key of Object.keys(obj)) { helpArr.push(key) }`
   - *String*: `for (const char of str)`
+- **Template Literals**: 
+
+  - ```javascript
+    `${x}` === x.toString()
+    `${{a: 1}}` === '[object Object]'
+    `${[1, 2]}` === '1, 2'
+  ```
 
 
 ### Lessons
@@ -30,6 +37,7 @@
 | 2. | Let | Jun 21, Mon |
 | 3. | Const | Jun 22, Tue |
 | 4. | For of | Jun 23, Wed |
+| 5. | Template Literals| Jun 24, Thu |
 <!--
 | | | |
 | | | |
