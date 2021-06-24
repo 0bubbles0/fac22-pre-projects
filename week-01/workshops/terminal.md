@@ -216,7 +216,6 @@
 |`git`|`log`|||View **commit history**||
 |`git`|`log --oneline`|||**short** version||
 |`git`|`log --oneline --reverse`|||**short, chronological**||
-|`git`|`log --oneline --reverse`|||**short, chronological**||
 |`git`|`show`||`HEAD~1`<br>`0d1`|View **specific commit** by head or id-start||
 |`git`|`show`||`HEAD~1:.gitignore`|**final version**||
 |`git`|`ls-tree`||`HEAD~1`|**all files/directories** of the commit||
