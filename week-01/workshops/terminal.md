@@ -17,6 +17,7 @@
 - [ ] Command explainer: <https://explainshell.com/explain?cmd=sudo+chown+-R+%24%28whoami%29+%24%28brew+--prefix%29%2F*>
 - [ ] Intro to Linux Terminal Workshop: <https://www.digitalocean.com/community/tutorials/an-introduction-to-the-linux-terminal>
 - [ ] Microsoft WSL Documentation: <https://docs.microsoft.com/en-us/windows/wsl/compare-versions#performance-across-os-file-systems>
+- [x] Developing on Windows with WSL2, VS Code, Docker, and the Terminal (*YouTube: Scott Hanselman*): <https://www.youtube.com/watch?v=A0eqZujVfYU&list=PLwgjdOlNdEeAX4kwL9Mv-aNA0dZn5GeEv&index=95>
 
 ### Git
 - [x] Git Documentation: <https://git-scm.com/doc/ext>
@@ -24,9 +25,17 @@
 - [x] Working Directory vs. Local Repository (*Stackoverflow*): <https://stackoverflow.com/questions/21692155/whats-the-difference-between-working-directory-and-local-repository>
 - [x] Stop/change git repository (*FCC*): <https://forum.freecodecamp.org/t/how-do-i-stop-or-change-the-git-repository-on-my-computer/138304>
 
-## Workshop: Linux Command Line Primer
+## Linux
 
-### Digital Ocean (21/06/2021)
+### WSL
+- File systems:
+  - Windows &rarr; `/mnt/c/Users/Barba`(mount)
+  - Linux &rarr; `~/home/bubbles`
+    - `$ cd ~` &rarr; `$ explorer.exe .` &rarr; shows where Linux/Ubuntu system lives on my PC
+    - Working in VS Code &rarr; URL `localhost:5000` (or other #) can show a Linux-html-file in Windows-Browser
+
+
+### Workshop: Linux Command Line Primer - Digital Ocean (21/06/2021)
 
 1. **$** &rarr; **regular user** log-in
 1. **#**, **sudo**, pound symbol &rarr; **admin** log-in, **root** user, elevated privileges
