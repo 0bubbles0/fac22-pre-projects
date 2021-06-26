@@ -42,8 +42,9 @@
 
 #### Steps:
 1. Terminal
-1. copy & paste download command
-1. `cd semantic-html`
-1. `ls`
-1. `code challenge.html` &rarr; VS Code
-1. `open challenge.html` &rarr; standard Browser (or `firefox -P`)
+1. copy & paste download command: 
+  `$ npx degit 'foundersandcoders/coursebook/src/workshops/semantic-html/starter-files#main' semantic-html`
+1. `$ cd semantic-html`
+1. `$ ls`
+1. `$ code challenge.html` &rarr; VS Code
+1. `$ open challenge.html` &rarr; standard Browser (or `firefox -P`)
