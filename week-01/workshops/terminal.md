@@ -18,6 +18,7 @@
 - [ ] Intro to Linux Terminal Workshop: <https://www.digitalocean.com/community/tutorials/an-introduction-to-the-linux-terminal>
 - [ ] Microsoft WSL Documentation: <https://docs.microsoft.com/en-us/windows/wsl/compare-versions#performance-across-os-file-systems>
 - [x] Developing on Windows with WSL2, VS Code, Docker, and the Terminal (*YouTube: Scott Hanselman*): <https://www.youtube.com/watch?v=A0eqZujVfYU&list=PLwgjdOlNdEeAX4kwL9Mv-aNA0dZn5GeEv&index=95>
+- [x] How Do I Update Ubuntu Linux Software Using Command Line: <https://www.cyberciti.biz/faq/how-do-i-update-ubuntu-linux-softwares/>
 
 ### Git
 - [x] Git Documentation: <https://git-scm.com/doc/ext>
@@ -33,6 +34,19 @@
   - Linux &rarr; `~/home/bubbles`
     - `$ cd ~` &rarr; `$ explorer.exe .` &rarr; shows where Linux/Ubuntu system lives on my PC
     - Working in VS Code &rarr; URL `localhost:5000` (or other #) can show a Linux-html-file in Windows-Browser
+- Updates:
+  |$|`command`|Description|
+  |---|---|---|
+  ||`apt-get`<br>`apt`|tool for handling packages|
+  ||(`apt-get update`|resync package index files)|
+  ||(`apt-get upgrade`|install newest versions of all packages currently installed)|
+  ||`sudo apt-get install package-name`|update only package-name to newest version|
+  ||`apt list --upgradable`|**list of all available updates**|
+  ||`sudo apt-get upgrade`<br>`sudo apt upgrade`|**apply software updates**|
+  ||`sudo apt-get update`<br>`sudo apt update`|list of updated software|
+<!--
+||``|||---|---|
+-->
 
 
 ### Workshop: Linux Command Line Primer - Digital Ocean (21/06/2021)
@@ -128,7 +142,7 @@
 ||`cd`||new-project|**c**hange **d**irectory &rarr; go to correct location|
 ||`mkdir`||new-project|**m**a**k**e **dir**ectory &rarr; new-project|
 |``|``|``||**create locally**|
-|``|``|``||**clone**|
+|`git`|`clone`||`{URL}`|**clone**|
 |``|``|``||**download**|
 |``|``|``||**fork**|
 |``|``|``||make **feature branch**|
@@ -177,7 +191,7 @@
 ||**Copy online Repository**|||||
 ||``|``||**fork** &rarr; Copy into my account, change copy without affecting original||
 ||``|``||create **feature branch** &rarr; can eventually be merged again with main branch||
-||``|``||**clone** &rarr; get copy of online repo on my PC||
+|`git`|`clone`||`{URL}`|**clone** &rarr; get copy of online git repo on my PC||
 ||**Edit**|||||
 ||`echo Hello >`<br>`create`||file.txt|**Create** new file||
 ||`echo world >>`||file.txt|**Modify** file||
