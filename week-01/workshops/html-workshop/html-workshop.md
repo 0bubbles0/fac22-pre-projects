@@ -10,9 +10,9 @@
 
 ## Reading List
 
-- [ ] Semantic HTML (fac Workshop): <https://learn.foundersandcoders.com/workshops/semantic-html/>
+- [x] Semantic HTML (fac Workshop): <https://learn.foundersandcoders.com/workshops/semantic-html/>
 - [ ] Safari Reader Mode: <https://medium.com/@mandy.michael/building-websites-for-safari-reader-mode-and-other-reading-apps-1562913c86c9>
-- [ ] Non-semantic HTML structure: https://oliverjam.es/blog/complete-guide-to-making-web-pages/
+- [x] Non-semantic HTML structure: https://oliverjam.es/blog/complete-guide-to-making-web-pages/
 
 ## Workshop: Semantic HTML
 
@@ -27,7 +27,7 @@
   - **Accessibility** &rarr; accommodates assistive technologies (voice, screen readers), user customisation, easy navigation
 
 #### Checklist
-
+##### Semantics:
 - Important page area &rarr; `<header>, <footer>`, etc.
 - Start label of a new section &rarr; `<h_>`
 - Link &rarr; `<a href="_">`
@@ -35,10 +35,32 @@
 - Asking for user input &rarr; `<form><label><input></form>`
 - Styling handle &rarr; `<div class="flex-parent">`, `<span class="text-bold">`, etc.
 
+##### Non-semantics:
+- Structure:
+  - my-page (folder)
+    - index.html (homepage of website)
+      ```
+        <!DOCTYPE html>
+        <html lang="en"> (Root element, set language)
+          <head>
+            <meta charset="utf-8"> (Set doc encoding)
+            <meta name="viewport" content="width=device-width, initial-scale=1"> (Responsive sizing)
+            <title>Page Title</title>
+            <link rel="icon" href="/favicon.ico"> (little icon on tab-bar. Check <https://realfavicongenerator.net/>)
+            <link rel="stylesheet" href="/my-styles.css">
+            <meta name="description" content="This is for search engines">
+            <script src="/my-script.js" defer></script>
+          </head>
+          <body>
+            <h1>Page Title</h1>
+          </body>
+        </html>
+      ```
 #### Task
 
-- Rewrite HTML page &rarr; Replace all `<div>`s
-- *Bonus*: Improve non-semantic errors, check <https://oliverjam.es/blog/complete-guide-to-making-web-pages/>
+- [x] Rewrite HTML page &rarr; Replace all `<div>`s
+- [x] *Bonus*: Improve non-semantic errors, check <https://oliverjam.es/blog/complete-guide-to-making-web-pages/>
+- [x] Compare my attempt to solution.
 
 #### Steps:
 1. Terminal

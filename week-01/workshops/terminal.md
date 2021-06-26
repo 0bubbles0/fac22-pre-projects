@@ -19,6 +19,7 @@
 - [ ] Microsoft WSL Documentation: <https://docs.microsoft.com/en-us/windows/wsl/compare-versions#performance-across-os-file-systems>
 - [x] Developing on Windows with WSL2, VS Code, Docker, and the Terminal (*YouTube: Scott Hanselman*): <https://www.youtube.com/watch?v=A0eqZujVfYU&list=PLwgjdOlNdEeAX4kwL9Mv-aNA0dZn5GeEv&index=95>
 - [x] How Do I Update Ubuntu Linux Software Using Command Line: <https://www.cyberciti.biz/faq/how-do-i-update-ubuntu-linux-softwares/>
+- [ ] Run Linux GUI apps with WSL (*Microsoft Docs*): <https://docs.microsoft.com/en-us/windows/wsl/tutorials/gui-apps>
 
 ### Git
 - [x] Git Documentation: <https://git-scm.com/doc/ext>
@@ -47,6 +48,8 @@
 <!--
 ||``|||---|---|
 -->
+- Browser:
+  - In VS Code: 
 
 
 ### Workshop: Linux Command Line Primer - Digital Ocean (21/06/2021)
