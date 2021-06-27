@@ -1,4 +1,4 @@
-# Accessibility - Notes on Founders and Coders & A11y Workshop
+# Accessibility - A11y Workshop
 
 ## Contents
 - Questions
@@ -20,7 +20,24 @@
 
 ## Reading notes
 
-
+- Website that requires eye-sight and a mouse &rarr; broken
+- disabled **user stories**
+    - don't make assumptions
+    - technical limitations, physical / learning disabilities
+    - physical: 
+        - blindness (&rarr; **screen readers**, alt text for graphs/img/video, voice technology)
+        - impaired eyesight (&rarr; font size, contrasts/brightness)
+        - colour blindness (&rarr; colour combinations, colour-coded content)
+        - hearing (&rarr; alt text for audio/video, captions)
+        - hands (no-mouse &rarr; **keyboard navigation**)
+    - technical:
+        - old device/system/browser or limited internet speed/data (lower incomes, tech-averse, different country) &rarr; consider impact of project-size/media on speed, memory, mobile data, older browsers
+- how to accommodate this in **development**
+    - consider everyone when developing UI
+    - **Keyboard navigation**
+    - **Screen readers**
+- how **test** code
+    - get out of my comfort zone
 
 ## Checklist
 
