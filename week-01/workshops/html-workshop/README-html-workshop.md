@@ -8,14 +8,14 @@
 - Checklist
   - Semantics
   - Non-semantics
-- Task
+- Tasks
 - Steps
 
 ## Questions
 
 ## Reading List
 
-- [x] Semantic HTML (fac Workshop): <https://learn.foundersandcoders.com/workshops/semantic-html/>
+- [x] Semantic HTML (*fac Workshop*): <https://learn.foundersandcoders.com/workshops/semantic-html/>
 - [ ] Safari Reader Mode: <https://medium.com/@mandy.michael/building-websites-for-safari-reader-mode-and-other-reading-apps-1562913c86c9>
 - [x] Non-semantic HTML structure: https://oliverjam.es/blog/complete-guide-to-making-web-pages/
 
