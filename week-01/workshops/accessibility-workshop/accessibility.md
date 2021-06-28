@@ -71,10 +71,8 @@
 - Global code: 
     - [ ] Validate HTML, e.g. <https://validator.w3.org/nu/>
     - [ ] Allow Zoom 200% &rarr; full content/functionality: e.g. server-side script that assigns different style sheets. Font sizes in %, em, named, Container sizes in page-percent, avoid justified text.
-       
-       `<head>`
     - [ ] `<html lang="">`
-    - [ ] `<title>`
+    - [ ] `<head>` &rarr; `<title>`
     - [ ] Landmark regions: header, nav, main, section, form, aside, footer
     - [ ] Linear content flow: Tabindex only 0 or -1, not on unfocusable elements, not required on inherently focusable items (links, buttons)
     - [ ] avoid autofocus
@@ -95,10 +93,23 @@
 - Color contrast
     - [ ] No colour-only information/signalling
     - [ ] Text normal &rarr; 4.5:1
-    - [ ] Text large &rarr; 3:1
+    - [ ] Text large (18pt or 14pt-bold, i.e. 24px or 18.5px-bold) &rarr; 3:1
+    - [ ] Link to surrounding text (if no underline) &rarr; 3:1
     - [ ] Icons, Inputs &rarr; 3.0:1
     - [ ] Contrast of ::selection if highlighted?
     - [ ] Test in browsing modes, e.g. High Contrast, Inverted Colors
+    - Tools: 
+        - **Color Shark (checks hex, recommends): <https://colorshark.io/>**
+        - Colour Contrast Check: <http://www.snook.ca/technical/colour_contrast/colour.html>
+        - Colour Contrast Analyser: <http://juicystudio.com/services/colourcontrast.php>
+            - Firefox Extension: <http://juicystudio.com/article/colour-contrast-analyser-firefox-extension.php>
+        - Colour Contrast Visualiser &rarr; suggests combinations (Flash or Adobe AIR): <http://www.stainlessvision.com/projects/colour-contrast-visualiser>
+        - CSS Analyser (colours, text sizes): <http://juicystudio.com/services/csstest.php>
+        - Luminosity Contrast Ratio Analyser (tests colour combinations): <http://juicystudio.com/services/luminositycontrastratio.php>
+        - Vischeck (colour blindness simulator): <http://www.vischeck.com/vischeck/>
+        - Contrast Analyser, Version 2.0 (App, checks colours against colour blindness): <http://www.paciellogroup.com/resources/contrast-analyser.html>
+        - Graybit (simulates page in greyscale): <http://www.graybit.com/>
+
 - Headings
     - [ ] Introduce (new) content 
     - [ ] 1 `<h1>` per page/view, don't skip levels, logical sequence
@@ -158,4 +169,23 @@
 - [ ] compare to solution
 
 
-
+- **Mistakes**:
+1. horizontal scroll &rarr; instead carousel with buttons?
+3. text/font contrast?
+    - font: body *hsl(0, 5%, 60%)* &rarr; #9e9494
+        - font: button, a &rarr; inherit
+    - #toggleNav *#fff*
+    - &rarr; Contrast is 2.95
+    - Suggestion: font #7e7272, i.e. **hsl(0, 5%, 47%)**
+4. font size?
+    - family: system-ui
+    - toggle: 1.5rem
+5. ? gap between recipes
+6. Zoom 200% &rarr; overlaps page
+2. Links (Read more): not recognisable &rarr; need underline (& colour?), more descriptive text
+7. Links nav: no href, not styled as links
+8. h1 is an img? No alt-text
+9. h3 skips a level
+10. ul is not a list &rarr; articles?
+11. `<head>` misses lang, title
+12. tabindex: Menu, focus? style
