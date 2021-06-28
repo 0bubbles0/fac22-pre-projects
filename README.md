@@ -16,6 +16,7 @@ It will aim to contain:
 
 I am excited for what this space will turn into over the coming weeks!
 
+<!--
 ### Template Repo
 
 Create a new repository on your own profile which has a README.md and a set of folders for each week.
@@ -25,3 +26,5 @@ How you lay out this repository and how the site looks are up to you. We've adde
 You might like to host this repository on GitHub pages and contain your project sites inside this single repository.
 
 You might prefer to create each site in its own repository and link to them from this central directory.
+
+-->
