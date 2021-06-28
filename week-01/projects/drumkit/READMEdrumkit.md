@@ -9,6 +9,10 @@
 
 ## Questions
 ## Resources
+
+- [ ] Files (*GitHub*): <https://wesbos.slack.com/messages/javascript30>
+- [ ] Tutorial Video (*20 min*): <https://courses.wesbos.com/account/access/60cd2fa48981fd4f947005bc>
+
 ## Notes
-## Tasks
+## Task
 ## Steps
