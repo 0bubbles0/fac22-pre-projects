@@ -142,5 +142,20 @@
 
 ## Steps
 
+- [x] Reading
+    - [x] Make Checklist
+- [x] Set up files
+- [ ] Compare to **Checklist**
+    - [ ] Check in **Browser** &rarr; obvious issues &rarr; note & count (Size, Spacing Straw Test, Zoom, tooltips)
+    - [ ] **HTML**: head, tag names (landmarks), alt text, autofocus, attributes
+    - [ ] **Colour**: Contrasts, colour-only communication 
+    - [ ] **Style**: Layout, Size, Spacing, Links, Buttons, Inputs
+    - [ ] **Tabindex**: understand, check HTML
+- [ ] Chrome Lighthouse
+- [ ] HTML validation
+- [ ] keyboard navigation
+- [ ] screen reader
+- [ ] compare to solution
+
 
 
