@@ -20,3 +20,26 @@ function pick(obj, keys) {
 
 console.log(pick({ a: 1, b: 2, c: 3, d: 4 }, ['c', 'b', 'c']));
 console.log({ b: 2, c: 3 });
+
+/* ... Rest Parameter
+*/
+
+function sum(...numbers) {
+  //console.log(numbers);
+  let numArr = [0, ...numbers];
+  // console.log(numArr);
+  return numArr.reduce((total, val) => total + val);
+}
+
+const sums = [sum(), sum(100), sum(2000, 1), sum(-500, -300)];
+
+console.log(sums);
+
+//Solution
+function sum1(...numbers) {
+  let sum = 0;
+  for (const n of numbers) {
+    sum += n;
+  }
+  return sum;
+}

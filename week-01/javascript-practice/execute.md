@@ -27,6 +27,14 @@
     `${{a: 1}}` === '[object Object]'
     `${[1, 2]}` === '1, 2'
   ```
+  
+- **... Rest Parameter**:
+  -	`const f = (…args) => args;`
+    - `f(1, 2, 3)` &rarr; `[1, 2, 3]`
+  - `const f = (…numbers) => { can loop numbers as array }`
+  - As function parameter: can only be **ONE** … at **last place** (i.e. “all remaining”)
+  -	As function arguments: can call `add(…numbers)` &rarr; treat each number as separate argument
+
 
 
 ### Lessons
@@ -38,6 +46,7 @@
 | 3. | Const | Jun 22, Tue |
 | 4. | For of | Jun 23, Wed |
 | 5. | Template Literals| Jun 24, Thu |
+| 6. | Rest Parameter | Jun 28, Mon |
 <!--
 | | | |
 | | | |

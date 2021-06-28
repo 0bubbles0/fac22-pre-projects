@@ -16,12 +16,14 @@
 
 - [x] Files (*GitHub*): <https://wesbos.slack.com/messages/javascript30>
 - [x] Tutorial Video (*20 min*): <https://courses.wesbos.com/account/access/60cd2fa48981fd4f947005bc>
+- [x] Using data attributes (*MDN*): <https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes>
+- [x] Keyboard codes: <https://keycode.info/>
 
 
 ## Learn
 - No design patterns, frameworks, libraries etc. &rarr; just **Vanilla JS**
 - Audio-playing with a prompt from JavaScript 
-- Key events
+- Keyboard events
 - Listening for transition end
 
 ## Task
@@ -45,7 +47,7 @@
     <autio data-key="65" src="sound/clap.wav"></audio>
     ```
   - `data-key` is an attribute we just made up
-  - find correct keyboard key number on <keycode.info>
+  - find correct keyboard key number on <https://keycode.info/>
   - onclick &rarr; add .playing class
 
 ### CSS
@@ -73,11 +75,11 @@
       - play audio
   - If HTML has a **matching div-element** `data-key === e.keyCode`
     - add `.playing` style
-  - Reset after event
+  - **Reset after** event
     - Recognise which element just finished animation &rarr; `e.propertyName === 'transform'`
     - remove `.playing` from it
-  - EventListener on window for keyboard-press &rarr; 'keydown'
-  - EventListener on `<div>`s for when they finish a transition &rarr; 'transitionend'
+  - EventListener on window for **keyboard-press** &rarr; 'keydown'
+  - EventListener on `<div>`s for when they **finish a transition** &rarr; 'transitionend'
 
   ```javascript
     function playSound(e) {
@@ -106,7 +108,6 @@
       key.addEventListener('transitionend', removeTransition)
     );
  ```
-
 
 
 ## Variation Ideas
