@@ -12,10 +12,11 @@
 1. Variation Ideas
 
 ## Questions
+
 ## Resources
 
-- [x] Files (*GitHub*): <https://wesbos.slack.com/messages/javascript30>
-- [x] Tutorial Video (*20 min*): <https://courses.wesbos.com/account/access/60cd2fa48981fd4f947005bc>
+- [x] Files (*GitHub*): <https://github.com/wesbos/JavaScript30>
+- [x] Tutorial Video (*20 min*): <https://courses.wesbos.com/account/access/60cd2fa48981fd4f947005bc/view/194837696>
 - [x] Using data attributes (*MDN*): <https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes>
 - [x] Keyboard codes: <https://keycode.info/>
 
