@@ -35,6 +35,24 @@
   - As function parameter: can only be **ONE** … at **last place** (i.e. “all remaining”)
   -	As function arguments: can call `add(…numbers)` &rarr; treat each number as separate argument
 
+- **get, set**
+  - objects can hold fixed or dynamic properties (function, which gets called when property is accessed user.userFunciton)
+  - getter, setter can store history of changes (e.g. by pushing them into an array)
+    ```javascript
+    function createUser(userName) {
+    return {
+      names: [userName],
+      get userName() { return this.names[this.names.length - 1]; },
+      set userName(userName) { this.names.push(userName); }
+    };
+    }
+
+    const user = createUser('Amir');
+    user.userName = 'Betty';
+    user.names;
+    Result:
+    ['Amir', 'Betty']
+    ```
 
 
 ### Lessons
@@ -47,6 +65,7 @@
 | 4. | For of | Jun 23, Wed |
 | 5. | Template Literals| Jun 24, Thu |
 | 6. | Rest Parameter | Jun 28, Mon |
+| 7. | Accessors in object literals (get & set)| Jun 29, Tue |
 <!--
 | | | |
 | | | |
