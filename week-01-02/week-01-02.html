@@ -15,38 +15,69 @@
     <h2>Documenting my Progress</h2>
   </header>
 
-  <main>
+  <main class="grid-parent">
     <!--Summary-->
     <section>
-      <h3>This week I learned:</h3>
+      <h3>These two weeks I learned:</h3>
       <ul>
-        <li>Writing semantic HTML tags is more accessible</li>
-        <li>We can audit sites using Lighthouse</li>
-        <li>...</li>
+        <li>WSL Terminal:
+          <ul>
+            <li>Windows files live in <code>/mnt/c/</code></li>
+            <li>Linux files live in <code>~/home/</code></li>
+            <li>The Terminal commands <code>$ cd ~</code> and <code>$ explorer.exe .</code> visually show where the
+              Linux system & files "live" on
+              my PC</li>
+            <li>Using the Command Line to view the commit history (<code>$ git log</code>) and restore a previous
+              version (<code>$ git restore</code>)</li>
+          </ul>
+        </li>
+        <li>A11y:
+          <ul>
+            <li>Semantic HTML tags optimise a11y & modern technologies (SEO, voice, browser defaults)</li>
+            <li>Audit sites with Browser Dev Tools (Lighthouse in Chrome)</li>
+          </ul>
+        </li>
+        <li>JavaScript:
+          <ul>
+            <li>const: the value can be mutated, but not reassigned &rarr; can push to an array, not assign a new
+              array though</li>
+            <li>Template Literals: <code>`{x}`</code> is the same as <code>x.toString()</code></li>
+            <li>Shadowing: an inner <code>{let/const x = 1;}</code> won't impact outer
+              <code>let/const x = 5;</code>
+            </li>
+          </ul>
+        </li>
+
       </ul>
+      <!--
+      <li></li>
+      <li></li>
+    -->
     </section>
 
-    <!--Projects-->
+
+    <!--Challenges-->
     <section>
-      <h3>Projects:</h3>
+      <h3>Daily Routine:</h3>
+      <ul>
+        <li>Use: Terminal, GitHub, VS Code, Browser Dev Tools</li>
+        <li>Exercise: Execute Program, Codewars</li>
+        <li>Learn: Workshop, Research</li>
+        <li>Project</li>
+        <li>Document Progress: To-do List, Twitter "#TIL"</li>
+      </ul>
 
-      <h4>Drums</h4>
-      <a href="projects/drumkit/starter-01-JavaScript Drum Kit/index-START.html" target="_blank">Starter</a>
+      <h3>JavaScript Topics:</h3>
+      <h4>ES6 array methods</h4>
+      <a href="https://github.com/0bubbles0/fac22-pre-projects/blob/main/week-01-02/challenges/es6-array.md"
+        target="_blank">Research</a>
       <br>
-      <a href="projects/drumkit/starter-01-JavaScript Drum Kit/index-FINISHED.html" target="_blank">Solution</a>
-      <br>
-      <a href="projects/drumkit/attempt/index-drum-attempt.html" target="_blank">My Attempt</a>
-      <br>
-      <p> Upcoming Variation: <a href="" target="_blank">Violin Tuner</a></p>
+      <a href="https://github.com/0bubbles0/fac22-pre-projects/blob/main/week-01-02/challenges/es6-array.js"
+        target="_blank">Challenge</a>
 
-      <h4>Clock</h4>
-      <a href="projects/clock/index-START.html" target="_blank">Starter</a>
-      <br>
-      <a href="projects/clock/index-FINISHED.html" target="_blank">Solution</a>
-      <br>
-      <a href="projects/clock/index-attempt.html" target="_blank">My Attempt</a>
-      <br>
-      <p> Upcoming Variation: <a href="" target="_blank">London-Cologne-Tokyo</a></p>
+      <h4>Group combinator</h4>
+      <a href="https://github.com/0bubbles0/fac22-pre-projects/blob/main/week-01-02/challenges/groupings.js"
+        target="_blank">Solution</a>
     </section>
 
 
@@ -63,43 +94,47 @@
 
       <h4>Semantic HTML</h4>
       <a href="workshops/html-workshop/semantic-html/challenge.html" target="_blank">Starter</a>
-      <br>
+      |
       <a href="workshops/html-workshop/semantic-html/solution/solution.html" target="_blank">Solution</a>
       <br>
       <a href="workshops/html-workshop/semantic-html/attempt-barbara/html-attempt.html" target="_blank">My attempt</a>
 
       <h4>Accessibility (A11y)</h4>
       <a href="workshops/accessibility-workshop/learn-a11y/index.html" target="_blank">Starter</a>
-      <br>
+      |
       <a href="workshops/accessibility-workshop/learn-a11y/solution/index.html" target="_blank">Solution</a>
       <br>
       <a href="workshops/accessibility-workshop/attempt-barbara/a11y-attempt.html" target="_blank">My attempt</a>
     </section>
 
 
-    <!--Challenges-->
+    <!--Projects-->
     <section>
-      <h3>JavaScript Topics:</h3>
-      <h4>ES6 array methods</h4>
-      <a href="https://github.com/0bubbles0/fac22-pre-projects/blob/main/week-01-02/challenges/es6-array.md"
-        target="_blank">Research</a>
-      <br>
-      <a href="https://github.com/0bubbles0/fac22-pre-projects/blob/main/week-01-02/challenges/es6-array.js"
-        target="_blank">Challenge</a>
+      <h3>Projects:</h3>
 
-      <h4>Group combinator</h4>
-      <a href="https://github.com/0bubbles0/fac22-pre-projects/blob/main/week-01-02/challenges/groupings.js"
-        target="_blank">Solution</a>
+      <h4>Drums</h4>
+      <a href="projects/drumkit/starter-01-JavaScript Drum Kit/index-START.html" target="_blank">Starter</a>
+      |
+      <a href="projects/drumkit/starter-01-JavaScript Drum Kit/index-FINISHED.html" target="_blank">Solution</a>
+      <br>
+      <a href="projects/drumkit/attempt/index-drum-attempt.html" target="_blank">My Attempt</a>
+      <p> Upcoming Variation: <a href="" target="_blank">Violin Tuner</a></p>
+
+      <h4>Clock</h4>
+      <a href="projects/clock/index-START.html" target="_blank">Starter</a>
+      |
+      <a href="projects/clock/index-FINISHED.html" target="_blank">Solution</a>
+      <br>
+      <a href="projects/clock/index-attempt.html" target="_blank">My Attempt</a>
+      <p> Upcoming Variation: <a href="" target="_blank">London-Cologne-Tokyo</a></p>
     </section>
 
   </main>
 
   <footer>
     <p>
-      Back to <a href="../index.html">Home</a>
-    </p>
-    <p>
-      View the <a href="https://github.com/0bubbles0/fac22-pre-projects/tree/main/week-01">GitHub Repository</a>
+      Back to <a href="../index.html">Home</a> | View in the <a
+        href="https://github.com/0bubbles0/fac22-pre-projects/tree/main/week-01">GitHub Repository</a>
     </p>
   </footer>
 
