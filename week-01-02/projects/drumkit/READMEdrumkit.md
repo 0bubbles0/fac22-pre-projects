@@ -118,9 +118,10 @@
   - Works with click as well (and .key:hover)
 
 - Long
+  - **Violin Tuner** (GDAE, long notes only stop when pressing key again)
+  
   - image map
     - actual drum-kit
     - other image
   - Piano (eg for number-keys 1-8)
-  - Violin Tuner (GDAE)
 

@@ -82,10 +82,11 @@ setInterval(setDate, 1000);
 ```
 
 ## Variation Ideas
+- **Different Time Zones: London, Cologne, Tokyo**
+
 - Digital Clock
 - Style Clock: Add hour labels
   - Day / Night or Sunrise/Sunset &rarr; light/dark mode
-- Different Time Zones
 - Set custom time that isn't right now
 - Nest clock in page
 
