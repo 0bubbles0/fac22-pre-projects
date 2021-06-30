@@ -27,7 +27,6 @@
     `${{a: 1}}` === '[object Object]'
     `${[1, 2]}` === '1, 2'
   ```
-  
 - **... Rest Parameter**:
   -	`const f = (…args) => args;`
     - `f(1, 2, 3)` &rarr; `[1, 2, 3]`
@@ -40,20 +39,20 @@
   - getter, setter can store history of changes (e.g. by pushing them into an array)
     ```javascript
     function createUser(userName) {
-    return {
-      names: [userName],
-      get userName() { return this.names[this.names.length - 1]; },
-      set userName(userName) { this.names.push(userName); }
-    };
+      return {
+        names: [userName],
+        get userName() { return this.names[this.names.length - 1]; },
+        set userName(userName) { this.names.push(userName); }
+      };
     }
-
     const user = createUser('Amir');
     user.userName = 'Betty';
     user.names;
-    Result:
-    ['Amir', 'Betty']
     ```
+    Result: ['Amir', 'Betty']
 
+- **Object shorthand naming**
+  - if name & age are already defined variables &rarr; `const user = { name: name, age: age}` SAME AS `const user = {name, age}`
 
 ### Lessons
 
@@ -66,6 +65,7 @@
 | 5. | Template Literals| Jun 24, Thu |
 | 6. | Rest Parameter | Jun 28, Mon |
 | 7. | Accessors in object literals (get & set)| Jun 29, Tue |
+| 8. | Shorthand properties | Jun 30, Wed |
 <!--
 | | | |
 | | | |

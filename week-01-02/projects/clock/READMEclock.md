@@ -86,6 +86,7 @@ setInterval(setDate, 1000);
 
 - Digital Clock
 - Style Clock: Add hour labels
+  - Normal 12-hr clock, write "am" or "pm" on clock face
   - Day / Night or Sunrise/Sunset &rarr; light/dark mode
 - Set custom time that isn't right now
 - Nest clock in page
