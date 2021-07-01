@@ -53,6 +53,15 @@
 
 - **Object shorthand naming**
   - if name & age are already defined variables &rarr; `const user = { name: name, age: age}` SAME AS `const user = {name, age}`
+  - 
+    ```javascript 
+      const rectangle3D = {
+        width: 3, depth: 4, height: 5,
+        baseArea() { return this.width * this.depth; },
+        volume() { return this.baseArea() * this.height }
+      };
+      rectangle3D.volume(); // 60
+      ```
 
 ### Lessons
 
@@ -66,6 +75,7 @@
 | 6. | Rest Parameter | Jun 28, Mon |
 | 7. | Accessors in object literals (get & set)| Jun 29, Tue |
 | 8. | Shorthand properties | Jun 30, Wed |
+| 9. | Shorthand methods | Jul 1, Thu |
 <!--
 | | | |
 | | | |
