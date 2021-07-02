@@ -2,24 +2,12 @@
 
 ## Content
 - Questions
-- Topics
 - Schedule
 - Summary & Sessions
 - Reading List
 - Homework
 
 ## Questions
-## Topics
-- CSS: Grid, Layouts
-- A11y
-- Git & GitHub
-- Projects:
-  - Projects gallery
-  - Recreate BBC News
-  - JS30: Playing with CSS Variables and JS
-  - JS30: Array Cardio 1
-
-
 ## Schedule
 
   - **Daily Routine**: GitHub, Execute, Twitter
@@ -35,7 +23,6 @@
     | **Mon** | - [CSS Layouts](https://learn.foundersandcoders.com/workshops/css-layout/) | - [Learn Layout](https://learnlayout.com/) | - [Project Gallery](https://learn.foundersandcoders.com/course/syllabus/pre-apprenticeship-2/project) |
     | | | - [SmolCSS](https://smolcss.dev/) | |
     | **Tue** | - [A11y ARIA Labels](https://css-tricks.com/why-how-and-when-to-use-semantic-html-and-aria/) | - [Year of A11y](<https://www.24a11y.com/2019/what-a-year-of-learning-and-teaching-accessibility-taught-me/>) | - [JS30](https://javascript30.com/) CSS Variables |
-    | | | - [ARIA]() | |
     | **Wed** | | - [Refactoring UI](https://twitter.com/i/events/994601867987619840) | - JS30 Array Cardio 1|
     | **Thu** | - Weekly Summary | | |
     | | - File links correct? | | |
@@ -44,8 +31,6 @@
 
 
 ## Summary & Sessions
-
-
 
 ## Reading List
 
@@ -62,7 +47,6 @@
   ### A11y
   - [ ] What a Year of Learning and Teaching Accessibility Taught Me: <https://www.24a11y.com/2019/what-a-year-of-learning-and-teaching-accessibility-taught-me/>
   - [ ] Why, How, and When to Use Semantic HTML and ARIA: <https://css-tricks.com/why-how-and-when-to-use-semantic-html-and-aria/>
-
 
 
 ## Homework
