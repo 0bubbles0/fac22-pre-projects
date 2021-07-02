@@ -39,10 +39,10 @@
     </html>
 
   ### CSS Parent:
-      Units|.
-      ---|---
-      auto | size according to content
-      1fr | takes available space
+  Units|.
+  ---|---
+  auto | size according to content
+  1fr | takes available space
 
    ```css
     grid-container { /*parent*/
@@ -80,20 +80,20 @@
   - Can customize each item's size, position, order in grid (&rarr; items don't need to appear in their HTML order, eg. for @media)
     
   #### With line numbers
-    ```css
-      .item1 { /*child*/
-        grid-area: 1 / 4 / span 2 / span 3; /*or 1 / 4 / 3 / 7;*/ 
-          /*Shorthand for…*/
-            grid-row: 1 / span 2; /*or 1 / 3;*/ 
-              /*Shorthand for grid-row-start, grid-row-end*/
-            grid-column: 4 / span 3; /*or 4 / 7;*/ 
-              /*Shorthand for grid-column-start, grid-column-end*/
-     
-        justify-self: stretch; /* horizontally*/
-        align-self: stretch; /* vertically*/
-        display: grid; /*… nest grid within grid*/
-      } 
-    ```
+  ```css
+    .item1 { /*child*/
+      grid-area: 1 / 4 / span 2 / span 3; /*or 1 / 4 / 3 / 7;*/ 
+        /*Shorthand for…*/
+          grid-row: 1 / span 2; /*or 1 / 3;*/ 
+            /*Shorthand for grid-row-start, grid-row-end*/
+          grid-column: 4 / span 3; /*or 4 / 7;*/ 
+            /*Shorthand for grid-column-start, grid-column-end*/
+    
+      justify-self: stretch; /* horizontally*/
+      align-self: stretch; /* vertically*/
+      display: grid; /*… nest grid within grid*/
+    } 
+  ```
 
   #### With named items
   - syntax grid-template-areas &rarr; row(' ') column(space) unnamed(.)
@@ -112,16 +112,16 @@
     ```
 
   ### Media Query
-    ```css
-      @media (min-width: 400px) { 
-        grid-template-columns: auto 1fr;
-        grid-template-rows: auto 1fr auto;
-        grid-template-areas: 
-          "header header" 
-          "advert content" 
-          "footer footer"; 
-      }
-    ```
+  ```css
+    @media (min-width: 400px) { 
+      grid-template-columns: auto 1fr;
+      grid-template-rows: auto 1fr auto;
+      grid-template-areas: 
+        "header header" 
+        "advert content" 
+        "footer footer"; 
+    }
+  ```
 
 
 
