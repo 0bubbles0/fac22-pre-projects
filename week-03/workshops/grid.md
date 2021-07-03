@@ -10,7 +10,7 @@
 
 
 ## Questions
-  - minmax, auto-fit, auto-fill, repeat
+  - minmax, auto-fit, auto-fill
 
 ## Reading List
   - freeCodeCamp: <https://www.freecodecamp.org/learn/responsive-web-design/#css-grid>
@@ -23,7 +23,10 @@
 
 ### Suggestions
   - [ ] A complete guide to grid: <https://css-tricks.com/snippets/css/complete-guide-grid/>
-  - [ ] CSS Grid Garden: <https://cssgridgarden.com/>
+  - [x] CSS Grid Garden: <https://cssgridgarden.com/>
+  
+ ### Also interesting 
+  - flexbox zombies
 
 ## Summary
 
@@ -42,7 +45,7 @@
   Units|.
   ---|---
   auto | size according to content
-  1fr | takes available space
+  1fr | takes 1 fraction of available space &rarr; 1/4 and 3/4 would get 1fr and 3fr
 
    ```css
     grid-container { /*parent*/
@@ -50,6 +53,7 @@
 
       grid-template: 150px / auto auto auto; /*1-row-150px 3-columns-auto*/
         grid-template-columns: 80px auto 200px; /*3 columns, widths 80-auto-200. >4-column-children line-break*/
+          grid-template-columns: repeat(8, 12.5%);
         grid-template-rows: 80px 200px; /*2 rows, heights 80-200*/
 
       grid-gap: 50px 100px; /*gap between rows, columns*/
@@ -84,13 +88,18 @@
     .item1 { /*child*/
       grid-area: 1 / 4 / span 2 / span 3; /*or 1 / 4 / 3 / 7;*/ 
         /*Shorthand for…*/
-          grid-row: 1 / span 2; /*or 1 / 3;*/ 
+          grid-row: 1 / span 2; 
+            /*or 1 / 3;*/ 
+            /*or 1 / column; for all rows*/
             /*Shorthand for grid-row-start, grid-row-end*/
-          grid-column: 4 / span 3; /*or 4 / 7;*/ 
+          grid-column: 4 / span 3; 
+            /*or 4 / 7;*/ 
+            /*or 1 / row; for full row*/
             /*Shorthand for grid-column-start, grid-column-end*/
     
       justify-self: stretch; /* horizontally*/
       align-self: stretch; /* vertically*/
+      order: 0; /*change default order of elements, like z-index (places -1 0 1 in that order)*/
       display: grid; /*… nest grid within grid*/
     } 
   ```
@@ -126,6 +135,10 @@
 
 
 ## Grid Garden
+
+- if we want to fill a whole row” &rarr; `grid-column-end: row;`
+- `order: 0` &rarr; change default order of elements, like z-index (places -1 0 1 in that order)
+- `grid-template-columns: repeat(8, 12.5%);`
 
 
 ## In Practice

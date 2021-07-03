@@ -67,7 +67,7 @@
     - [ ] Twitter #TIL
 
   ### Workshops
-  - [ ] CSS Grid Garden: <https://cssgridgarden.com/>
+  - [x] CSS Grid Garden: <https://cssgridgarden.com/>
   - [ ] CSS Layouts: <https://learn.foundersandcoders.com/workshops/css-layout/>
   - [ ] A11y ARIA Lables:
     - [ ] What are they: <https://css-tricks.com/why-how-and-when-to-use-semantic-html-and-aria/>
