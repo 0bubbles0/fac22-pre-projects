@@ -63,6 +63,13 @@
       rectangle3D.volume(); // 60
       ```
 
+- **Number.isNaN(X)**
+  - old `isNaN(x)` (which converts x to number before checking) had error
+    - true for `NaN`, `0/0`, typos, expressions with `undefined` &rarr; **but** `undefined` *is* a number
+  - new `Number.isNAN(x)` does it properly
+  - configure in eslint &rarr; configure no-restricted-globals &rarr; disallow isNaN()
+
+
 ### Lessons
 
 | # | Lesson | Date |
@@ -76,6 +83,7 @@
 | 7. | Accessors in object literals (get & set)| Jun 29, Tue |
 | 8. | Shorthand properties | Jun 30, Wed |
 | 9. | Shorthand methods | Jul 1, Thu |
+| 10. | Number.isNaN(x) | Jul 5, Mon |
 <!--
 | | | |
 | | | |
