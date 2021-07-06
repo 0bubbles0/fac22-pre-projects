@@ -14,13 +14,14 @@
   - Center Content
   - Flexbox: Row
   - Grid: control children size & location
-- Tasks
+- fac-Workshop Tasks
 
 
 ## Questions
 
 ## Summary
 ### Do
+- `* {box-sizing: border-box;}`
 - **Consistency** & reusability &rarr; pre-determine some allowed values in specialised 
   - **modifier classes** &rarr; e.g. `.width-sm { max-width: 40rem;}`
   - or **CSS Variables**: `var(--width, 40rem)`
@@ -59,6 +60,11 @@
   - block elements take full-width. 
   - Inline only necessary width, don't interrupt flow
   - Auto-wrap of content
+- **Display** Property:
+  - All values: <https://developer.mozilla.org/en-US/docs/CSS/display>
+  - Most common: inline, block, none, flex, grid
+- Border-box: Prevent margin/padding misbehaving
+  - `* {box-sizing: border-box;}`
 - **Flex**ible **box**:
   - *1D* alignment of items
   - item placements not exact, just generally automatically ok
@@ -146,7 +152,7 @@
     ```
 
 
-## Tasks
+## fac-Workshop Tasks
 
 1. `challenge-1/index.html`
     - insert css classes in style, add center+width classes in HTML
@@ -168,3 +174,36 @@
 1. `challenge-4/index.html`
     - Give classes to HTML
     - Don't touch CSS
+
+
+## SmolCSS
+- small snippets of modern layout CSS: <https://smolcss.dev/>
+- Responsive grid, flexbox
+- Size Range:
+  - Use --min, minmax(), min()
+  - clamp(min, ideal, max) &rarr; `clamp(1rem, 5%, 3rem)`
+- Grid:
+  - `place-content: center;`
+  - good sidenav: `grid-template-columns: fit-content(20ch) minmax(min(50vw, 30ch), 1fr);`
+- Image:
+  - Frame: `aspect-ratio: 4/3;`
+  - Img: `display: block; object-fit: cover;`
+
+
+## Every Layout: Boxes
+- Separate **concerns**:
+  - **Aesthetic**, branding
+    - utilise global/general selectors &rarr; `:root`, *, p...
+    - **utility classes** for final adjustments &rarr; `.font-size\:big {...!important;}`
+  - **Layout**
+    - **Composite** layouts &rarr; nested, component layouts
+      - 1 component &rarr; space/pad/separate elements vertically/horizontally
+    - `display: flex` &rarr; element is still a block, its children will behave like flexboxes
+  - **Sizing**:
+    - element-size (width for inline, height for block) depends on inner content & outer context &rarr; browser defaults very good, limit interference
+    - `box-sizing: content-box;` &rarr; desirable for [Center layout](https://every-layout.dev/layouts/center)
+- **Units**:
+  - Make own font-size &rarr; `:root { font-size: calc(1rem + 0.5vw);}`
+  - em for inline elements (SVG icons)
+  - rem for block elements
+  - ch for width

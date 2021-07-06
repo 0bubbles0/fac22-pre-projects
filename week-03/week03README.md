@@ -35,12 +35,12 @@
 ## Reading List
 
   ### CSS
-  - [ ] A complete guide to grid: <https://css-tricks.com/snippets/css/complete-guide-grid/>
+  - [x] A complete guide to grid: <https://css-tricks.com/snippets/css/complete-guide-grid/>
   - [ ] CSS Layout - MDN: <https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout>
-  - [ ] Every Layout: great comprehensive resource on building layout components: <https://every-layout.dev/>
-  - [ ] Boxes - Every Layout: <https://every-layout.dev/rudiments/boxes/>
-  - [ ] Learn Layout: <https://learnlayout.com/>
-  - [ ] SmolCSS: small snippets of modern layout CSS: <https://smolcss.dev/>
+  - [x] Every Layout: great comprehensive resource on building layout components: <https://every-layout.dev/>
+  - [x] Boxes - Every Layout: <https://every-layout.dev/rudiments/boxes/>
+  - [x] Learn Layout: <https://learnlayout.com/>
+  - [x] SmolCSS: small snippets of modern layout CSS: <https://smolcss.dev/>
 
   - [ ] Refactoring UI - Design Tips: <https://twitter.com/i/events/994601867987619840>
 
