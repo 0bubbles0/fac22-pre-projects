@@ -15,6 +15,9 @@
   - Flexbox: Row
   - Grid: control children size & location
 - fac-Workshop Tasks
+- SmolCSS
+- Every Layout
+
 
 
 ## Questions
@@ -24,6 +27,7 @@
 - `* {box-sizing: border-box;}`
 - **Consistency** & reusability &rarr; pre-determine some allowed values in specialised 
   - **modifier classes** &rarr; e.g. `.width-sm { max-width: 40rem;}`
+    - **composite** &rarr; each class does 1 task, e.g. space children vertically
   - or **CSS Variables**: `var(--width, 40rem)`
 - **Center** content:
   - max-width
