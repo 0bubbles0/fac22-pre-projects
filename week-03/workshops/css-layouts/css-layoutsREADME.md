@@ -2,18 +2,59 @@
 
 ## Content
 - Questions
+- Summary
+  - Do
+  - Don't
+- Notes
+  - Layouts
+  - Consistency
+    - Modifier Classes
+    - CSS Variables
+    - Stack
+  - Center Content
+  - Flexbox: Row
+  - Grid: control children size & location
+- Tasks
 
 
 ## Questions
 
 ## Summary
 ### Do
-- CSS goal &rarr; as reusable as possible &rarr; specialised **modifier classes**
-- Consistency &rarr; pre-determine allowed values for width
-- `max-width` for *text*, ~80 characters
-### Don't
+- **Consistency** & reusability &rarr; pre-determine some allowed values in specialised 
+  - **modifier classes** &rarr; e.g. `.width-sm { max-width: 40rem;}`
+  - or **CSS Variables**: `var(--width, 40rem)`
+- **Center** content:
+  - max-width
+  - **margin** left-right to auto
+- Between rows: **Stack**
+  - for margin, gap...
+  - HTML-**parent**: `class="stack-sm"`
+  - CSS b/w siblings: `.stack-sm > * + * {...}`
+- Within row: **flexbox** for auto-distribution
+  - can add `.align-start {...}` etc. modifier classes
+    ```css
+      .row {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 1rem;
+          align-items: center;
+        }
+    ```
+- Specific distribution: **grid**
+    ```css
+        .grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+          gap: 1rem;
+        }
+    ```
 
-## Layouts
+
+## Notes
+
+### Layouts
+
 - **Flow**: 
   - block elements take full-width. 
   - Inline only necessary width, don't interrupt flow
@@ -26,25 +67,9 @@
   - *2D* layouts
   - precise item placements &rarr; less flexible
 
-## CSS Variables
-- inherited &rarr; from parent
 
-## Center Text
-  - should limit `max-width`, with fall-back value
-  - position with margin
-    - `margin: auto;` &rarr; take up all available space
-    - `margin-left: auto;` &rarr; pushes to right
-    - center a text-box
-      ```css
-        .center { 
-          max-width: 30rem; 
-          margin: [?] auto;
-        }
-      ```
-
-## Classes
-- For **Consistency**
-- **Modifier Classes**
+### Consistency
+#### Modifier Classes
   - Pre-determine a few allowed values
     ```css
       .width-sm {
@@ -57,7 +82,10 @@
         max-width: 60rem;
       }
     ```
-- **Stack**
+- Or with CSS **variables**
+  - inherited from parent: `.width { max-width: var(--width, 40rem); }`
+
+#### Stack
   - give parent style-class to space children
   - Parent &rarr; `<div class="stack-sm">`
   - All children &rarr; `.stack-sm > * { ... }`
@@ -67,16 +95,76 @@
   - Can nest stacks
 
 
+### Center content
+  - e.g. text
+  - should limit `max-width`, with fall-back value
+  - position with margin
+    - `margin: auto;` &rarr; take up all available space
+    - `margin-left: auto;` &rarr; pushes to right
+    - center a text-box
+      ```css
+        .center { 
+          max-width: 30rem; 
+          margin: [?] auto;
+        }
+      ```
+
+### Flexbox: Row
+  - Make it with a flexbox & `wrap` &rarr; won't need @media
+  - `gap` &rarr; auto for row & column, works for flexbox (not Safari) & grid
+  - `align` &rarr; height for row-flex. Usually center
+  - `justify` &rarr; push items along width
+    ```css
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        align-items: center;
+      }
+      .align-start {
+        align-items: start;
+      }
+      .justify-end {
+        justify-content: flex-end;
+      }
+
+      <div class="row justify-end">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+      </div>
+    ```
+
+### Grid: Control children size & location
+- Each child gets specific/consistent size & location (or auto)
+- E.g. image gallery. All children same size, auto-amount per row
+    ```css
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+        gap: 1rem;
+      }
+    ```
+
 
 ## Tasks
+
 1. `challenge-1/index.html`
     - insert css classes in style, add center+width classes in HTML
     - header &rarr; 60rem;
     - 1st section &rarr; 40rem;
     - contact-section &rarr; 20rem;
+
 1. `challenge-2/index.html`
-  - fix vertical spacing
-  - insert stack CSS, add classes to HTML
-  - 2rem b/w sections
-  - 1rem b/w elements in a section
-  - 0.5rem b/w a form-field and its label
+    - fix vertical spacing
+    - insert stack CSS, add classes to HTML
+    - 2rem b/w sections
+    - 1rem b/w elements in a section
+    - 0.5rem b/w a form-field and its label
+
+1. `challenge-3/index.html`
+    - make flex row for logo (start) & nav (end) &rarr; `justify-content: space-between;`
+    - insert CSS code, add classes to HTML 
+
+1. `challenge-4/index.html`
+    - Give classes to HTML
+    - Don't touch CSS
