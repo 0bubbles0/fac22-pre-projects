@@ -66,8 +66,15 @@
 - **Number.isNaN(X)**
   - old `isNaN(x)` (which converts x to number before checking) had error
     - true for `NaN`, `0/0`, typos, expressions with `undefined` &rarr; **but** `undefined` *is* a number
-  - new `Number.isNAN(x)` does it properly
+  - new `Number.isNAN(x)` does it properly &rarr; true for (`NaN`) / false for (`undefined`)
   - configure in eslint &rarr; configure no-restricted-globals &rarr; disallow isNaN()
+
+-	**f.bind(thisA)**
+  -	this is usually only the direct parent &rarr; how have transferrable parent?
+  -	`.bind()` function method: can call function with a specific this, leave original function unchanged
+  -	next step: arrow functions
+  -	declare &rarr; `function objKeyVal() { return this.key; }`
+  -	call &rarr; `objKeyVal.bind(obj) ();`
 
 
 ### Lessons
@@ -84,8 +91,8 @@
 | 8. | Shorthand properties | Jun 30, Wed |
 | 9. | Shorthand methods | Jul 1, Thu |
 | 10. | Number.isNaN(x) | Jul 5, Mon |
+| 11. | f.bind() | Jul 6, Tue|
 <!--
-| | | |
 | | | |
 | | | |
  -->
