@@ -76,9 +76,9 @@
 
   ### Projects
   - [ ] Projects gallery: <https://learn.foundersandcoders.com/course/syllabus/pre-apprenticeship-2/project>
-    - Use workshops, Reading list, own Research
-    - Make main index.html the gallery &rarr; links to all projects
-    - Each project: img, title, short description
+    - [x] Use workshops, Reading list, own Research
+    - [ ] Make main index.html the gallery &rarr; links to all projects
+    - [ ] Each project: img, title, short description
   - [ ] Recreate BBC News: <https://github.com/bobbysebolao/learn-css-grid>
   - [ ] Playing with CSS Variables (*JavaScript30*): <https://javascript30.com/>
   - [ ] Array Cardio 1 (*JavaScript 30*): <https://javascript30.com/> 
