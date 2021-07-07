@@ -2,7 +2,7 @@
 :root {
   --bground-color: #f4f1de;
   --top-color: grey;
-  --card-color:;
+  --card-color: lightblue;
   --font-color:;
   --accent-color:;
   --hover-color:;
@@ -22,6 +22,7 @@ html {
 body {
   font-family: system-ui, sans-serif;
   background: var(--bground-color);
+  text-align: center;
 }
 
 
@@ -63,8 +64,8 @@ body {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
-  gap: var(--rem-m);
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: var(--rem-l);
 }
 
 .gap-l { gap: var(--rem-l);}
@@ -84,21 +85,7 @@ body {
 }
 
 
-/*Images*/
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-.gallery-frame {
-  aspect-ratio: 4/3;
-}
-.gallery-img {
-  display: block;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
+
 
 /*Deco Header, Footer*/
 header {
@@ -128,6 +115,32 @@ footer {
   border-top: 2px solid var(--top-color);
 }
 
+/*Deco*/
+.tile {
+  display: block;
+  background: var(--card-color);
+}
+.tile:hover {
+  opacity: 0.8;
+}
+
+/*Images*/
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.gallery-frame {
+  aspect-ratio: 4/3;
+}
+.gallery-img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+
 /*Hilfslinien
-header > p, li {border: 1px solid green;}
+article {border: 1px solid green;}
 */
