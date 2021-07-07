@@ -18,9 +18,16 @@
 - [x] Tutorial Video (*20 min*): <https://courses.wesbos.com/account/access/60cd2fa48981fd4f947005bc/view/194837696>
 
 ## Learn
+- Make tables in JS
+- Array methods
+
 ## Task
 ## Steps
   ### HTML
+  
   ### CSS
+  
   ### JavaScript
+
+
 ## Variation Ideas
