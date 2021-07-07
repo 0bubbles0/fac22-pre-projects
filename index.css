@@ -1,1 +1,133 @@
+/*Variables*/
+:root {
+  --bground-color: #f4f1de;
+  --top-color: grey;
+  --card-color:;
+  --font-color:;
+  --accent-color:;
+  --hover-color:;
+  --rem-s: 0.5rem;
+  --rem-m: 1rem;
+  --rem-l: 2rem;
+  --rem-xl: 4rem;
+}
 
+/*Defaults*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+html {
+}
+body {
+  font-family: system-ui, sans-serif;
+  background: var(--bground-color);
+}
+
+
+/*Layout: Simple*/
+.center {
+  max-width: 60rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center-txt { text-align: center;}
+
+.width-s { max-width: 40rem;}
+.width-m { max-width: 60rem;}
+.width-l { max-width: 95vw;}
+.width-full { max-width: 100vw;}
+
+.stack-s > * + * { margin-top: var(--rem-s);}
+.stack-m > * + * { margin-top: var(--rem-m);}
+.stack-l > * + * { margin-top: var(--rem-l);}
+.stack-xl > * + * { margin-top: var(--rem-xl);}
+
+
+.pad-m { padding: var(--rem-m);}
+.pad-sides-m { 
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.pad-top-s { padding-top: var(--rem-s);}
+.pad-top-m { padding-top: var(--rem-m);}
+
+/*Layout: flex & grid*/
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  gap: var(--rem-m);
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: var(--rem-m);
+}
+
+.gap-l { gap: var(--rem-l);}
+.gap-xl { gap: var(--rem-xl);}
+
+.justify-bw {
+  justify-content: space-between;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+.align-stretch {
+  align-items: stretch;
+}
+.align-start {
+  align-items: start;
+}
+
+
+/*Images*/
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.gallery-frame {
+  aspect-ratio: 4/3;
+}
+.gallery-img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/*Deco Header, Footer*/
+header {
+  background: var(--top-color);
+  margin: 0;
+  font-size: calc(1rem + 0.3vw);
+}
+/*
+header > div {
+  padding: 1rem;
+}
+*/
+.a-no {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.list-no {
+  list-style: none;
+  padding: 0;
+}
+.hover-pale:hover {
+  background: var(--bground-color);
+}
+
+footer {
+  border-top: 2px solid var(--top-color);
+}
+
+/*Hilfslinien
+header > p, li {border: 1px solid green;}
+*/
