@@ -76,6 +76,11 @@
   -	declare &rarr; `function objKeyVal() { return this.key; }`
   -	call &rarr; `objKeyVal.bind(obj) ();`
 
+-	**Generators**:
+  -	`function* numbers(a, b) { yield 1; yield a; yield b; }`
+  -	yield is like return, can be used repeatedly (function running halts temporarily)
+  -	can for-of over it, make `Array.from(numbers(1, 2))`
+
 
 ### Lessons
 
@@ -92,7 +97,9 @@
 | 9. | Shorthand methods | Jul 1, Thu |
 | 10. | Number.isNaN(x) | Jul 5, Mon |
 | 11. | f.bind() | Jul 6, Tue|
+| 12. | Generator f | Jul 7, Wed |
 <!--
+| | | |
 | | | |
 | | | |
  -->

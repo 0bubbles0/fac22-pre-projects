@@ -13,7 +13,7 @@
 
 .posts {
   display: grid;
-  grid-template: 300px auto / repeat(5, 1fr);
+  grid-template: auto auto / repeat(5, 1fr);
   gap: 1rem;
 }
 
