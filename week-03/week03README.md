@@ -81,7 +81,7 @@
     - [x] Each project: img, title, short description
   - [x] Recreate BBC News: <https://github.com/bobbysebolao/learn-css-grid>
   - [x] Playing with CSS Variables (*JavaScript30*): <https://javascript30.com/>
-  - [ ] Array Cardio 1 (*JavaScript 30*): <https://javascript30.com/> 
+  - [x] Array Cardio 1 (*JavaScript 30*): <https://javascript30.com/> 
 
   ### Guest Prep
   - [ ] Tom Dignan (Apolitical)
