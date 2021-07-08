@@ -14,9 +14,9 @@
 
 ## Reading List
 
-- [ ] Learn Accessibility (*Founders and Coders Workshop*): <https://learn.foundersandcoders.com/workshops/learn-a11y/>
-- [ ] WCAG (Web Content Accessibility Guidelines): <https://www.w3.org/WAI/standards-guidelines/wcag/>
-- [ ] The A11y Project's Checklist: <https://www.a11yproject.com/checklist/>
+- [x] Learn Accessibility (*Founders and Coders Workshop*): <https://learn.foundersandcoders.com/workshops/learn-a11y/>
+- [x] WCAG (Web Content Accessibility Guidelines): <https://www.w3.org/WAI/standards-guidelines/wcag/>
+- [x] The A11y Project's Checklist: <https://www.a11yproject.com/checklist/>
 
 ## Reading notes
 

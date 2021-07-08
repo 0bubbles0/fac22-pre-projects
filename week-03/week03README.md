@@ -42,7 +42,7 @@
   - [x] Learn Layout: <https://learnlayout.com/>
   - [x] SmolCSS: small snippets of modern layout CSS: <https://smolcss.dev/>
 
-  - [ ] Refactoring UI - Design Tips: <https://twitter.com/i/events/994601867987619840>
+  - [x] Refactoring UI - Design Tips: <https://twitter.com/i/events/994601867987619840>
 
   ### A11y
   - [ ] What a Year of Learning and Teaching Accessibility Taught Me: <https://www.24a11y.com/2019/what-a-year-of-learning-and-teaching-accessibility-taught-me/>
