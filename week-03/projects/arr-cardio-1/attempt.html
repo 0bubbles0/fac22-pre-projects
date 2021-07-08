@@ -76,8 +76,13 @@
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
     const inventorSortBirths = inventors.sort(
-      (a, b) => a.year - b.year
+      (a, b) => (a.year > b.year) ? 1 : -1
     );
+
+    const inventorSortBirths1 = inventors.sort((a, b) => {
+      let c = a["year"];
+      //console.log(c);
+    })
     //console.table(inventorSortBirths)
 
     //Long version
@@ -95,7 +100,7 @@
     function totalYearsLong(inventors) {
       var totalYears = 0;
       for (var i = 0; i < inventors.length; i++) {
-        totalYears += inventors[i].year;
+        totalYears += (inventors[i].passed - inventors[i].year);
       }
       return totalYears;
     }
@@ -182,8 +187,28 @@
       return obj;
     }, {})
 
-    console.log(transportation);
+    //console.log(transportation);
 
+
+    //Display
+    console.log(inventors);
+    console.log("Task 1: Filter inventors born in 1500s");
+    console.table(born1500s);
+    console.log("Task 2: Show all inventor first and last names");
+    console.table(inventorNames);
+    console.log("Task 3: Sort all inventors by birth dates");
+    console.log(ordered);
+    console.log("Task 4: Total lifespans of all inventors");
+    console.log(totalYearsMe);
+    console.log("Task 5: Sort inventors by lifespans");
+    console.table(inventorSortLifespans);
+    console.log("Task 6: List all Paris Boulevards with 'de' in name");
+    console.log("Task 7: Sort people alphabetically by last names");
+    console.log(people);
+    console.table(peopleAlphNames);
+    console.log("Task 8");
+    console.log(data);
+    console.table(transportation);
 
   </script>
 </body>
