@@ -81,6 +81,21 @@
   -	yield is like return, can be used repeatedly (function running halts temporarily)
   -	can for-of over it, make `Array.from(numbers(1, 2))`
 
+-	Computed Properties:
+  -	Create key &rarr; `{[x]: 5}`
+  -	`[‘Be’ + ‘tty’]`
+    ```javascript
+      const users = [
+        {name: 'Amir', loginCount: 5},
+        {name: 'Betty', loginCount: 16},
+      ];
+
+      function loginCount(user) {
+        return {[user.name]: user.loginCount};
+      }
+
+      [loginCount(users[0]), loginCount(users[1])]; // Goal: [{Amir: 5}, {Betty: 16}]
+    ```
 
 ### Lessons
 
@@ -98,6 +113,7 @@
 | 10. | Number.isNaN(x) | Jul 5, Mon |
 | 11. | f.bind() | Jul 6, Tue|
 | 12. | Generator f | Jul 7, Wed |
+| 13. | Computed properties | Jul 8, Thu |
 <!--
 | | | |
 | | | |
