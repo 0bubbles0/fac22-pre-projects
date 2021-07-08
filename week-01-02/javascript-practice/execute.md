@@ -81,7 +81,7 @@
   -	yield is like return, can be used repeatedly (function running halts temporarily)
   -	can for-of over it, make `Array.from(numbers(1, 2))`
 
--	Computed Properties:
+-	**Computed Properties**:
   -	Create key &rarr; `{[x]: 5}`
   -	`[‘Be’ + ‘tty’]`
     ```javascript
