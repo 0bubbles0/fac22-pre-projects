@@ -97,6 +97,24 @@
       [loginCount(users[0]), loginCount(users[1])]; // Goal: [{Amir: 5}, {Betty: 16}]
     ```
 
+-	**Tagged template literals**:
+      ```javascript
+        function returnsItsArguments(strings, ...values) {
+          return {
+            firstArg: strings,
+            secondArg: values,
+          };
+        }
+        returnsItsArguments`1${2}3`; // Result: {firstArg: ['1', '3'], secondArg: [2]}
+      ```
+- literal strings, passed as arr argument &rarr; `1, 3`
+  - spaces count
+  - might be padded with ‘’, so that always #literals > #interpolatedVal
+- interpolated values, passed as rest parameters  ${…}
+- Real example  making strings HTML-safe, e.g. turn < into &lt; (escape)  common-tags library's safeHtml
+
+
+
 ### Lessons
 
 | # | Lesson | Date |
@@ -114,6 +132,7 @@
 | 11. | f.bind() | Jul 6, Tue|
 | 12. | Generator f | Jul 7, Wed |
 | 13. | Computed properties | Jul 8, Thu |
+| 14. | Tagged template literals | Jul 9, Fr |
 <!--
 | | | |
 | | | |
