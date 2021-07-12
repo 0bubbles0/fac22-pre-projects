@@ -24,3 +24,23 @@
 - Include ARIA labels in my projects
 
 ## Notes
+
+- **ARIA** labels
+- What: **A**ccessible **R**ich **I**nternet **A**pplications
+  - together with *semantic* HTML &rarr; simple/robust interfaces:
+    - opens page to browser defaults, SEO, screen readers, RSS readers
+- Why
+- Use:
+- When
+- How:
+  1. Semantic HTML (preference)
+  1. ARIA labels (last resort)
+
+
+### Steps
+- Raw text
+- HTML Structure
+- Meaningful Styles
+- Semantic HTML
+- ARIA: when
+- ARIA & JS
