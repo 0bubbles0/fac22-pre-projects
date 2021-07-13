@@ -45,8 +45,8 @@
   - [x] Refactoring UI - Design Tips: <https://twitter.com/i/events/994601867987619840>
 
   ### A11y
-  - [ ] What a Year of Learning and Teaching Accessibility Taught Me: <https://www.24a11y.com/2019/what-a-year-of-learning-and-teaching-accessibility-taught-me/>
-  - [ ] Why, How, and When to Use Semantic HTML and ARIA: <https://css-tricks.com/why-how-and-when-to-use-semantic-html-and-aria/>
+  - [x] What a Year of Learning and Teaching Accessibility Taught Me: <https://www.24a11y.com/2019/what-a-year-of-learning-and-teaching-accessibility-taught-me/>
+  - [x] Why, How, and When to Use Semantic HTML and ARIA: <https://css-tricks.com/why-how-and-when-to-use-semantic-html-and-aria/>
 
 
 ## Homework
@@ -69,10 +69,10 @@
   ### Workshops
   - [x] CSS Grid Garden: <https://cssgridgarden.com/>
   - [x] CSS Layouts: <https://learn.foundersandcoders.com/workshops/css-layout/>
-  - [ ] A11y ARIA Lables:
-    - [ ] What are they: <https://css-tricks.com/why-how-and-when-to-use-semantic-html-and-aria/>
-    - [ ] Why are they used: <https://www.24a11y.com/2019/what-a-year-of-learning-and-teaching-accessibility-taught-me/>
-    - [ ] Include in my projects where appropriate
+  - [x] A11y ARIA Lables:
+    - [x] What are they: <https://css-tricks.com/why-how-and-when-to-use-semantic-html-and-aria/>
+    - [x] Why are they used: <https://www.24a11y.com/2019/what-a-year-of-learning-and-teaching-accessibility-taught-me/>
+    - [x] Include in my projects where appropriate
 
   ### Projects
   - [x] Projects gallery: <https://learn.foundersandcoders.com/course/syllabus/pre-apprenticeship-2/project>
