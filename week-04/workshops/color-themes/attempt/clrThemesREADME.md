@@ -38,7 +38,7 @@
   - **Surface** 
     - higher elevation &rarr; higher illumination of surface color (with semi-transparent overlay)
 
-    ![Elevation overlay] (https://lh3.googleusercontent.com/MZFRD7NVPpsDPgaWSxLb_9rapm7FFMh2kp6nJuAUrIORQadQtlG5BQ5flovINSBW1fCohcC-mZsFQDpSNKPMEEv08at_zHVKHWiU=w1064-v0)
+    ![Elevation overlay](https://lh3.googleusercontent.com/MZFRD7NVPpsDPgaWSxLb_9rapm7FFMh2kp6nJuAUrIORQadQtlG5BQ5flovINSBW1fCohcC-mZsFQDpSNKPMEEv08at_zHVKHWiU=w1064-v0)
 
   - **Primary** & **Secondary** Item Backgrounds
     - Desaturated &rarr **200 to 50**
