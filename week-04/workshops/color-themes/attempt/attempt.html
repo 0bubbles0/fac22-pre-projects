@@ -50,11 +50,17 @@
     </article>
   </section>
 
+  <footer>
+    <p>After <a href="https://github.com/bobbysebolao/learn-css-variables">Learn CSS Variables</a> Workshop by Bobby
+      Sebolao</p>
+  </footer>
+
   <script>
     const toggleSwitch = document.querySelector(
       '.theme-switch input[type="checkbox"]'
     );
-    const body = document.getElementsByTagName('body');
+    const body = document.querySelector("body");
+    //or const body = document.documentElement;
     console.log(body);
 
     function switchTheme(e) {
