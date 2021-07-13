@@ -52,7 +52,7 @@
 ### Projects
 - [x] Dark Mode (Bobby Sebolao): <https://github.com/bobbysebolao/learn-css-variables>
 - [ ] Array Cardio 2 (JS30):
-- [ ] Flex Panels Gallery (JS30):
+- [x] Flex Panels Gallery (JS30):
 - [ ] My Portfolio Gallery &rarr; refactor
 
 ### Set JS Challenges
