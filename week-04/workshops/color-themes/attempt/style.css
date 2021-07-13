@@ -9,7 +9,7 @@ background colour
 :root {
   /* variables go here */
   --bg-colour:#fff;
-  --font-colour:#000;
+  --font-colour:#121212;
   --primary-colour:#ef476f;
   --secondary-colour:#118ab2;
 }
@@ -18,10 +18,13 @@ background colour
 
 .dark {
   /* variables go here */
-  --bg-colour:#000;
-  --font-colour:#fff;
-  --primary-colour:#118ab2;
-  --secondary-colour:#ef476f;
+  --bg-colour:#121212;
+  --font-colour: #fff;
+  --primary-colour:#f98404;
+  --primary-colour:#f8cf68;
+  --secondary-colour:#64dfdf;
+  --secondary-colour:#66bb6a;
+  --secondary-colour:#93ff98;
 }
 
 /* DO NOT EDIT CODE BELOW THIS LINE! */
@@ -106,7 +109,7 @@ footer {
 }
 
 input:checked + .slider {
-  background-color: #66bb6a;
+  background-color: #93ff98;
 }
 
 input:checked + .slider:before {
