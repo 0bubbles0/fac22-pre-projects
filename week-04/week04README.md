@@ -11,10 +11,12 @@
 
 ## Schedule
 - [x] **P**: Dark Mode
-- [ ] **P**: JS30 Panels
+- [x] **P**: JS30 Panels
+- [x] **P**: JS30 ArrayCardio2
 
-- [ ] **P**: JS30 ArrayCardio2
 - [ ] **R**: Architecture (BEM, Composition, Guidelines)
+
+
 - [ ] **R**: Responsive Design (Units, length, mobile-first)
 - [ ] **R**: Advanced (selectors, pseudo elements, underengineer radio)
 - [ ] **P**: Portfolio Gallery &rarr; refactor
@@ -51,13 +53,9 @@
 
 ### Projects
 - [x] Dark Mode (Bobby Sebolao): <https://github.com/bobbysebolao/learn-css-variables>
-- [ ] Array Cardio 2 (JS30):
+- [x] Array Cardio 2 (JS30):
 - [x] Flex Panels Gallery (JS30):
 - [ ] My Portfolio Gallery &rarr; refactor
-
-### Set JS Challenges
-- [ ] Read: understand a code block
-- [ ] Solve a task
 
 ### Research
 - [ ] **CSS Architecture**
@@ -87,6 +85,9 @@
     - What are pseudo-elements? Can you provide examples where they’re useful?
     - How might you create custom-styled checkboxes using both of the above?
 
+### Set JS Challenges
+- [ ] Read: understand a code block
+- [ ] Solve a task
 
 ### Guest Prep
 - [ ] Tom Dignan (Apolitical)

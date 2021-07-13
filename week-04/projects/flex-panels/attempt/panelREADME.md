@@ -1,24 +1,13 @@
-# Title
-
-## Content
-1. Questions
-1. Resources
-1. Learn
-1. Task
-1. Steps
-    - HTML
-    - CSS
-    - JavaScript
-1. Variation Ideas
+# Flex Panel Gallery
 
 
 ## Questions
 ## Resources
-- [ ] Video Tutorial: <https://courses.wesbos.com/account/access/60cd2fa48981fd4f947005bc/view/194130264>
-- [ ] 
+- [x] Video Tutorial: <https://courses.wesbos.com/account/access/60cd2fa48981fd4f947005bc/view/194130264>
 
 ## Learn
-
+- Flexbox: flex, flex-grow, nest, hide with Y-coordinate
+- JS: transitionend
 
 ## Steps
 
