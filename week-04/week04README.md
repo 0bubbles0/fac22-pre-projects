@@ -10,9 +10,9 @@
 ## Questions
 
 ## Schedule
-- [ ] **P**: Dark Mode
-
+- [x] **P**: Dark Mode
 - [ ] **P**: JS30 Panels
+
 - [ ] **P**: JS30 ArrayCardio2
 - [ ] **R**: Architecture (BEM, Composition, Guidelines)
 - [ ] **R**: Responsive Design (Units, length, mobile-first)
@@ -50,7 +50,7 @@
 - [ ] Twitter
 
 ### Projects
-- [ ] Dark Mode (Bobby Sebolao): <https://github.com/bobbysebolao/learn-css-variables>
+- [x] Dark Mode (Bobby Sebolao): <https://github.com/bobbysebolao/learn-css-variables>
 - [ ] Array Cardio 2 (JS30):
 - [ ] Flex Panels Gallery (JS30):
 - [ ] My Portfolio Gallery &rarr; refactor
