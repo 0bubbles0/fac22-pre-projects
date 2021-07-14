@@ -24,17 +24,23 @@
     % | based on parent
 
   - **When should you use a media query? Are they only for screen size?**
-
+    - mobile first (min), desktop first (max), or combination (cater for tablets)
+    - can make a hard break. Rather use viewport units, flexbox, grid?
+    - Other media queries:
+      `@media not|only mediatype[all/print/screen/speech] and (expressions, size, orientation:landscape) { }`
 
   - **How can mobile-first CSS make responsive styling easier?**
-
+    - take full advantage of defaults that work fine for mobile
+    - code simpler, shorter, faster performance
 
 ## Reading List
 - [x] Units: <https://every-layout.dev/rudiments/units/>
 - [x] length: <https://css-tricks.com/the-lengths-of-css/>
-- [ ] mobile-first: <https://zellwk.com/blog/how-to-write-mobile-first-css/>
+- [x] mobile-first: <https://zellwk.com/blog/how-to-write-mobile-first-css/>
 
-### Further Readings
+### Further Reading
+- Mobile-first
+  - Build responsive layouts with Susy (zellwk.com)
 
 ## Notes
 
@@ -73,7 +79,16 @@ vmin, vmax | good to find true screen, sizemin(vh, vw) or max(vh, vw)
 
 
 ### How can mobile-first CSS make responsive styling easier?
-
+- **What** is mobile-first approach
+  - in design and coding (especially CSS)
+  - code styles for mobile devices, then add/override with
+  - `@media (min-width: ...px)`
+  - vs. desktop-first approach &rarr; `@media (max-width: ...px)`
+- **Why** mobile-first
+  - **simplifies** code, because smaller screens may have simpler designs
+  - Often **default** widths etc will work fine on mobile, would have to reinstate if using desktop-first
+- **Combine** @media min & max
+  - keep code **DRY**, e.g. for tablets
 
 
 

@@ -14,11 +14,11 @@
 - [x] **P**: JS30 Panels
 - [x] **P**: JS30 ArrayCardio2
 - [x] **R**: Architecture (BEM, Composition, Guidelines)
-
-- [ ] **R**: Responsive Design (Units, length, mobile-first)
-
+- [x] **R**: Responsive Design (Units, length, mobile-first)
 
 - [ ] **R**: Advanced (selectors, pseudo elements, underengineer radio)
+
+
 - [ ] **P**: Portfolio Gallery &rarr; refactor
 - [ ] **R**: Challenges: Write & Read
 - [ ] **R**: Guest Prep
@@ -70,14 +70,18 @@
     - How can composition help us build UIs?
       - consistent layout system, component-based UI, (`.box-m {}`), primitive/reusable/responsive classes (e.g. space children vertically)
 
-- [ ] **Responsive Design**
-  - [ ] Units: <https://every-layout.dev/rudiments/units/>
-  - [ ] length: <https://css-tricks.com/the-lengths-of-css/>
-  - [ ] mobile-first: <https://zellwk.com/blog/how-to-write-mobile-first-css/>
+- [x] **Responsive Design**
+  - [x] Units: <https://every-layout.dev/rudiments/units/>
+  - [x] length: <https://css-tricks.com/the-lengths-of-css/>
+  - [x] mobile-first: <https://zellwk.com/blog/how-to-write-mobile-first-css/>
   - Questions:
     - What CSS units should we use for dimensions? What are absolute and relative units?
+      - rem (block elements), em (inline elements), ch (max-width), vw & vh (responsive spacing), vmin & vmax (find true screen size), % (based on parent)
     - When should you use a media query? Are they only for screen size?
+      - mobile (min) or desktop (max) first or combination. Can make hard break
+      - Others: `@media not|only mediatype[all/print/screen/speech] and (expressions, size, orientation:landscape) { }`
     - How can mobile-first CSS make responsive styling easier?
+      - defaults often work fine on mobiles
 
 - [ ] **Advanced CSS**
   - [ ] selectors: <https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors>
