@@ -13,11 +13,11 @@
 - [x] **P**: Dark Mode
 - [x] **P**: JS30 Panels
 - [x] **P**: JS30 ArrayCardio2
-
-- [ ] **R**: Architecture (BEM, Composition, Guidelines)
-
+- [x] **R**: Architecture (BEM, Composition, Guidelines)
 
 - [ ] **R**: Responsive Design (Units, length, mobile-first)
+
+
 - [ ] **R**: Advanced (selectors, pseudo elements, underengineer radio)
 - [ ] **P**: Portfolio Gallery &rarr; refactor
 - [ ] **R**: Challenges: Write & Read
@@ -58,14 +58,17 @@
 - [ ] My Portfolio Gallery &rarr; refactor
 
 ### Research
-- [ ] **CSS Architecture**
-  - [ ] Guidelines: <https://cssguidelin.es/>
-  - [ ] BEM: <http://getbem.com/introduction/>
-  - [ ] Composition: <https://every-layout.dev/rudiments/composition/>
+- [x] **CSS Architecture**
+  - [x] Guidelines: <https://cssguidelin.es/>
+  - [x] BEM: <http://getbem.com/introduction/>
+  - [x] Composition: <https://every-layout.dev/rudiments/composition/>
   - Questions:
-    - Why are CSS naming conventions useful?
-    - When might specificity become a problem?
+    - Why are CSS naming conventions useful? 
+      - Structure, Speed, Reusable &rarr; BEM (`.button__state--danger {}`)
+    - When might specificity become a problem? 
+      - Inconsistency, Later adjustment, collaboration, large projects
     - How can composition help us build UIs?
+      - consistent layout system, component-based UI, (`.box-m {}`), primitive/reusable/responsive classes (e.g. space children vertically)
 
 - [ ] **Responsive Design**
   - [ ] Units: <https://every-layout.dev/rudiments/units/>
