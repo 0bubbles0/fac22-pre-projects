@@ -15,13 +15,14 @@
 - [x] **P**: JS30 ArrayCardio2
 - [x] **R**: Architecture (BEM, Composition, Guidelines)
 - [x] **R**: Responsive Design (Units, length, mobile-first)
+- [x] **R**: Advanced (selectors, pseudo elements, underengineer radio)
 
-- [ ] **R**: Advanced (selectors, pseudo elements, underengineer radio)
 
-
-- [ ] **P**: Portfolio Gallery &rarr; refactor
-- [ ] **R**: Challenges: Write & Read
 - [ ] **R**: Guest Prep
+
+
+- [ ] **R**: Challenges: Write & Read
+- [ ] **P**: Portfolio Gallery &rarr; refactor
 
 ## Summary & Sessions
 
@@ -80,17 +81,28 @@
     - When should you use a media query? Are they only for screen size?
       - mobile (min) or desktop (max) first or combination. Can make hard break
       - Others: `@media not|only mediatype[all/print/screen/speech] and (expressions, size, orientation:landscape) { }`
+        - high-contrast
     - How can mobile-first CSS make responsive styling easier?
       - defaults often work fine on mobiles
 
-- [ ] **Advanced CSS**
-  - [ ] selectors: <https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors>
-  - [ ] pseudo elements: <https://css-tricks.com/pseudo-element-roundup/>
-  - [ ] underenginerr radio: <https://adrianroselli.com/2017/05/under-engineered-custom-radio-buttons-and-checkboxen.html>
+- [x] **Advanced CSS**
+  - [x] selectors: <https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors>
+  - [x] pseudo elements: <https://css-tricks.com/pseudo-element-roundup/>
+  - [x] underenginerr radio: <https://adrianroselli.com/2017/05/under-engineered-custom-radio-buttons-and-checkboxen.html>
   - Questions:
     - What are “combinator” selectors? Can you provide examples where they’re useful?
+      - Descendants any/direct (`header p`, `header > p`), Siblings any/adjacent (`h3 ~ p`, `h3 + p`)
+      - Describe relationship/context of selected elements
     - What are pseudo-elements? Can you provide examples where they’re useful?
+      - ::before, ::after, ::first-line, ::first-letter, ::selection
+      - items not in HTML (non-semantic), design-only
+      - e.g. layers, shapes, (list) icons, 3D, gleaming button, fade-out, print-only, labels
     - How might you create custom-styled checkboxes using both of the above?
+      - HTML: `<input type="checkbox"><label>Agree</label>`
+      - visually hide `input[type=checkbox] { clip: }`
+      - `input[type=checkbox] + label::before { content:''; transition: }`
+      - `input[type=checkbox] + label::after { content:''; transform: rotate(0deg); transition:}`
+      - `input[type=radio]:checked + label::after { transform: rotate(45deg) }`
 
 ### Set JS Challenges
 - [ ] Read: understand a code block
