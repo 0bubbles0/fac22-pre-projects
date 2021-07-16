@@ -16,13 +16,9 @@
 - [x] **R**: Architecture (BEM, Composition, Guidelines)
 - [x] **R**: Responsive Design (Units, length, mobile-first)
 - [x] **R**: Advanced (selectors, pseudo elements, underengineer radio)
-
-
-- [ ] **R**: Guest Prep
-
-
-- [ ] **R**: Challenges: Write & Read
-- [ ] **P**: Portfolio Gallery &rarr; refactor
+- [x] **R**: Guest Prep
+- [x] **R**: Challenges: Write & Read
+- [x] **P**: Portfolio Gallery &rarr; refactor
 
 ## Summary & Sessions
 
@@ -105,11 +101,11 @@
       - `input[type=radio]:checked + label::after { transform: rotate(45deg) }`
 
 ### Set JS Challenges
-- [ ] Read: understand a code block
-- [ ] Solve a task
+- [x] Read: understand a code block
+- [x] Solve a task
 
 ### Guest Prep
-- [ ] Tom Dignan (Apolitical)
-- [ ] Siebe Van Dijck (This is Undefined)
-  - [ ] Research: website/blog, team, social media
-  - [ ] Prep Questions
+- [x] Tom Dignan (Apolitical)
+- [x] Siebe Van Dijck (This is Undefined)
+  - [x] Research: website/blog, team, social media
+  - [x] Prep Questions
