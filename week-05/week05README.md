@@ -55,10 +55,10 @@
 
 - **Acceptance Criteria**
   - [ ] Navigation menu
-  - [ ] ‘About us’ section
-  - [ ] Images, text and external links
+  - [x] ‘About us’ section
+  - [x] Images, text and external links
   - [ ] Semantic HTML elements
-  - [ ] Stretch Goal: Use the automatic trigger functionality of your GitHub project board.
+  - [x] Stretch Goal: Use the automatic trigger functionality of your GitHub project board.
 
 
 #### Background Prep
@@ -72,15 +72,15 @@
 - [x] **Task**: 
   - [x] Understand tasks
   - [x] distribute with A
-- [ ] **Set up**:
-  - [ ] clone repo locally
-  - [ ] file structure?
-  - [ ] Start GitHub Project board, Issues?
-- [ ] **Gather Content**:
-  - [ ] Topics: cartoon characters?
-  - [ ] Text
-  - [ ] img
-  - [ ] links
+- [x] **Set up**:
+  - [x] clone repo locally
+  - [x] file structure?
+  - [x] Start GitHub Project board, Issues?
+- [x] **Gather Content**:
+  - [x] Topics: cartoon characters?
+  - [x] Text
+  - [x] img
+  - [x] links
 - [ ] **Plan Page**:
   - [ ] Content
   - [ ] *HTML* Structure &rarr; semantic
