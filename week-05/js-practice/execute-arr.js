@@ -20,8 +20,23 @@ function eql(arr1, arr2) {
 /*
 console.log(eql([], [1]));
 console.log(eql(['a', 'b', 'c'], ['a', 'x', 'c']));
-*/
 
 let sliceTest = [0, 1, 2, 3, 4];
 sliceTest.slice();
 console.log(sliceTest);
+*/
+
+
+function uniq(arr) {
+  let newArr = [];
+  arr.forEach(item => {
+    if (!newArr.includes(item)) {
+      newArr.push(item);
+    }
+  });
+  return newArr;
+}
+
+console.log(uniq([1, 2, 3]), "Expect [1, 2, 3]");
+console.log(uniq(['a', 'a', 'b']), "Expect ['a', 'b']");
+console.log(uniq([1, 1, 1, 1]), "Expect [1]");
