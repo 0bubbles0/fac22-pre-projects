@@ -4,8 +4,9 @@
 
 
 
+- URL
+![Coolors](https://coolors.co/000000-14213d-fca311-e5e5e5-ffffff){: width=150 height=100}
 
-![Coolors](https://coolors.co/000000-14213d-fca311-e5e5e5-ffffff)
 
-
-![Bright](./palettes/bright.png)
+- Local
+![Bright](/palettes/bright.png){: width=150 height=100}
