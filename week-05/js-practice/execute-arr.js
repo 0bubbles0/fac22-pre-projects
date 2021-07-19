@@ -37,6 +37,10 @@ function uniq(arr) {
   return newArr;
 }
 
+/*
 console.log(uniq([1, 2, 3]), "Expect [1, 2, 3]");
 console.log(uniq(['a', 'a', 'b']), "Expect ['a', 'b']");
 console.log(uniq([1, 1, 1, 1]), "Expect [1]");
+*/
+
+console.log(new Array(1000)[0]);

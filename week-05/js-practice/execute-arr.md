@@ -4,6 +4,7 @@
 - `arr.pop();` &rarr; returns the removed element
 - `arr.slice(2);` &rarr; returns copies in new arr, from begin index, empty if begin index is not in arr. No (arg) &rarr; slice whole arr. Doesn't change original arr 
   - negative values count from back
+- `arr.join()`&rarr; `,` is default. `null` & `undefined` turn to ''
 - concat: returns new arr, doesn't change original
   - arr1 + arr2 &rarr; will convert both arr to str first! &rarr; `[1, 2] + [3]; // '1,23'`
     ```javascript
@@ -11,6 +12,14 @@
       [1, 2].concat([3, 4]); // [1, 2, 3, 4]
     ```
 - includes &rarr; `['a', 'b'].includes('a'); // true`
+- **Empty** slots:
+  - `new Array(1)[0]; // undefined`
+  - `0 in ['a']; // true` or [undefined]
+  - `0 in new Array(1).fill('a');; // true` or (undefined)
+  - `0 in new Array(1); // false`
+  - `(new Array(1)).length;; // 1`
+  - replacing elements past the end of an array causes the array to grow
+  - but *better* use use new Array with fill
 - `[1, 2].fill(3); //[3, 3]` overwrites each value, returns arr
   - create an array and immediately fill (otherwise this array would be undefined) &rarr; `new Array(3).fill('d'); // ['d', 'd', 'd']` 
   - e.g. dynamically create x items for *progress bar*
@@ -76,6 +85,14 @@
 | 18. | Arrays are objects | Jul 18, So |
 | 19. | Map | Jul 18, So |
 | 20. | Square | Jul 18, So |
+
+| 21. | Index of| Jul 19, Mo |
+| 22. | Join | Jul 19, Mo |
+| 23. | Filter | Jul 19, Mo|
+| 24. | Implement filter with forEach | Jul 19, Mo|
+| 25. | Even numbers | Jul 19, Mo|
+| 26. | Implement compact | Jul 19, Mo|
+| 27. | Empty slots | Jul 19, Mo|
 
 <!--
 | | | |
