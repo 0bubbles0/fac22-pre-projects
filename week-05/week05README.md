@@ -17,7 +17,7 @@
 - [ ] **P**: JS30: 14 Tool Tips
 - [ ] **P**: JS30: Multiple Checkboxes
 - [ ] **P**: Portfolio refactor
-- [ ] **R**: Challenges: Read & Write
+- [ ] **R**: Challenges: Create GitHub repo, Read & Write
 - [ ] **R**: Guest Prep
 
 ## Summary & Sessions
@@ -120,7 +120,7 @@
 
 ### Set JS Challenges
 - [ ] Source: material/algorithm from *Execute*, *Khan Academy*
-
+- [x] Create GitHub Repo for these
 - [ ] Read: understand a code block
 - [ ] Solve a task
 

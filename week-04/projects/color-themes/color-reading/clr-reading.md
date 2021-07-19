@@ -5,8 +5,9 @@
   - [ ] Instagram Series: <https://www.instagram.com/p/BxpT3UKAmsJ/> 
 - [x] Google Material Guidelines: <https://material.io/design/color/dark-theme.html>
   - [x] Palette Generator: <https://material.io/design/color/the-color-system.html#tools-for-picking-colors> 
-
-
+- [ ] A11y Palette Generator: <http://colorsafe.co/>
+- [ ] Contrast checker: <https://contrastchecker.com/>
+- [ ] A11y checker of palettes: <https://toolness.github.io/accessible-color-matrix/>
 
 ## Ultimate Guide
 ### Design
