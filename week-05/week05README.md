@@ -15,10 +15,11 @@
 - [x] **R**: Prettier
 - [x] **R**: ESLint
 
-- [ ] **P**: Collab Agency
-
 - [ ] **P**: JS30: 14 Tool Tips
 - [ ] **P**: JS30: Multiple Checkboxes
+
+- [ ] **P**: Collab Agency
+
 - [ ] **P**: Portfolio refactor
 - [ ] **R**: Challenges: Create GitHub repo, Read & Write
 - [ ] **R**: Guest Prep
