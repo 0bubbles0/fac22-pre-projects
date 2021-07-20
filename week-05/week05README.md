@@ -14,8 +14,8 @@
 
 - [x] **R**: Prettier
 - [x] **R**: ESLint
+- [x] **P**: JS30: 14 Tool Tips
 
-- [ ] **P**: JS30: 14 Tool Tips
 - [ ] **P**: JS30: Multiple Checkboxes
 
 - [ ] **P**: Collab Agency
@@ -126,6 +126,7 @@
   - [x] Read:
     - [x] <https://eslint.org/docs/about/>
     - [x] <https://eslint.org/docs/user-guide/getting-started>
+    - [x] All Rules<https://eslint.org/docs/rules/>
   - [x] Download
         `$ npm install eslint --save-dev`
         `$ npm init` &rarr; make package.json file
@@ -135,6 +136,7 @@
         `$ npx eslint yourfile.js` &rarr; run ESLint on yourfile
 
 - [x] **Questions**
+
   - **Checking our code**: What different ways can we make sure our code is consistent?
     - Formatting: indentation (tab width), quotation ("" or ''), semicolons, line-breaks, trailing comma &rarr; **Prettier Ext**
   - What is **Prettier**? How might it **help** us write better code?
@@ -145,10 +147,13 @@
     - JS parsing with Espress, AST, pluggable &rarr; evaluates code patterns. Can help with consistency, bugs by showing warning/errors for syntax, and own linting rules
     - Prereqs: Node.js(^10.12.0, or >=12.0.0) with SSL support
 
+- [ ] **Further Reading**
+  - [ ] Setting up efficient Prettier in ESLint: <https://indepth.dev/posts/1282/setting-up-efficient-workflows-with-eslint-prettier-and-typescript>
+
 ### Projects: Own
 
-- [ ] 14 Dev Tool Tips (JS30)
-- [ ] Multiple Checkboxes (JS30)
+- [x] 14 Dev Tool Tips (JS30): 11 Min
+- [ ] Multiple Checkboxes (JS30): 11 Min
 - [ ] My Portfolio Gallery &rarr; refactor
 
 ### Set JS Challenges
