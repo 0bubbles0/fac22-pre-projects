@@ -7,7 +7,7 @@ function eql(arr1, arr2) {
   let isEqual = true;
   if (arr1.length < arr2.length) {
     isEqual = false;
-  };
+  }
   arr1.forEach((element, index) => {
     console.log(element, index, arr2[index]);
     if (element !== arr2[index]) {
@@ -25,7 +25,6 @@ let sliceTest = [0, 1, 2, 3, 4];
 sliceTest.slice();
 console.log(sliceTest);
 */
-
 
 function uniq(arr) {
   let newArr = [];
