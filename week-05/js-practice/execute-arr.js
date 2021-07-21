@@ -28,7 +28,7 @@ console.log(sliceTest);
 
 function uniq(arr) {
   let newArr = [];
-  arr.forEach(item => {
+  arr.forEach((item) => {
     if (!newArr.includes(item)) {
       newArr.push(item);
     }
@@ -59,7 +59,7 @@ function allTrue(values) {
 // Remember to pass an initial value of [] as reduce's second argument.
 
 // console.log(filter([1, 2, 3], num => num >= 0)); // Expected: [1, 2, 3]
-console.log(filter([1, 2, 3], num => num > 1)); // Expected: [2, 3]
+console.log(filter([1, 2, 3], (num) => num > 1)); // Expected: [2, 3]
 // console.log(filter([1, 2, 3], num => num > 5)); // Expected: []
 // console.log(filter([null, undefined], num => true)); // Expected: [null, undefined]
 // console.log(filter([], num => true)); // Expected: []
