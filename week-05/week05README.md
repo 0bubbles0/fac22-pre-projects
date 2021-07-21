@@ -113,13 +113,13 @@
 
     - E.g. `.prettierrc.json` or .js, .yml, .yaml., .toml
 
-    ```javascript
-      {
-        "trailingComma": "es5",
-        "tabWidth": 2,
-        "semi": false,
-        "singleQuote": true
-      }
+    ```json
+    {
+      "trailingComma": "es5",
+      "tabWidth": 2,
+      "semi": false,
+      "singleQuote": true
+    }
     ```
 
 - [x] **ESLint**
@@ -131,13 +131,17 @@
     - [x] Configuring: <https://eslint.org/docs/user-guide/configuring/>
     - [x] Wesbos GitHub: <https://github.com/wesbos/eslint-config-wesbos>
     - [x] WesBos YouTube Tutorial ESLint & Prettier: <https://www.youtube.com/watch?v=lHAeK8t94as>
-  - [x] Download
+    - [x] Make package.json file with $ npm init: <https://nodesource.com/blog/the-basics-of-package-json-in-node-js-and-npm/>
+  - [x] Set up in a project:
         `$ npm install eslint --save-dev`
         `$ npm init` &rarr; make package.json file
         `$ npx eslint --init` &rarr; set up config file
         `.eslintrc.{js,yml,json}`
         `javascript { "rules": { "semi": ["error", "always"], "quotes": ["error", "double"] } } ` &rarr; "error", "warn" or "off" OR 2, 1, 0
-        `$ npx eslint yourfile.js` &rarr; run ESLint on yourfile
+        `$ npx eslint yourfile.js` &rarr; run ESLint on yourfile - Perhaps: need to install prettier in project &rarr; `$ npm i prettier`
+
+    - Müll:
+      package.json &rarr; //"main": "eslint-sugg.js",
 
 - [x] **Questions**
 

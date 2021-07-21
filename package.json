@@ -1,0 +1,33 @@
+{
+  "name": "fac22-pre-projects",
+  "version": "1.0.0",
+  "description": "FaC 22 Pre-Apprenticeships Projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "\"standard\"",
+    "eslint": "npx eslint index.js",
+    "prettier": "npx prettier --check ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0bubbles0/fac22-pre-projects.git"
+  },
+  "keywords": [
+    "fac22",
+    "html5",
+    "css",
+    "es6",
+    "front-end",
+    "web-development"
+  ],
+  "author": "0bubbles0",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/0bubbles0/fac22-pre-projects/issues"
+  },
+  "homepage": "https://github.com/0bubbles0/fac22-pre-projects#readme",
+  "devDependencies": {
+    "eslint": "^7.31.0",
+    "prettier": "^2.3.2"
+  }
+}
