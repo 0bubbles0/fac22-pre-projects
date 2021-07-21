@@ -15,8 +15,7 @@
 - [x] **R**: Prettier
 - [x] **R**: ESLint
 - [x] **P**: JS30: 14 Tool Tips
-
-- [ ] **P**: JS30: Multiple Checkboxes
+- [x] **P**: JS30: Multiple Checkboxes
 
 - [ ] **P**: Collab Agency
 
@@ -27,6 +26,8 @@
 ## Summary & Sessions
 
 ## Additional Readings:
+
+- Keybinding to Comment out several lines of code in one go: Ctrl+K+C / Ctrl+K+U
 
 ## Homework
 
@@ -54,20 +55,20 @@
   1. As a potential **client**, I want to:
 
   - [x] **B** See information about each member of your team so that I can know who you are (E1)
-  - [ ] Browse your website on mobile, tablet, and desktop devices (E3)
+  - [x] Browse your website on mobile, tablet, and desktop devices (E3)
   - [x] Click to navigate to different sections of your webpage (E1)
   - [x] **B** Visit your website at a publicly accessible domain name (E2)
 
   2. Additionally, as a **visually** impaired user, I want to:
 
   - [x] **B** Navigate your website using keyboard controls (E2)
-  - [ ] Hear my screen reader describe the content on your website (E1)
+  - [x] Hear my screen reader describe the content on your website (E1)
 
 - **Acceptance Criteria**
   - [x] Navigation menu
   - [x] ‘About us’ section
   - [x] Images, text and external links
-  - [ ] Semantic HTML elements
+  - [x] Semantic HTML elements
   - [x] Stretch Goal: Use the automatic trigger functionality of your GitHub project board.
 
 #### Background Prep
@@ -153,7 +154,7 @@
 ### Projects: Own
 
 - [x] 14 Dev Tool Tips (JS30): 11 Min
-- [ ] Multiple Checkboxes (JS30): 11 Min
+- [x] Multiple Checkboxes (JS30): 11 Min
 - [ ] My Portfolio Gallery &rarr; refactor
 
 ### Set JS Challenges

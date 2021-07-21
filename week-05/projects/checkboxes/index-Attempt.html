@@ -1,101 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Hold Shift to Check Multiple Checkboxes</title>
-</head>
-<body>
-  <style>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hold Shift to Check Multiple Checkboxes</title>
+    <!--   <script defer src="script.js"></script> -->
+  </head>
+  <body>
+    <style>
+      html {
+        font-family: sans-serif;
+        background: #ffc600;
+      }
 
-    html {
-      font-family: sans-serif;
-      background: #ffc600;
-    }
+      .inbox {
+        max-width: 400px;
+        margin: 50px auto;
+        background: white;
+        border-radius: 5px;
+        box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1);
+      }
 
-    .inbox {
-      max-width: 400px;
-      margin: 50px auto;
-      background: white;
-      border-radius: 5px;
-      box-shadow: 10px 10px 0 rgba(0,0,0,0.1);
-    }
+      .item {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #f1f1f1;
+      }
 
-    .item {
-      display: flex;
-      align-items: center;
-      border-bottom: 1px solid #F1F1F1;
-    }
+      .item:last-child {
+        border-bottom: 0;
+      }
 
-    .item:last-child {
-      border-bottom: 0;
-    }
+      input:checked + p {
+        background: #f9f9f9;
+        text-decoration: line-through;
+      }
 
-    input:checked + p {
-      background: #F9F9F9;
-      text-decoration: line-through;
-    }
+      input[type='checkbox'] {
+        margin: 20px;
+      }
 
-    input[type="checkbox"] {
-      margin: 20px;
-    }
-
-    p {
-      margin: 0;
-      padding: 20px;
-      transition: background 0.2s;
-      flex: 1;
-      font-family:'helvetica neue';
-      font-size: 20px;
-      font-weight: 200;
-      border-left: 1px solid #D1E2FF;
-    }
-  </style>
-   <!--
+      p {
+        margin: 0;
+        padding: 20px;
+        transition: background 0.2s;
+        flex: 1;
+        font-family: 'helvetica neue';
+        font-size: 20px;
+        font-weight: 200;
+        border-left: 1px solid #d1e2ff;
+      }
+    </style>
+    <!--
    The following is a common layout you would see in an email client.
 
    When a user clicks a checkbox, holds Shift, and then clicks another checkbox a few rows down, all the checkboxes inbetween those two checkboxes should be checked.
 
   -->
-  <div class="inbox">
-    <div class="item">
-      <input type="checkbox">
-      <p>This is an inbox layout.</p>
+    <div class="inbox">
+      <div class="item">
+        <input type="checkbox" />
+        <p>This is an inbox layout.</p>
+      </div>
+      <div class="item">
+        <input type="checkbox" />
+        <p>Check one item</p>
+      </div>
+      <div class="item">
+        <input type="checkbox" />
+        <p>Hold down your Shift key</p>
+      </div>
+      <div class="item">
+        <input type="checkbox" />
+        <p>Check a lower item</p>
+      </div>
+      <div class="item">
+        <input type="checkbox" />
+        <p>Everything in between should also be set to checked</p>
+      </div>
+      <div class="item">
+        <input type="checkbox" />
+        <p>Try to do it without any libraries</p>
+      </div>
+      <div class="item">
+        <input type="checkbox" />
+        <p>Just regular JavaScript</p>
+      </div>
+      <div class="item">
+        <input type="checkbox" />
+        <p>Good Luck!</p>
+      </div>
+      <div class="item">
+        <input type="checkbox" />
+        <p>Don't forget to tweet your result!</p>
+      </div>
     </div>
-    <div class="item">
-      <input type="checkbox">
-      <p>Check one item</p>
-    </div>
-    <div class="item">
-      <input type="checkbox">
-      <p>Hold down your Shift key</p>
-    </div>
-    <div class="item">
-      <input type="checkbox">
-      <p>Check a lower item</p>
-    </div>
-    <div class="item">
-      <input type="checkbox">
-      <p>Everything in between should also be set to checked</p>
-    </div>
-    <div class="item">
-      <input type="checkbox">
-      <p>Try to do it without any libraries</p>
-    </div>
-    <div class="item">
-      <input type="checkbox">
-      <p>Just regular JavaScript</p>
-    </div>
-    <div class="item">
-      <input type="checkbox">
-      <p>Good Luck!</p>
-    </div>
-    <div class="item">
-      <input type="checkbox">
-      <p>Don't forget to tweet your result!</p>
-    </div>
-  </div>
 
-<script>
-</script>
-</body>
+    <script>
+      // console.log('Hello');
+
+      // make array [input type="checkbox"]
+      const allCheckboxes = Array.from(
+        document.querySelectorAll('.inbox input[type="checkbox"]')
+      );
+      console.log(allCheckboxes);
+
+      // recognise shift keys --> e.shiftKey === true
+      //Format: data-key="71"
+      //event.key = Shift
+      // event.location = 1 or 2
+      // event.which = 16
+      // event.code = ShiftLeft or ShiftRight
+      // e.keyCode == '44'
+      // KeyboardEvent.shiftKey true or false
+
+      /*function:
+       */
+      // if shift was pressed
+      //find all checked (& their index)
+
+      // if (number of checked >== 1 or === 2)
+      // find index of first&last checked checkbox
+      // if one shift=no, two shift=yes
+      //on shift-release
+      // check all checkboxes with indexes between --> slice?
+
+      function shiftBox(e) {
+        // console.log(e.target.checked);
+        //if shift pressed
+        // console.log(e.keyCode);
+        if (e.shiftKey) {
+          const box = e.target;
+          if (box.checked) {
+            // console.log('this is checked');
+            //find all checked (& their index)
+            const allCheckedIx = allCheckboxes
+              .filter(a => a.checked)
+              .map(a => allCheckboxes.indexOf(a));
+            // console.log(allCheckedIx);
+            //if allChecked >1
+            if (allCheckedIx.length > 1) {
+              // console.log('magic');
+              //know range: allChecked first & last item
+              const rangeA = allCheckedIx[0];
+              const rangeZ = allCheckedIx[allCheckedIx.length - 1];
+              console.log(`range is ${rangeA} to ${rangeZ}`);
+              //tick each in range
+              for (let i = rangeA; i <= rangeZ; i++) {
+                allCheckboxes[i].checked = true;
+              }
+            }
+          }
+        }
+      }
+
+      function shiftBox2(e) {
+        if (e.shiftKey && e.target.checked) {
+          const allCheckedIx = allCheckboxes
+            .filter(a => a.checked)
+            .map(a => allCheckboxes.indexOf(a));
+          if (allCheckedIx.length > 1) {
+            const rangeA = allCheckedIx[0];
+            const rangeZ = allCheckedIx[allCheckedIx.length - 1];
+            for (let i = rangeA; i <= rangeZ; i++) {
+              allCheckboxes[i].checked = true;
+            }
+          }
+        }
+      }
+
+      let lastChecked;
+      function handleCheck(e) {
+        //Check if shift down
+        // & Check that we are checking it
+        let inBetween = false; //flag variable
+        if (e.shiftKey && this.checked) {
+          //magic: loop all checkboxes --> know first & last checked. More robust than relying on HTML
+          allCheckboxes.forEach(box => {
+            console.log(box);
+            if (box === this || box === lastChecked) {
+              inBetween = !inBetween; //turn it on
+            }
+
+            if (inBetween) {
+              box.checked = true; //this line is reached by lastChecked
+            }
+          });
+        }
+        lastChecked = this;
+      }
+
+      //checkbox.forEach addEventListener ("check", function)
+      allCheckboxes.forEach(item => item.addEventListener('click', shiftBox2));
+
+      /*Müll
+      // const allCheckboxes = Array.from(document.querySelectorAll('input'));
+      // console.log(allCheckboxes);
+        // make array [.item] together or separate?
+        // const allCheckedIx2 = allCheckboxes.filter((a, index) => {
+          // console.log(a.checked);
+          // if (a.checked) {
+            // console.log(index);
+            // console.log(allCheckboxes.indexOf(a));
+            // return index;
+            // }
+            // });
+            
+            
+            //eventListener shift-start
+            document.addEventListener('keypress', e => {
+              console.log('touch');
+              console.log(e);
+            });
+            */
+    </script>
+  </body>
 </html>
