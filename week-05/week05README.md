@@ -128,6 +128,9 @@
     - [x] <https://eslint.org/docs/about/>
     - [x] <https://eslint.org/docs/user-guide/getting-started>
     - [x] All Rules<https://eslint.org/docs/rules/>
+    - [x] Configuring: <https://eslint.org/docs/user-guide/configuring/>
+    - [x] Wesbos GitHub: <https://github.com/wesbos/eslint-config-wesbos>
+    - [x] WesBos YouTube Tutorial ESLint & Prettier: <https://www.youtube.com/watch?v=lHAeK8t94as>
   - [x] Download
         `$ npm install eslint --save-dev`
         `$ npm init` &rarr; make package.json file
@@ -141,11 +144,13 @@
   - **Checking our code**: What different ways can we make sure our code is consistent?
     - Formatting: indentation (tab width), quotation ("" or ''), semicolons, line-breaks, trailing comma &rarr; **Prettier Ext**
   - What is **Prettier**? How might it **help** us write better code?
-    - auto-formatter: can automatically do "", (), indentations ... on save
+    - auto-**formatter**: can automatically do "", (), indentations ... on save
     - don't need to waste time fixing these things
     - consistent formatting rules across collaboration projects
   - How can a **linter** help us avoid **bugs**?
-    - JS parsing with Espress, AST, pluggable &rarr; evaluates code patterns. Can help with consistency, bugs by showing warning/errors for syntax, and own linting rules
+    - JS parsing with Espress, AST, pluggable &rarr; evaluates code patterns.
+    - Can help with consistency, bugs by showing warning/errors for syntax, and own linting rules
+    - gives feedback on my **code quality**
     - Prereqs: Node.js(^10.12.0, or >=12.0.0) with SSL support
 
 - [ ] **Further Reading**
