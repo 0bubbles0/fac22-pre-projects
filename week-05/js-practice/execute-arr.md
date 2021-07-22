@@ -54,6 +54,7 @@
   - `arr.some(f)` & `arr.every()` &rarr; returns true or false. [].some(f) //false, .every //true
     - `!arr.some(f)` &rarr; none
   - sort &rarr; changes & returns original array
+
     - if sorted in new arr &rarr; arr.slice().sort()
     - .sort() turns items into str & compares &rarr; "200" < "3"
     - custom f for numbers &rarr; .sort(f)
@@ -63,6 +64,7 @@
       - words: f(a,b) {(a>b)? 1; -1} // abc < bc &rarr; moves item back/forth in arr
       - by arr.length: {a.length - b.length}
       - by property: arr.sort((a, b) => {return a.age - b.age;}).map(item => item.name)
+
   - `arr.reduce((acc, x) => acc + x, 0)` &rarr; acc is accumulator
 
     - can store intermediate Sums in help-arr:
@@ -114,36 +116,46 @@
 |  9. | Slice              | Jul 16, Fr |
 | 10. | Copy array         | Jul 16, Fr |
 
-| 11. | Get first element | Jul 18, So |
+|   # | Lesson              | Date       |
+| --: | ------------------- | ---------- |
+| 11. | Get first element   | Jul 18, So |
 | 12. | Slice with negative | Jul 18, So |
-| 13. | Concat | Jul 18, So |
-| 14. | Includes | Jul 18, So |
-| 15. | Implement uniq | Jul 18, So |
-| 16. | New and fill | Jul 18, So |
-| 17. | Fill dynamically | Jul 18, So |
-| 18. | Arrays are objects | Jul 18, So |
-| 19. | Map | Jul 18, So |
-| 20. | Square | Jul 18, So |
+| 13. | Concat              | Jul 18, So |
+| 14. | Includes            | Jul 18, So |
+| 15. | Implement uniq      | Jul 18, So |
+| 16. | New and fill        | Jul 18, So |
+| 17. | Fill dynamically    | Jul 18, So |
+| 18. | Arrays are objects  | Jul 18, So |
+| 19. | Map                 | Jul 18, So |
+| 20. | Square              | Jul 18, So |
 
-| 21. | Index of| Jul 19, Mo |
-| 22. | Join | Jul 19, Mo |
-| 23. | Filter | Jul 19, Mo|
-| 24. | Implement filter with forEach | Jul 19, Mo|
-| 25. | Even numbers | Jul 19, Mo|
-| 26. | Implement compact | Jul 19, Mo|
-| 27. | Empty slots | Jul 19, Mo|
+|   # | Lesson                        | Date       |
+| --: | ----------------------------- | ---------- |
+| 21. | Index of                      | Jul 19, Mo |
+| 22. | Join                          | Jul 19, Mo |
+| 23. | Filter                        | Jul 19, Mo |
+| 24. | Implement filter with forEach | Jul 19, Mo |
+| 25. | Even numbers                  | Jul 19, Mo |
+| 26. | Implement compact             | Jul 19, Mo |
+| 27. | Empty slots                   | Jul 19, Mo |
 
-| 28. | Some and every | Jul 21, Wed|
-| 29. | Implement none | Jul 21, Wed|
-| 30. | Has null | Jul 21, Wed|
-| 31. | Sort | Jul 21, Wed|
-| 32. | Sort by word length | Jul 21, Wed|
-| 33. | Reduce | Jul 21, Wed|
-| 34. | Sum squared odds | Jul 21, Wed|
-| 35. | All true | Jul 21, Wed|
+|   # | Lesson              | Date        |
+| --: | ------------------- | ----------- |
+| 28. | Some and every      | Jul 21, Wed |
+| 29. | Implement none      | Jul 21, Wed |
+| 30. | Has null            | Jul 21, Wed |
+| 31. | Sort                | Jul 21, Wed |
+| 32. | Sort by word length | Jul 21, Wed |
+| 33. | Reduce              | Jul 21, Wed |
+| 34. | Sum squared odds    | Jul 21, Wed |
+| 35. | All true            | Jul 21, Wed |
 
-| 36. | | Jul |
-| 37. | | Jul |
+|   # | Lesson                       | Date        |
+| --: | ---------------------------- | ----------- |
+| 36. | Implement Filter With Reduce | Jul 22, Thu |
+| 37. | Implement Join               | Jul 22, Thu |
+| 38. |                              | Jul 22, Thu |
+| 39. |                              | Jul         |
 
 <!--
 | | | |

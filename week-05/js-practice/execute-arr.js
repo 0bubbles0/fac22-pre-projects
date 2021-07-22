@@ -58,20 +58,56 @@ function allTrue(values) {
 // Remember to return acc inside your reduce callback.
 // Remember to pass an initial value of [] as reduce's second argument.
 
-// console.log(filter([1, 2, 3], num => num >= 0)); // Expected: [1, 2, 3]
-console.log(filter([1, 2, 3], (num) => num > 1)); // Expected: [2, 3]
+// console.log(filter([1, 2, 3], (num) => num >= 0)); // Expected: [1, 2, 3]
+//console.log(filter([1, 2, 3], (num) => num > 1)); // Expected: [2, 3]
 // console.log(filter([1, 2, 3], num => num > 5)); // Expected: []
 // console.log(filter([null, undefined], num => true)); // Expected: [null, undefined]
-// console.log(filter([], num => true)); // Expected: []
+// console.log(filter([], (num) => true)); // Expected: []
 //console.log(filter.toString().includes('reduce')); // You must use reduce.
 
 function filter(arr, callback) {
   return arr.reduce((acc, current) => {
+    // console.log(acc);
+    // console.log(typeof acc);
     console.log(callback(current));
     if (callback(current)) {
-      console.log('accept', current);
+      // console.log('make' + acc + current);
       return acc.concat(current);
-      // acc.push(current);
     }
+    return acc;
   }, []);
+}
+
+// Using reduce, write a function that behaves like join.
+// Joining [] should produce ''
+function join1(arr, separator) {
+  return arr.reduce((acc, x) => acc.concat(x, separator), '');
+}
+
+// console.log(join(['a'], ','), 'want "a"'); //
+// console.log(join(['a', 'b'], ','), 'want "a,b"'); //
+// console.log(join(['a', 'b', 'c'], ''), 'want "abc"'); //
+// console.log(join(['a', 'b', 'c', 'd'], 'x'), 'want "axbxcxd"'); //
+// console.log(join(['a', 'b'], 'COMMA'), 'want "aCOMMAb"'); //
+console.log(join(['', '', ''], ','), 'want ",,"'); //
+// console.log(join([], ','), 'want ""'); //
+
+function join(arr, separator) {
+  return arr.reduce((acc, x, index) => {
+    console.log(acc);
+    if (index === 0) {
+      return acc + x;
+    }
+    return acc + separator + x;
+  }, '');
+}
+
+//SOLUTION
+function joinSolution(arr, separator) {
+  if (arr.length === 0) {
+    return '';
+  }
+  return arr.reduce((acc, current) => {
+    return acc + separator + current;
+  });
 }
