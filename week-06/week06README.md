@@ -22,9 +22,9 @@
 
 ## Schedule
 
-- [ ]
-- [ ]
-- [ ]
+- [ ] **P**:
+- [ ] **R**:
+- [ ] **W**:
 
 ## Summary & Sessions
 
