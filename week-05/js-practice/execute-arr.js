@@ -89,7 +89,7 @@ function join1(arr, separator) {
 // console.log(join(['a', 'b', 'c'], ''), 'want "abc"'); //
 // console.log(join(['a', 'b', 'c', 'd'], 'x'), 'want "axbxcxd"'); //
 // console.log(join(['a', 'b'], 'COMMA'), 'want "aCOMMAb"'); //
-console.log(join(['', '', ''], ','), 'want ",,"'); //
+// console.log(join(['', '', ''], ','), 'want ",,"'); //
 // console.log(join([], ','), 'want ""'); //
 
 function join(arr, separator) {
@@ -110,4 +110,15 @@ function joinSolution(arr, separator) {
   return arr.reduce((acc, current) => {
     return acc + separator + current;
   });
+}
+
+//Write the function reverse using reduceRight.
+//A hint: use concat in your reduce callback function.
+console.log(reverse([1]), 'want [1]');
+console.log(reverse([1, 2, 3, 4, 5]), 'want [5, 4, 3, 2, 1]');
+console.log(reverse(['a', 'b', 'c']), 'want ["c", "b", "a"]');
+console.log(reverse([]), 'want []');
+
+function reverse(arr) {
+  return arr.reduceRight((acc, x) => acc.concat(x), []);
 }
