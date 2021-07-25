@@ -22,6 +22,7 @@
   - `arr.indexOf('b')`
   - `arr.findIndex((val, val's index, whole arr)=>)` &rarr; can nest function, more nuanced/flexible item-description
     - can customise start-index for search, here after 2nd element: `arr.findIndex((elem, index) => index > 1 && elem === 'a');`
+  - `arr.find( =>)` &rarr; returns 1st matching value
 
 ## Special
 
@@ -46,6 +47,10 @@
   const arr = ['a', 'b', 'c'];
   arr.five = 5; //adds five: 5 to arr, but arr.length remains 3
   ```
+
+  - `arr[-1] = 'd';` &rarr; assigns `'-1'='d'` key-value pair to arr
+    - will show up in Object.keys(arr), .findIndex(f)
+    - won't show up with forEach
 
 - **flatten nested** arrays
   - **flat()** returns new array
@@ -188,9 +193,9 @@
 | 43. | Implement Reverse             | Jul 23, Fri |
 | 44. | flat and flatMap              | Jul 23, Fri |
 |  -- | ------                        | ----        |
-| 45. |                               | Jul         |
-| 46. |                               | Jul         |
-| 47. |                               | Jul         |
+| 45. | Find                          | Jul 25, Sun |
+| 46. | Negative array indexes        | Jul 25, Sun |
+| 47. | Implement find                | Jul         |
 | 48. |                               | Jul         |
 
 <!--
