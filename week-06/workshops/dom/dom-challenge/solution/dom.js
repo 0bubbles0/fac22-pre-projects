@@ -5,8 +5,8 @@
 e.g. "<p class="para">Hello</p>" -> "<p class="para highlight">Hello</p>"
 */
 function toggleHighlight() {
-  const secondPara = document.querySelectorAll("p")[1];
-  secondPara.classList.toggle("highlight");
+  const secondPara = document.querySelectorAll('p')[1];
+  secondPara.classList.toggle('highlight');
 }
 
 /* CHALLENGE 2
@@ -18,9 +18,9 @@ e.g. generateList(["hello", "world"]) -> <ul>
                                           </ul>
 */
 function generateList(array) {
-  const ul = document.createElement("ul");
+  const ul = document.createElement('ul');
   for (let item of array) {
-    const li = document.createElement("li");
+    const li = document.createElement('li');
     li.append(item);
     ul.append(li);
   }
@@ -34,7 +34,7 @@ function generateList(array) {
 */
 function validateTweet(textarea) {
   const length = textarea.value.length;
-  textarea.setAttribute("aria-invalid", length > 180 ? true : false);
+  textarea.setAttribute('aria-invalid', length > 180 ? true : false);
 }
 
 /* CHALLENGE 3b
@@ -42,8 +42,8 @@ function validateTweet(textarea) {
 2. Whenever a user types into it validate it using the previous function
 */
 function validateTweetOnInput() {
-  const tweet = document.querySelector("#tweet");
-  tweet.addEventListener("input", () => {
+  const tweet = document.querySelector('#tweet');
+  tweet.addEventListener('input', () => {
     validateTweet(tweet);
   });
 }
@@ -55,9 +55,9 @@ e.g. <button class="toggle-button">Toggle</button>
      <p>This should appear/disappear when the button is clicked</p>
 */
 function setupToggleButtons() {
-  const buttons = document.querySelectorAll(".toggle-button");
+  const buttons = document.querySelectorAll('.toggle-button');
   buttons.forEach((button) => {
-    button.addEventListener("click", () => {
+    button.addEventListener('click', () => {
       const nextEl = button.nextElementSibling;
       nextEl.hidden = !nextEl.hidden;
     });

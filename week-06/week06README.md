@@ -22,7 +22,7 @@
 
 ## Schedule
 
-- [ ] **W**: DOM
+- [x] **W**: DOM
 
 - [ ] **R**: DOM
 
@@ -52,7 +52,7 @@
 
 ### Research Spikes: Advanced DOM
 
-- [ ] Finish workshop: <https://learn.foundersandcoders.com/workshops/dom-challenge/>
+- [x] Finish workshop: <https://learn.foundersandcoders.com/workshops/dom-challenge/>
 
 - [ ] NodeList (_MDN_): <https://developer.mozilla.org/en-US/docs/Web/API/NodeList>
 - [ ] The Content Template Element (_MDN_): <https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template>

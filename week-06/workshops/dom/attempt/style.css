@@ -22,7 +22,7 @@ section + section {
 /* All inputs other than checkboxes & radios
  * should be block display so they sit on a new line
  */
-input:not([type="checkbox"]):not([type="radio"]),
+input:not([type='checkbox']):not([type='radio']),
 button,
 textarea {
   display: block;
@@ -45,10 +45,15 @@ pre {
   background-color: gold;
 }
 
-[aria-invalid="true"] {
+[aria-invalid='true'] {
   box-shadow: 0 0 0 3px red;
 }
 
 .toggle-button {
   margin-bottom: 1rem;
+}
+
+.hidden {
+  display: none;
+  /* visibility: hidden; */
 }
