@@ -5,6 +5,7 @@
   - can search for full filetype (pdf, jpg!=jpeg)
 
   ```javascript
+  /cat/.test('copycat'); // true
   /^a|b$/.test('ax'); // true
   /(^a)|(b$)/.test('ax'); // true
   /^(a|b)$/.test('ax'); // false
@@ -28,6 +29,7 @@ Describe exactly 1 character at a time:
 | [a-z]  | any a-z                        |
 | [0-9]  | any 0-9, === \d                |
 | [^a-z] | Except: any NOT a-z            |
+| .      | ' ', but not \n                |
 | \d     | digit                          |
 | \s     | whitespace                     |
 | \w     | words: a-zA-Z0-9\_             |

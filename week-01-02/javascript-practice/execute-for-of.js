@@ -22,7 +22,7 @@ console.log(pick({ a: 1, b: 2, c: 3, d: 4 }, ['c', 'b', 'c']));
 console.log({ b: 2, c: 3 });
 
 /* ... Rest Parameter
-*/
+ */
 
 function sum(...numbers) {
   //console.log(numbers);

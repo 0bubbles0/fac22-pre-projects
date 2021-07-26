@@ -101,6 +101,11 @@
 - **map** &rarr; returns new array. Often shorter code than forEach
 - `arr.some(f)` & `arr.every()` &rarr; returns true or false. [].some(f) //false, .every //true
   - `!arr.some(f)` &rarr; none
+    ```javascript
+    [].every((number) => number > 5); // true
+    [true, false, true].every((bool) => bool); // false
+    [].some((user) => user.name === 'Cindy'); // false
+    ```
 - **sort** &rarr; changes & returns original array
 
   - if sorted in new arr &rarr; arr.slice().sort()
@@ -195,8 +200,8 @@
 |  -- | ------                        | ----        |
 | 45. | Find                          | Jul 25, Sun |
 | 46. | Negative array indexes        | Jul 25, Sun |
-| 47. | Implement find                | Jul         |
-| 48. |                               | Jul         |
+|  -- | ------                        | ----        |
+| 47. | Implement find                | Jul 26, Mon |
 
 <!--
 | | | |
