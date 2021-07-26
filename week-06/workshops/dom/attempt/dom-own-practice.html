@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Barbara Practice</title>
+  </head>
+  <body>
+    <h1>DOM Practice</h1>
+    <section id="section-1"></section>
+
+    <script>
+      const section1 = document.querySelector('#section-1');
+      let p = document.createElement('p');
+      p.append('Hello');
+      // document.createElement('p').append('Hello');
+      // section1.append(pH);
+      section1.appendChild(p);
+      section1.appendChild(document.createElement('h2')); //works
+    </script>
+  </body>
+</html>

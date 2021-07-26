@@ -11,27 +11,27 @@
 
 ## Workshop
 
-| Method/Property                                            | Description                                 | Link                                                                         |
-| ---------------------------------------------------------- | ------------------------------------------- | ---------------------------------------------------------------------------- |
-| **DOM element**                                            |                                             | <https://developer.mozilla.org/en-US/docs/Web/API/Element>                   |
-| **NodeList**                                               | can only .forEach, or make `Array.from(x)`  | <https://developer.mozilla.org/en-US/docs/Web/API/NodeList>                  |
-| **Access**                                                 |                                             |                                                                              |
-| `document.querySelector(_css selector_)`                   |                                             | <https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector>    |
-| `document.querySelectorAll()`                              | makes NodeList                              | <https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll> |
-| **Create**                                                 |                                             |                                                                              |
-| `document.createElement('button')`                         | in JS memory, not on page display           | <https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement>    |
-| `div.appendChild(x, 'word')`                               | ? can display it on page?                   | <https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild>          |
-| `parent.append`                                            |                                             | <https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/append>         |
-| **Attributes** access with .                               | HTML attributes = JS DOM-object properties  |                                                                              |
-| `document.querySelector("button").id = "my-id";`           | changes id name                             |                                                                              |
-| `x.setAttribute` and `x.removeAttribute`                   | for aria-labels                             | <https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute>      |
-| `x.classList.add("my-class"), .remove, .toggle, .contains` | DOMTokenList methods                        | <https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList#methods>      |
-| **Content**                                                |                                             |                                                                              |
-| `.textContent`                                             | overwrite existing text/DOM-element content |                                                                              |
-| `.append`                                                  | add text behind existing content            |                                                                              |
-| **Style**                                                  |                                             |                                                                              |
-| `x.style.background = blue`                                | inline                                      |                                                                              |
-| `x.classList.add("dark")`                                  | handle CSS class                            |                                                                              |
+| Method/Property                                                        | Description                                 | Link                                                                         |
+| ---------------------------------------------------------------------- | ------------------------------------------- | ---------------------------------------------------------------------------- |
+| **DOM element**                                                        |                                             | <https://developer.mozilla.org/en-US/docs/Web/API/Element>                   |
+| **NodeList**                                                           | can only .forEach, or make `Array.from(x)`  | <https://developer.mozilla.org/en-US/docs/Web/API/NodeList>                  |
+| **Access**                                                             |                                             |                                                                              |
+| `document.querySelector()`                                             | use CSS selector                            | <https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector>    |
+| `document.querySelectorAll()`                                          | makes NodeList                              | <https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll> |
+| **Create**                                                             |                                             |                                                                              |
+| `document.createElement('button')`                                     | in JS memory, not on page display           | <https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement>    |
+| `div.appendChild(x, 'word')`                                           | ? can display it on page?                   | <https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild>          |
+| `parent.append`                                                        |                                             | <https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/append>         |
+| **Attributes** access with .                                           | HTML attributes = JS DOM-object properties  |                                                                              |
+| `document.querySelector("button").id = "my-id";`                       | changes id name                             |                                                                              |
+| `x.setAttribute` and `x.removeAttribute`                               | for aria-labels                             | <https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute>      |
+| `x.classList.add("my-class")`<br>`.remove`<br>`.toggle`<br>`.contains` | DOMTokenList methods                        | <https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList#methods>      |
+| **Content**                                                            |                                             |                                                                              |
+| `.textContent`                                                         | overwrite existing text/DOM-element content |                                                                              |
+| `.append`                                                              | add text behind existing content            |                                                                              |
+| **Style**                                                              |                                             |                                                                              |
+| `x.style.background = blue`                                            | inline                                      |                                                                              |
+| `x.classList.add("dark")`                                              | handle CSS class                            |                                                                              |
 
 ## Spike: Advanced DOM
 
