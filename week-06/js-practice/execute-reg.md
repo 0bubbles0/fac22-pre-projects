@@ -6,6 +6,7 @@
 
   ```javascript
   /cat/.test('copycat'); // true
+  /[a-e]/.test('added'); // true
   /^a|b$/.test('ax'); // true
   /(^a)|(b$)/.test('ax'); // true
   /^(a|b)$/.test('ax'); // false
@@ -24,20 +25,28 @@
 
 Describe exactly 1 character at a time:
 
-| .      | Description                    |
-| ------ | ------------------------------ |
-| [a-z]  | any a-z                        |
-| [0-9]  | any 0-9, === \d                |
-| [^a-z] | Except: any NOT a-z            |
-| .      | ' ', but not \n                |
-| \d     | digit                          |
-| \s     | whitespace                     |
-| \w     | words: a-zA-Z0-9\_             |
-| ?      | 0 or 1, eg. for optional parts |
-| \*     | 0 or more                      |
-| +      | 1 or more                      |
-| ^      | at start                       |
-| $      | at end                         |
+| .        | Description                                           |
+| -------- | ----------------------------------------------------- |
+| [a-z]    | any a-z                                               |
+| [abc]    | any a OR b OR c                                       |
+| [?.]     | any ? or . same for other special characters          |
+| [0-9]    | any 0-9, === \d                                       |
+| [^a-z]   | Except: any NOT a-z                                   |
+| [b^]     | b or ^                                                |
+| .        | ' ', but not \n                                       |
+| \bword\b | word boundary to mark a full word surrounded by non-w |
+| word\B   | anything that doesn't END with word                   |
+| \d       | digit                                                 |
+| \s       | whitespace                                            |
+| \w       | words: a-zA-Z0-9\_                                    |
+| ?        | 0 or 1, eg. for optional parts                        |
+| \*       | 0 or more                                             |
+| +        | 1 or more                                             |
+| a{3}     | aaa                                                   |
+| a{3, 4}  | aaa to aaaa                                           |
+| a{3,}    | aaa or more. But NOT a{,3} as max!                    |
+| ^        | at start                                              |
+| $        | at end                                                |
 
 ### Lessons
 
@@ -69,9 +78,10 @@ Describe exactly 1 character at a time:
 | 22. | American long-distance phone number | Jul 25, Sun |
 | 23. | Character classes                   | Jul 25, Sun |
 | 24. | One character and space             | Jul 25, Sun |
-| 25. |                                     | Jul         |
-| 26. |                                     | Jul         |
-| 27. |                                     | Jul         |
-| 28. |                                     | Jul         |
-| 29. |                                     | Jul         |
+| --: | ----------------------------        | ----------- |
+| 25. | Character sets                      | Jul 26, Mon |
+| 26. | Word boundaries                     | Jul 26, Mon |
+| 27. | Dogs only                           | Jul 26, Mon |
+| 28. | Constrained repetition              | Jul 26, Mon |
+| 29. | Match hex codes                     | Jul 26, Mon |
 | 30. |                                     | Jul         |

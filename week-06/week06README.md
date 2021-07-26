@@ -45,7 +45,7 @@
 ### Routine
 
 - Execute:
-  - [ ] Arrays
+  - [x] Arrays
   - [ ] RegExp
 - Khan Academy: Computer Science
 - Twitter
