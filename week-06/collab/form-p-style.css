@@ -1,7 +1,18 @@
+.form {
+  border: 1px solid green;
+  width: 70vw;
+  margin: 0 auto;
+}
+
 .form > * {
   display: block;
 }
 
 .form > * + * {
-  margin: 1rem 0;
+  margin: 0.5rem 0;
+}
+
+.required {
+  color: red;
+  /* font-size: smaller; */
 }

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="form-p-style.css" rel="stylesheet" />
+    <script src="form-p-script.js" defer></script>
     <title>Form Practice</title>
   </head>
   <body>
@@ -13,45 +14,35 @@
 
     <form id="form-team-add" class="form" target="_self">
       <!-- Name -->
-      <label for="team-add-"
-        >Name:
-        <input
-          id="team-add-name"
-          type="text"
-          placeholder="Full Name"
-          required
-        />
-      </label>
+      <label for="team-add-">Name:<span class="required">*</span></label>
+      <input id="team-add-name" type="text" placeholder="Full Name" required />
       <!-- Email -->
-      <label for="team-add-"
-        >Email:
-        <input
-          id="team-add-email"
-          type="email"
-          placeholder="Email Address"
-          required
-      /></label>
-      <!-- Description max 149ch-->
-      <label for="team-add-"
-        >Description:
-        <textarea
-          id="team-add-desc"
-          placeholder="Description of the new team member (max 149 characters)"
-          maxlength="149"
-          required
-        ></textarea>
-      </label>
+      <label for="team-add-">Email:<span class="required">*</span></label>
+      <input id="team-add-email" type="email" placeholder="Email Address" />
+      <!--
+        Description
+        max
+        149ch--
+      -->
+      <label for="team-add-">Description:<span class="required">*</span></label>
+      <textarea
+        id="team-add-desc"
+        placeholder="Description of the new team member (max 149 characters)"
+        maxlength="149"
+      ></textarea>
       <!-- Image: upload -->
-      <!-- <input type="image" /> -->
+      <label for="team-add-img">Profile Image:</label>
+      <input id="team-add-img" type="file" />
       <!-- Admin password -->
       <label for="team-add-"
-        >Admin Password:
-        <input
-          id="team-add-admin-pass"
-          type="password"
-          placeholder="Admin Password"
-          required
-      /></label>
+        >Admin Password:<span class="required">*</span></label
+      >
+      <input
+        id="team-add-admin-pass"
+        type="password"
+        placeholder="Admin Password"
+        required
+      />
       <!-- Submit -->
       <button id="team-add-submit" type="submit">Submit</button>
     </form>

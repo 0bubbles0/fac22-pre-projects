@@ -71,34 +71,34 @@ Your add a member section **should**:
 
 As a member of agency, I want to:
 
-- Input the **name**, an **image** of, and **description** of the new team member (E1)
+- [x] Input the **name**, an **image** of, and **description** of the new team member (E1)
   - HTML form
   - name
   - description
   - image
-- Input an **admin password** and see if this has been accepted or rejected (E1)
-  - set up password
-  - check if password correct
-  - feedback: log member / error message
-- Be notified if the **email address** doesn’t look right (E2)
+- [ ] Input an **admin password** and see if this has been accepted or rejected (E1)
+  - [x] set up password
+  - [x] check if password correct
+  - [ ] feedback: log member / error message
+- [x] Be notified if the **email address** doesn’t look right (E2)
   - validate email, give feedback
 - Be notified if the description I’m writing is **too long** (E2)
   - check length
-- **See** the new member on the page once I click a button (E3)
+- [ ] **See** the new member on the page once I click a button (E3)
   - template
 
 Additionally, as a visually impaired user, I want to:
 
-- Navigate your website using keyboard controls (E1)
-- Hear my screen reader describe the content on your website (E1)
+- [ ] Navigate your website using keyboard controls (E1)
+- [ ] Hear my screen reader describe the content on your website (E1)
 
 ### Acceptance Criteria:
 
 User stories come with acceptance criteria - a detailed scope of a user’s requirements.
 
-- Input boxes for **name**, **email** and **description**
-- Input box for the **admin password**
-- Visible feedback when inputs are **not valid**
-- A **submit** button
-- A user cannot submit a form without filling out all of the **mandatory** fields (name, email address, request)
-- Information from the form **appears on the page** after clicking submit
+- [x] Input boxes for **name**, **email** and **description**
+- [x] Input box for the **admin password**
+- [ ] Visible feedback when inputs are **not valid**
+- [x] A **submit** button
+- [x] A user cannot submit a form without filling out all of the **mandatory** fields (name, email address, request)
+- [ ] Information from the form **appears on the page** after clicking submit
