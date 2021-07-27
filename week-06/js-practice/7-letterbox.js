@@ -53,17 +53,17 @@ var paintLetterboxes = function (start, end) {
   for (let i = start; i <= end; i++) {
     interval += i;
   }
-  console.log(interval);
+  // console.log(interval);
   //loop numbers --> each value has that index in digitCounter --> add up
   interval.split('').map((x) => {
     digitCounter[x] += 1;
-    console.log(digitCounter[x]);
+    // console.log(digitCounter[x]);
   });
   // return digitCounter values as arr
   return Object.values(digitCounter);
 };
 
-console.log(paintLetterboxes(125, 132));
+// console.log(paintLetterboxes(125, 132));
 
 //Other Solution
 function paintLetterboxes1(start, end) {
@@ -75,4 +75,23 @@ function paintLetterboxes1(start, end) {
       .forEach((x) => frequencies[x]++);
   }
   return frequencies;
+}
+
+function multiTable(number) {
+  let table = [];
+  for (let i = 1; i <= 10; i++) {
+    // console.log(i);
+    let calc = `${i} * ${number} = ${i * number}`;
+    // table.push(calc);
+  }
+  return table.join('\n');
+}
+
+// console.log(multiTable(5));
+
+//Other Solution
+function multiTable(n) {
+  return [...Array(10)]
+    .map((_, i) => `${i + 1} * ${n} = ${n * i + n}`)
+    .join('\n');
 }
