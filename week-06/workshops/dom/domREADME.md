@@ -2,6 +2,8 @@
 
 ## Questions
 
+- How is this for separation of concerns?
+
 ## Reading List
 
 - [x] fac Workshop: <https://learn.foundersandcoders.com/workshops/dom-challenge/>
@@ -67,28 +69,28 @@
 
 Read-only
 
-| `Node`                             | Description                              |
-| ---------------------------------- | ---------------------------------------- |
-|                                    | **Read-only**                            |
-| `.parentNode`, `.parentElement`    |                                          |
-| `.childNodes`                      | live NodeList of all children            |
-| `.firstChild`, `.lastChild`        | `null` if none                           |
-| `.nextSibling`, `.previousSibling` | next node in tree, `null`if none         |
-| `.nodeName`                        | 'audio', '#text', '#document', html-tag, |
-| `.nodeType`                        | element, attr, text, cdata, document...  |
-|                                    | **Edit**                                 |
-| `.textContent`                     | return/set text of it + children         |
-| `.normalize()`                     | clean up text                            |
-| `.nodeValue`                       | return/set current node value            |
-| `.cloneNode()`                     | node (& content)                         |
-| `.compareDocumentPosition()`       | against other node in other document     |
-| `.isEqualNode()` `.isSameNode()`   |                                          |
-| `.contains(x)`                     | true false?                              |
-| `.hasChildNodes()`                 |                                          |
-| `.insertBefore()`                  | as a child                               |
-| `.appendChild(x)`                  | add/move child here                      |
-| `.replaceChild()`                  |                                          |
-| `.removeChild()`                   |                                          |
+| `Node`                             | Description                                                  |
+| ---------------------------------- | ------------------------------------------------------------ |
+|                                    | **Read-only**                                                |
+| `.parentNode`, `.parentElement`    |                                                              |
+| `.childNodes`                      | live NodeList of all children (vs static docu.quSelectAll()) |
+| `.firstChild`, `.lastChild`        | `null` if none                                               |
+| `.nextSibling`, `.previousSibling` | next node in tree, `null`if none                             |
+| `.nodeName`                        | 'audio', '#text', '#document', html-tag,                     |
+| `.nodeType`                        | element, attr, text, cdata, document...                      |
+|                                    | **Edit**                                                     |
+| `.textContent`                     | return/set text of it + children                             |
+| `.normalize()`                     | clean up text                                                |
+| `.nodeValue`                       | return/set current node value                                |
+| `.cloneNode()`                     | node (& content)                                             |
+| `.compareDocumentPosition()`       | against other node in other document                         |
+| `.isEqualNode()` `.isSameNode()`   |                                                              |
+| `.contains(x)`                     | true false?                                                  |
+| `.hasChildNodes()`                 |                                                              |
+| `.insertBefore()`                  | as a child                                                   |
+| `.appendChild(x)`                  | add/move child here                                          |
+| `.replaceChild()`                  |                                                              |
+| `.removeChild()`                   |                                                              |
 
 ### `<template>`
 
@@ -138,11 +140,10 @@ Read-only
 
 - **How can we use this to render dynamic UI?**
   - _HTML_: `<template>` arranges element hierarchy, class/id
-  - _CSS_: pre-style classes for .card, .card**image, .card**title
+  - _CSS_: pre-style classes for `.card`, `.card__image`, `.card__title`
   - _JS_:
     - access (destination, `template.content.cloneNode(true)`)
     - function createCard() { database &rarr; nest into html-tags}
   - _Database_: can store anywhere else, centrally?
   - Auto-generate page content, easy addition of new items
-  - e.g. photo gallery
-  - Question: how is this for separation of concerns?
+  - e.g. photo gallery, table row
