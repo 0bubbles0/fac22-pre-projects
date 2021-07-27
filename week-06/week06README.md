@@ -23,8 +23,7 @@
 ## Schedule
 
 - [x] **W**: DOM
-
-- [ ] **R**: DOM
+- [x] **R**: DOM
 
 - [ ] **P**: Collab
 
@@ -54,17 +53,24 @@
 
 - [x] Finish workshop: <https://learn.foundersandcoders.com/workshops/dom-challenge/>
 
-- [ ] NodeList (_MDN_): <https://developer.mozilla.org/en-US/docs/Web/API/NodeList>
-- [ ] The Content Template Element (_MDN_): <https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template>
-- [ ] Template element example: <https://codepen.io/oliverjam/pen/yLNEOQO?editors=1010>
+- [x] NodeList (_MDN_): <https://developer.mozilla.org/en-US/docs/Web/API/NodeList>
+- [x] The Content Template Element (_MDN_): <https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template>
+- [x] Template element example: <https://codepen.io/oliverjam/pen/yLNEOQO?editors=1010>
 
 - **Questions**
   - How can we use advanced DOM features to make rendering complex UIs easier.
   - What is a NodeList?
+    - get with `Node.childNodes`, `document.querySelectorAll()`
     - How is it different from an array?
+      - also has `length`, `item`
+      - YES `for of`, `forEach()` NO `for...in`, `map()`...
+      - can `Array.from(x)`
     - What’s the different between “live” and “static” NodeLists?
+      - does/doesn't auto-update list with DOM changes
   - What is the `<template>` element?
     - How can we use this to render dynamic UI?
+      - e.g. new entries for img gallery, table rows
+      - can store database anywhere &rarr; amateur-friendly
 
 ### Collab Project Sprint
 

@@ -5,9 +5,9 @@
 ## Reading List
 
 - [x] fac Workshop: <https://learn.foundersandcoders.com/workshops/dom-challenge/>
-- [ ] NodeList (_MDN_): <https://developer.mozilla.org/en-US/docs/Web/API/NodeList>
-- [ ] Content Template Element (_MDN_): <https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template>
-- [ ] Template element example: <https://codepen.io/oliverjam/pen/yLNEOQO?editors=1010>
+- [x] NodeList (_MDN_): <https://developer.mozilla.org/en-US/docs/Web/API/NodeList>
+- [x] Content Template Element (_MDN_): <https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template>
+- [x] Template element example: <https://codepen.io/oliverjam/pen/yLNEOQO?editors=1010>
 
 ## Workshop
 
@@ -37,13 +37,112 @@
 
 ## Spike: Advanced DOM
 
-### How can we use advanced DOM features to make rendering complex UIs easier.
+- **How can we use advanced DOM features to make rendering complex UIs easier.**
 
-### What is a NodeList?
+### Node List
 
-- How is it different from an array?
-- What’s the different between “live” and “static” NodeLists?
+- **What is a NodeList?**
+  - object;
+  - collection of nodes, show with `Node.childNodes`, `document.querySelectorAll()`
+  - `forEach()`, `Array.from()`, `NodeList.length`, for older browsers `Array.prototype.forEach()`
+- **How is it different from an _array_?**
+  - also has `length`, `item`,
+  - YES `for of` NO `for...in`
+- **What’s the different between _live_ and _static_ NodeLists?**
 
-### What is the <template> element?
+  - **Live** &rarr; collection content auto-updates with DOM changes
+    - e.g. `Node.childNodes`
+  - **Static** &Rarr; collection content unaffected by DOM changes
+    - e.g. `document.querySelectorAll()`
+  - helps decision: cache steps, length?, how iterate
 
-- How can we use this to render dynamic UI?
+| `NodeList`        | Description                                         |
+| ----------------- | --------------------------------------------------- |
+| `NodeList.length` | # of nodes in list                                  |
+| `.item()`         | by index, null if out-of-bounds, use for non-JS DOM |
+| `.entries()`      | returns iterator for key-value pairs                |
+| `.forEach()`      |
+| `.keys()`         | returns iterator for keys                           |
+| `.values()`       | returns iterator for values                         |
+
+Read-only
+
+| `Node`                             | Description                              |
+| ---------------------------------- | ---------------------------------------- |
+|                                    | **Read-only**                            |
+| `.parentNode`, `.parentElement`    |                                          |
+| `.childNodes`                      | live NodeList of all children            |
+| `.firstChild`, `.lastChild`        | `null` if none                           |
+| `.nextSibling`, `.previousSibling` | next node in tree, `null`if none         |
+| `.nodeName`                        | 'audio', '#text', '#document', html-tag, |
+| `.nodeType`                        | element, attr, text, cdata, document...  |
+|                                    | **Edit**                                 |
+| `.textContent`                     | return/set text of it + children         |
+| `.normalize()`                     | clean up text                            |
+| `.nodeValue`                       | return/set current node value            |
+| `.cloneNode()`                     | node (& content)                         |
+| `.compareDocumentPosition()`       | against other node in other document     |
+| `.isEqualNode()` `.isSameNode()`   |                                          |
+| `.contains(x)`                     | true false?                              |
+| `.hasChildNodes()`                 |                                          |
+| `.insertBefore()`                  | as a child                               |
+| `.appendChild(x)`                  | add/move child here                      |
+| `.replaceChild()`                  |                                          |
+| `.removeChild()`                   |                                          |
+
+### `<template>`
+
+- **What is the `<template>` element?**
+
+  - mechanism for HTML content that won't be rendered immediately (only checked valid?)
+  - works for Metadata, flow, phrasing, script-supporting content
+  - attributes &rarr; global, content (read-only for DOM subtree)
+  - Template element: <https://developer.mozilla.org/en-US/docs/Web/API/HTMLTemplateElement>
+  - constructur for new dynamic elements
+  - careful of DocumentFragment!
+  - see also `<slot>`, `<shadow>`
+  - e.g.
+    - table template for new rows
+    - cards
+    - gallery
+
+  ```html
+  <table id="table">
+    <thead>
+      <tr>
+        <td>#</td>
+        <td>Description</td>
+      </tr>
+    </thead>
+    <tbody>
+      <!--insert template-->
+    </tbody>
+  </table>
+
+  <template id="newRow">
+    <tr>
+      <td></td>
+      <td></td>
+    </tr>
+  </template>
+  ```
+
+  ```javascript
+  let tbody = document.querySelector('tbody');
+  let template = document.querySelector('#newRow');
+  let clone = template.content.cloneNode(true);
+  td[0].textContent = '';
+  td[1].textContent = '';
+  tbody.appendChild(clone);
+  ```
+
+- **How can we use this to render dynamic UI?**
+  - _HTML_: `<template>` arranges element hierarchy, class/id
+  - _CSS_: pre-style classes for .card, .card**image, .card**title
+  - _JS_:
+    - access (destination, `template.content.cloneNode(true)`)
+    - function createCard() { database &rarr; nest into html-tags}
+  - _Database_: can store anywhere else, centrally?
+  - Auto-generate page content, easy addition of new items
+  - e.g. photo gallery
+  - Question: how is this for separation of concerns?
