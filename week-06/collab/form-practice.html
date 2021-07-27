@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="form-p-style.css" rel="stylesheet" />
+    <title>Form Practice</title>
+  </head>
+  <body>
+    <h1>Add a new Team Member</h1>
+    <h2>Are you interested in joining us?</h2>
+
+    <form id="form-team-add" class="form" target="_self">
+      <!-- Name -->
+      <label for="team-add-"
+        >Name:
+        <input
+          id="team-add-name"
+          type="text"
+          placeholder="Full Name"
+          required
+        />
+      </label>
+      <!-- Email -->
+      <label for="team-add-"
+        >Email:
+        <input
+          id="team-add-email"
+          type="email"
+          placeholder="Email Address"
+          required
+      /></label>
+      <!-- Description max 149ch-->
+      <label for="team-add-"
+        >Description:
+        <textarea
+          id="team-add-desc"
+          placeholder="Description of the new team member (max 149 characters)"
+          maxlength="149"
+          required
+        ></textarea>
+      </label>
+      <!-- Image: upload -->
+      <!-- <input type="image" /> -->
+      <!-- Admin password -->
+      <label for="team-add-"
+        >Admin Password:
+        <input
+          id="team-add-admin-pass"
+          type="password"
+          placeholder="Admin Password"
+          required
+      /></label>
+      <!-- Submit -->
+      <button id="team-add-submit" type="submit">Submit</button>
+    </form>
+  </body>
+</html>
