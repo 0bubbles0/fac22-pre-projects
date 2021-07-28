@@ -12,9 +12,11 @@
   margin: 0.5rem 0;
 }
 
-.required {
+.required,
+.error {
   color: red;
   /* font-size: smaller; */
+  font-style: italic;
 }
 
 [aria-invalid='true'] {

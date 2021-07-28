@@ -133,6 +133,7 @@ Read-only
   let tbody = document.querySelector('tbody');
   let template = document.querySelector('#newRow');
   let clone = template.content.cloneNode(true);
+  var td = clone.querySelectorAll('td');
   td[0].textContent = '';
   td[1].textContent = '';
   tbody.appendChild(clone);

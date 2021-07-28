@@ -86,6 +86,7 @@ As a member of agency, I want to:
   - check length
 - [ ] **See** the new member on the page once I click a button (E3)
   - template
+  - gather form info on submit: <https://www.youtube.com/watch?v=UAu7cMuu0BI>
 
 Additionally, as a visually impaired user, I want to:
 

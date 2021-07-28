@@ -14,37 +14,54 @@
 
     <form id="form-team-add" class="form" target="_self">
       <!-- Name -->
-      <label for="team-add-">Name:<span class="required">*</span></label>
-      <input id="team-add-name" type="text" placeholder="Full Name" required />
+      <label for="team-add-name">Name:<span class="required">*</span></label>
+      <input id="team-add-name" type="text" placeholder="Full Name" />
       <!-- Email -->
-      <label for="team-add-">Email:<span class="required">*</span></label>
+      <label for="team-add-email">Email:<span class="required">*</span></label>
       <input id="team-add-email" type="email" placeholder="Email Address" />
+      <!-- Name -->
+      <label for="team-add-title"
+        >Job Title:<span class="required">*</span>
+      </label>
+      <input id="team-add-title" type="text" placeholder="New Team Role" />
       <!--
         Description
         maxlength="149"
       -->
-      <label for="team-add-"
-        >Description (max 149 characters):<span class="required">*</span></label
-      >
+      <label for="team-add-desc"
+        >Description (max 149 characters):<span class="required">*</span
+        ><span class="error"></span
+      ></label>
       <textarea
         id="team-add-desc"
-        placeholder="Description of the new team member (max 149 characters)"
+        placeholder="Describe the role of the new team member"
       ></textarea>
       <!-- Image: upload -->
       <label for="team-add-img">Profile Image:</label>
-      <input id="team-add-img" type="file" />
+      <input id="team-add-img" type="text" placeholder="Insert URL" />
+      <!-- <input id="team-add-img" type="file" /> -->
+
       <!-- Admin password -->
-      <label for="team-add-"
-        >Admin Password:<span class="required">*</span></label
-      >
+      <label for="team-add-admin-pass"
+        >Admin Password:<span class="required">*</span
+        ><span class="error"></span
+      ></label>
       <input
         id="team-add-admin-pass"
         type="password"
         placeholder="Admin Password"
-        required
       />
       <!-- Submit -->
       <button id="team-add-submit" type="submit">Submit</button>
     </form>
+
+    <template id="new-team-card">
+      <article>
+        <h3></h3>
+        <h4></h4>
+        <img class="img__profile" src="" alt="Image of our new team member" />
+        <p></p>
+      </article>
+    </template>
   </body>
 </html>
