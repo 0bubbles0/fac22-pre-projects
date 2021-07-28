@@ -1,4 +1,4 @@
-# Week 4 Overview
+# Week 6 Overview
 
 ## Content
 
@@ -45,7 +45,7 @@
 
 - Execute:
   - [x] Arrays
-  - [ ] RegExp
+  - [x] RegExp
 - Khan Academy: Computer Science
 - Twitter
 

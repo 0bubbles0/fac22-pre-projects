@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge | Functions and asynchronous JavaScript</title>
+  </head>
+  <body>
+    <h1>Open the console</h1>
+    <script>
+      // Inside the script tag write a function light that takes two arguments: a string and a callback
+      // It should wait 1 second, log the string and then call its callback argument
+      // Use light to log each colour of a traffic light sequence, in order, followed by "finished"
+      //     e.g. It should log:
+
+      // green
+      // amber
+      // red
+      // amber
+      // green
+      // finished
+
+      // with a 1 second pause before each colour
+
+      let interval = 1000;
+
+      function light(str, f) {
+        setTimeout(() => {
+          f(str);
+        }, interval);
+
+        interval += 1000;
+      }
+
+      light('green', (x) => console.log(x));
+      light('amber', (x) => console.log(x));
+      light('red', (x) => console.log(x));
+      light('amber', (x) => console.log(x));
+      light('green', (x) => console.log(x));
+      light('finished', (x) => console.log(x));
+
+      function light1(colour, callback) {
+        setTimeout(() =>)
+      }
+    </script>
+  </body>
+</html>
