@@ -106,17 +106,29 @@ function addTeamGatherInfo() {
   const addDesc = teamAddDesc.value;
   const addImg = addTeamImgHelper(teamAddImg);
   const newTeamMember = { addName, addTitle, addDesc, addImg };
-  console.log(newTeamMember);
+  // console.log(newTeamMember);
   //return object
   return newTeamMember;
 }
 
 function addTeamFillTemplate() {
   //define target, template, clone
+  const target = document.querySelector('#team-cards');
   const template = document.querySelector('#new-team-card');
+  const tempClone = template.content.cloneNode(true);
   //take object, access each key
+  const formInfo = addTeamGatherInfo();
+  console.log(formInfo);
   //assign key-->template tags
+  //h3-name | h4-title | img-img | p-desc
+  tempClone.querySelector('h3').textContent = formInfo.addName;
+  tempClone.querySelector('h4').textContent = formInfo.addTitle;
+  tempClone.querySelector('p').textContent = formInfo.addDesc;
+  tempClone.querySelector('img').src =
+    'https://images.unsplash.com/photo-1552053831-71594a27632d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZG9nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60';
   // return target.clone
+  console.log(tempClone);
+  target.appendChild(tempClone);
 }
 
 teamAddDesc.addEventListener('input', () => {
@@ -125,5 +137,6 @@ teamAddDesc.addEventListener('input', () => {
 
 teamAddSubmit.addEventListener('click', () => {
   // passwordChecker(teamAddpasswordField, adminPasswordBAgency);
-  addTeamGatherInfo();
+  // addTeamGatherInfo();
+  addTeamFillTemplate();
 });

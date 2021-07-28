@@ -7,61 +7,96 @@
     <link href="form-p-style.css" rel="stylesheet" />
     <script src="form-p-script.js" defer></script>
     <title>Form Practice</title>
+    <style>
+      .form {
+        border: 1px solid green;
+        width: 70vw;
+        margin: 0 auto;
+      }
+
+      .form > * {
+        display: block;
+      }
+
+      .form > * + * {
+        margin: 0.5rem 0;
+      }
+
+      .required,
+      .error {
+        color: red;
+        /* font-size: smaller; */
+        vertical-align: super;
+        font-style: italic;
+      }
+
+      [aria-invalid='true'] {
+        box-shadow: 0 0 0 3px red;
+      }
+    </style>
   </head>
   <body>
     <h1>Add a new Team Member</h1>
     <h2>Are you interested in joining us?</h2>
 
-    <form id="form-team-add" class="form" target="_self">
-      <!-- Name -->
-      <label for="team-add-name">Name:<span class="required">*</span></label>
-      <input id="team-add-name" type="text" placeholder="Full Name" />
-      <!-- Email -->
-      <label for="team-add-email">Email:<span class="required">*</span></label>
-      <input id="team-add-email" type="email" placeholder="Email Address" />
-      <!-- Name -->
-      <label for="team-add-title"
-        >Job Title:<span class="required">*</span>
-      </label>
-      <input id="team-add-title" type="text" placeholder="New Team Role" />
-      <!--
+    <section>
+      <h3>Fill in this form</h3>
+      <form id="form-team-add" class="form" target="_self">
+        <!-- Name -->
+        <label for="team-add-name">Name:<span class="required">*</span></label>
+        <input id="team-add-name" type="text" placeholder="Full Name" />
+        <!-- Email -->
+        <label for="team-add-email"
+          >Email:<span class="required">*</span></label
+        >
+        <input id="team-add-email" type="email" placeholder="Email Address" />
+        <!-- Name -->
+        <label for="team-add-title"
+          >Job Title:<span class="required">*</span>
+        </label>
+        <input id="team-add-title" type="text" placeholder="New Team Role" />
+        <!--
         Description
         maxlength="149"
       -->
-      <label for="team-add-desc"
-        >Description (max 149 characters):<span class="required">*</span
-        ><span class="error"></span
-      ></label>
-      <textarea
-        id="team-add-desc"
-        placeholder="Describe the role of the new team member"
-      ></textarea>
-      <!-- Image: upload -->
-      <label for="team-add-img">Profile Image:</label>
-      <input id="team-add-img" type="text" placeholder="Insert URL" />
-      <!-- <input id="team-add-img" type="file" /> -->
+        <label for="team-add-desc"
+          >Description (max 149 characters):<span class="required">*</span
+          ><span class="error"></span
+        ></label>
+        <textarea
+          id="team-add-desc"
+          placeholder="Describe the role of the new team member"
+        ></textarea>
+        <!-- Image: upload -->
+        <label for="team-add-img">Profile Image:</label>
+        <input id="team-add-img" type="text" placeholder="Insert URL" />
+        <!-- <input id="team-add-img" type="file" /> -->
 
-      <!-- Admin password -->
-      <label for="team-add-admin-pass"
-        >Admin Password:<span class="required">*</span
-        ><span class="error"></span
-      ></label>
-      <input
-        id="team-add-admin-pass"
-        type="password"
-        placeholder="Admin Password"
-      />
-      <!-- Submit -->
-      <button id="team-add-submit" type="submit">Submit</button>
-    </form>
+        <!-- Admin password -->
+        <label for="team-add-admin-pass"
+          >Admin Password:<span class="required">*</span
+          ><span class="error"></span
+        ></label>
+        <input
+          id="team-add-admin-pass"
+          type="password"
+          placeholder="Admin Password"
+        />
+        <!-- Submit -->
+        <button id="team-add-submit" type="submit">Submit</button>
+      </form>
+    </section>
 
-    <template id="new-team-card">
-      <article>
-        <h3></h3>
-        <h4></h4>
-        <img class="img__profile" src="" alt="Image of our new team member" />
-        <p></p>
-      </article>
-    </template>
+    <section id="team-cards">
+      <h3>View your new member</h3>
+      <template id="new-team-card">
+        <article>
+          <h3></h3>
+          <h4></h4>
+          <img class="img__profile" alt="Image of our new team member" />
+          <p></p>
+        </article>
+      </template>
+    </section>
   </body>
 </html>
