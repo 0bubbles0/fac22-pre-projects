@@ -33,6 +33,7 @@ Describe exactly 1 character at a time:
 | [0-9]    | any 0-9, === \d                                       |
 | [^a-z]   | Except: any NOT a-z                                   |
 | [b^]     | b or ^                                                |
+| [\w-]    | any \w or -                                           |
 | .        | ' ', but not \n                                       |
 | \bword\b | word boundary to mark a full word surrounded by non-w |
 | word\B   | anything that doesn't END with word                   |
@@ -84,4 +85,4 @@ Describe exactly 1 character at a time:
 | 27. | Dogs only                           | Jul 26, Mon |
 | 28. | Constrained repetition              | Jul 26, Mon |
 | 29. | Match hex codes                     | Jul 26, Mon |
-| 30. |                                     | Jul         |
+| 30. | Character classes in sets           | Jul 28, Wed |
