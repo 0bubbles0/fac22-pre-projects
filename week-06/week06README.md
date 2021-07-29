@@ -96,6 +96,7 @@
 - [ ] Portfolio: Site architecture, what I want to focus/show off
   - [ ] Review with others
   - [ ] Readme on Profile: How?, Content
+    - [ ] <https://aboutmonica.com/blog/how-to-create-a-github-profile-readme>
 - [ ] JS30: Object & Arrays - Reference VS Copy
 - [ ] JS30: Sorting Band Names without articles
 
@@ -111,7 +112,7 @@
   - Set up skeleton Profile
   - Share Profile
 - Technical CV
-  - Read
+  - [ ] <https://www.notion.so/Guidance-on-your-first-tech-CV-fe5f6b679e2742a7b38b9f92562a7bc0>
   - Start writing
 
 ### Guest Prep
