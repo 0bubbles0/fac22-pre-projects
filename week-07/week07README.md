@@ -51,7 +51,7 @@
 
 ### Research Spikes: Promises, Async, Fetch
 
-- [ ] Functions, callbacks, async: <https://learn.foundersandcoders.com/workshops/functions-callbacks-async/>
+- [x] Functions, callbacks, async: <https://learn.foundersandcoders.com/workshops/functions-callbacks-async/>
 - [ ] Fetch (135min): <https://learn.foundersandcoders.com/workshops/learn-fetch/>
 - [ ] Promises (120min): <https://learn.foundersandcoders.com/workshops/promise-practice/>
 

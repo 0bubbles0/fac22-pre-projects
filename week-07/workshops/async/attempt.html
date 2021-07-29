@@ -40,8 +40,25 @@
       light('finished', (x) => console.log(x));
 
       function light1(colour, callback) {
-        setTimeout(() =>)
+        setTimeout(() => {
+          console.log(colour);
+          if (callback) {
+            callback();
+          }
+        }, 1000);
       }
+
+      light1('green', () => {
+        light1('amber', () => {
+          light1('red', () => {
+            light1('amber', () => {
+              light1('green', () => {
+                console.log('finished'); //breaks eternal function
+              });
+            });
+          });
+        });
+      });
     </script>
   </body>
 </html>
