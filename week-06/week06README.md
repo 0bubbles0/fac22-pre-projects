@@ -112,8 +112,9 @@
   - Set up skeleton Profile
   - Share Profile
 - Technical CV
-  - [ ] <https://www.notion.so/Guidance-on-your-first-tech-CV-fe5f6b679e2742a7b38b9f92562a7bc0>
+  - [x] Read: <https://www.notion.so/Guidance-on-your-first-tech-CV-fe5f6b679e2742a7b38b9f92562a7bc0>
   - Start writing
+    - <https://www.canva.com/design/DAEllrgdZU0/za4iWfHZLE5GyFW_l7MAwA/edit>
 
 ### Guest Prep
 
