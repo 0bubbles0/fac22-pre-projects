@@ -7,6 +7,29 @@
   </head>
   <body>
     <h1>Open the console</h1>
-    <script></script>
+    <script>
+      // Promise
+      let pokePromise = fetch('https://pokeapi.co/api/v2/pokemon/pikachu');
+      console.log(pokePromise);
+
+      // Promise-Response Object
+      pokePromise.then((resultResponseObject) =>
+        console.log(resultResponseObject)
+      );
+
+      // Pikachu Object, nested Promise
+      pokePromise
+        .then((response) => response.json())
+        .then((bodyArrPokObj) => console.log(bodyArrPokObj));
+
+      // Error
+      pokePromise.catch((error) => console.log(error));
+
+      //Workshop 1: getUser() for GitHub user
+      function getUser(username) {
+        fetch('https://api.github.com/users/USERNAME_HERE');
+        fetch(`https://api.github.com/users/${username}`);
+      }
+    </script>
   </body>
 </html>
