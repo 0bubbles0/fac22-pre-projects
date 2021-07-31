@@ -8,28 +8,61 @@
   <body>
     <h1>Open the console</h1>
     <script>
-      // Promise
-      let pokePromise = fetch('https://pokeapi.co/api/v2/pokemon/pikachu');
-      console.log(pokePromise);
+      // // Promise
+      // let pokePromise = fetch('https://pokeapi.co/api/v2/pokemon/pikachu');
+      // console.log(pokePromise);
 
-      // Promise-Response Object
-      pokePromise.then((resultResponseObject) =>
-        console.log(resultResponseObject)
-      );
+      // // Promise-Response Object
+      // pokePromise.then((resultResponseObject) =>
+      //   console.log(resultResponseObject)
+      // );
 
-      // Pikachu Object, nested Promise
-      pokePromise
-        .then((response) => response.json())
-        .then((bodyArrPokObj) => console.log(bodyArrPokObj));
+      // // Pikachu Object, nested Promise
+      // pokePromise
+      //   .then((response) => response.json())
+      //   .then((bodyArrPokObj) => console.log(bodyArrPokObj));
 
-      // Error
-      pokePromise.catch((error) => console.log(error));
+      // // Error
+      // pokePromise.catch((error) => console.log(error));
 
       //Workshop 1: getUser() for GitHub user
       function getUser(username) {
-        fetch('https://api.github.com/users/USERNAME_HERE');
-        fetch(`https://api.github.com/users/${username}`);
+        // fetch('https://api.github.com/users/USERNAME_HERE');
+        return fetch(`https://api.github.com/users/${username}`).then(
+          (response) => response.json()
+        );
       }
+      let userTest = getUser('0bubbles0')
+        .then(console.log)
+        .catch(console.error);
+
+      //Workshop 2: getRepos(userObject)
+      function getRepos(user) {
+        return fetch(user.repos_url).then((response) => response.json());
+      }
+
+      let repoTest = getUser('0bubbles0')
+        .then(getRepos)
+        .then(console.log)
+        .catch(console.error);
+      // console.log(repoTest);
+
+      //Workshop 3: fetch multiple profiles simultaneously
+      function fetchAllUsers(...users) {
+        let userArr = [getUser(users)];
+        console.log(userArr);
+        return Promise.all(userArr).then(console.log).catch(console.error);
+      }
+      console.log(getUser('0bubbles0'));
+      console.log(fetchAllUsers('0bubbles0', 'oliverjam'));
+
+      /*3 OR: */
+      const oliverPromise = getUser('oliverjam');
+      const starsuitPromise = getUser('starsuit');
+
+      Promise.all([oliverPromise, starsuitPromise])
+        .then(console.log)
+        .catch(console.error);
     </script>
   </body>
 </html>

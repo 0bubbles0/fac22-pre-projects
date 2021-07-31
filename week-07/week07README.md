@@ -52,7 +52,7 @@
 ### Research Spikes: Promises, Async, Fetch
 
 - [x] Functions, callbacks, async: <https://learn.foundersandcoders.com/workshops/functions-callbacks-async/>
-- [ ] Fetch (135min): <https://learn.foundersandcoders.com/workshops/learn-fetch/>
+- [x] Fetch (E135min A180min): <https://learn.foundersandcoders.com/workshops/learn-fetch/>
 - [ ] Promises (120min): <https://learn.foundersandcoders.com/workshops/promise-practice/>
 
 - [ ] First-class Function (_MDN_): <https://developer.mozilla.org/en-US/docs/Glossary/First-class_Function>

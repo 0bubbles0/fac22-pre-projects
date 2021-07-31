@@ -2,6 +2,8 @@
 
 ## Questions
 
+-     ((user) => console.log(user)) === (console.log)
+
 ## Content
 
 - Reading List
@@ -39,6 +41,28 @@ fetch('url') // Promise {<state>: "pending"}
   .then((pikachu) => console.log(pikachu)) // Object { abilities: [],}
   .catch((error) => console.log(error)); // TypeError: ...
 ```
+
+- GitHub API example:
+
+  ```javascript
+  //Make promise to get user object
+  const getUser = (username) =>
+    fetch(`https://api.github.com/users/${username}`).then((response) =>
+      response.json()
+    );
+  //call with getUser('x').then(console.log).catch(console.error);
+  // Promise to get [all repos]
+  const getRepos = (user) =>
+    fetch(user.repos_url).then((response) => response.json());
+
+  //Nest
+  getUser('x').then(getRepos).then(console.log).catch(console.error);
+
+  // Fetch Multiple users:
+  Promise.all([getUser('x'), getUser('y')])
+    .then(console.log)
+    .catch(console.error);
+  ```
 
 ## Asynchronicity
 
@@ -156,6 +180,7 @@ fetch('url') // Promise {<state>: "pending"}
 
 - Use fetch to get user from GitHub API
 - Generate access token in request URL if too many requests: <https://github.com/settings/tokens>
+- Token: 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
 
 1.  Write:
 
@@ -167,19 +192,54 @@ fetch('url') // Promise {<state>: "pending"}
     getUser('oliverjam')
       .then((user) => console.log(user))
       .catch((error) => console.log(error));
+
+    //Solution:
+    const getUser = (username) =>
+      fetch(`https://api.github.com/users/${username}`).then((response) =>
+        response.json()
+      );
+
+    getUser('oliverjam').then(console.log).catch(console.error);
     ```
 
 2.  Write:
 
-```javascript
-function getRepos(getUser_responseObject) {
-  //fetch repos with userObject {repos_url}
-}
-getUser(user).then(getRepos).log([repos]);
-```
+    ```javascript
+    function getRepos(getUser_responseObject) {
+      //fetch repos with userObject {repos_url}
+    }
+    getUser(user).then(getRepos).log([repos]);
+
+    //Solution:
+    const getRepos = (user) =>
+      fetch(user.repos_url).then((response) => response.json());
+
+    getUser('oliverjam').then(getRepos).then(console.log).catch(console.error);
+    ```
+
+- Repos live in: 'https://api.github.com/users/0bubbles0/repos'
+- Should return [{id: , node_id:}, {}]
+
+3. Fetch Multiple Profiles
+
+   - Read Promise.all: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all>
+   - Promise.all(iterable of promises) &rarr; returns 1 Promise [results]
+   - will resolve when all inputs resolve (or there were none)
+   - will reject if any inputs reject/error
+   - `Promise.all([p1, p2, p3]).then(console.log); // Array [3, 42, 'foo']`
+   - useful for grouping related async tasks
+   - Similar: `Promise.allSettled()`
+
+   ```javascript
+   const oliverPromise = getUser('oliverjam');
+   const starsuitPromise = getUser('starsuit');
+
+   Promise.all([oliverPromise, starsuitPromise])
+     .then(console.log)
+     .catch(console.error);
+   ```
 
 <!--
-
 
 ```javascript
 
