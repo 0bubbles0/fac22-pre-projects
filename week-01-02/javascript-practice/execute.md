@@ -83,8 +83,8 @@
 - **Number.isNaN(X)**
 
   - old `isNaN(x)` (which converts x to number before checking) had error
-    - true for `NaN`, `0/0`, typos, expressions with `undefined` &rarr; **but** `undefined` _is_ a number
-  - new `Number.isNAN(x)` does it properly &rarr; true for (`NaN`) / false for (`undefined`)
+    - **true** for `NaN`, `0/0`, typos, expressions with `undefined` &rarr; **but** `undefined` _is_ a number
+  - new `Number.isNAN(x)` does it properly &rarr; **true** for (`NaN`) / **false** for (`undefined`)
   - configure in eslint &rarr; configure no-restricted-globals &rarr; disallow isNaN()
 
 - **f.bind(thisA)**
