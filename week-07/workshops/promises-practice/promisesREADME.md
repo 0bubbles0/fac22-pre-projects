@@ -22,6 +22,9 @@
 
 ## Notes
 
+- Sequence important for: animation, dataRequest-to-API
+- Don't always know code-run-length &rarr; tell them to wait
+
 ## Challenge 1
 
 ## Challenge 2
