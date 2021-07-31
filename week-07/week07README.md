@@ -22,11 +22,12 @@
 
 ## Schedule
 
-- [ ] **W**: Functions, callbacks, async
-- [ ] **W**: Fetch
-- [ ] **W**: Promises
-- [ ] **R**: Reading
+- [x] **W**: Functions, callbacks, async
+- [x] **W**: Fetch
 
+- [ ] **W**: Promises
+
+- [ ] **R**: Reading
 - [ ] **P**: Collab: Repo, Plan, API
 - [ ] **P**: GitHub Profile Readme
 - [ ] **P**: Portfolio: tidy, repo/Nebenseiten, Architecture ideas

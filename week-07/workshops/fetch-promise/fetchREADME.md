@@ -178,10 +178,6 @@ fetch('url') // Promise {<state>: "pending"}
 
 ## Workshop
 
-- Use fetch to get user from GitHub API
-- Generate access token in request URL if too many requests: <https://github.com/settings/tokens>
-- Token: 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
-
 1.  Write:
 
     ```javascript
