@@ -9,6 +9,45 @@
     <h1>Open the console</h1>
     <script>
       // write your code here
+      function getPoke(poke) {
+        return fetch(`https://pokeapi.co/api/v2/pokemon/${poke}`).then(
+          (response) => response.json()
+        );
+      }
+
+      function getPoke1(url) {
+        return fetch(url).then((response) => response.json());
+      }
+      // function getSpecies(x) {
+      //   return x.then((poke) => poke.species.url);
+      // }
+
+      // getPoke('pikachu');
+      // getPoke('pikachu')
+      function getSpecies(poke) {
+        return then((poke) => poke.species.url);
+      }
+      getPoke('https://pokeapi.co/api/v2/pokemon/pikachu')
+        .then((poke) => poke.species.url)
+        .then(console.log);
+      // .then(console.log);
+      // .then((data) => console.log(data))
+      //   .then((link) => link.json())
+      //   .then((link) => link.shape.url)
+      // .then((response) => console.log(response))
+
+      //Use fetch to request data from "https://pokeapi.co/api/v2/pokemon/pikachu"
+      // Once your code has the response it should grab the species.url property and make a new request to that
+      // Once your code has that response it should grab the shape.url property and make a final request to that
+      // Log the final response body. It should look something like this:
+
+      // {
+      //  "awesome_names": [...],
+      //  "id": 8,
+      //  "name": "quadruped",
+      //  "names": [...],
+      //  "pokemon_species": [...]
+      // }
     </script>
   </body>
 </html>
