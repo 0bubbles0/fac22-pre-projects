@@ -133,12 +133,13 @@
     - [x] WesBos YouTube Tutorial ESLint & Prettier: <https://www.youtube.com/watch?v=lHAeK8t94as>
     - [x] Make package.json file with $ npm init: <https://nodesource.com/blog/the-basics-of-package-json-in-node-js-and-npm/>
   - [x] Set up in a project:
-        `$ npm install eslint --save-dev`
-        `$ npm init` &rarr; make package.json file
-        `$ npx eslint --init` &rarr; set up config file
-        `.eslintrc.{js,yml,json}`
-        `javascript { "rules": { "semi": ["error", "always"], "quotes": ["error", "double"] } } ` &rarr; "error", "warn" or "off" OR 2, 1, 0
-        `$ npx eslint yourfile.js` &rarr; run ESLint on yourfile - Perhaps: need to install prettier in project &rarr; `$ npm i prettier`
+
+    - `$ npm install eslint --save-dev`
+    - `$ npm init` &rarr; make package.json file
+    - `$ npx eslint --init` &rarr; set up config file
+    - `.eslintrc.{js,yml,json}`
+    - `javascript { "rules": { "semi": ["error", "always"], "quotes": ["error", "double"] } } ` &rarr; "error", "warn" or "off" OR 2, 1, 0
+    - `$ npx eslint yourfile.js` &rarr; run ESLint on yourfile - Perhaps: need to install prettier in project &rarr; `$ npm i prettier`
 
     - Müll:
       package.json &rarr; //"main": "eslint-sugg.js",
