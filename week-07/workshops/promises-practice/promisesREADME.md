@@ -22,8 +22,10 @@
 
 ## Notes
 
-- Sequence important for: animation, dataRequest-to-API
+- Sequence important for: animation, dataRequest-to-another-API
 - Don't always know code-run-length &rarr; tell them to wait
+- How avoid over-nesting? &rarr; Promises
+- .then() returns a new promise &rarr; can chain
 
 ## Challenge 1
 

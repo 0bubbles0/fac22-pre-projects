@@ -24,11 +24,11 @@
 
 - [x] **W**: Functions, callbacks, async
 - [x] **W**: Fetch
+- [ ] **P**: Collab: Repo, Plan, API
 
 - [ ] **W**: Promises
 
 - [ ] **R**: Reading
-- [ ] **P**: Collab: Repo, Plan, API
 - [ ] **P**: GitHub Profile Readme
 - [ ] **P**: Portfolio: tidy, repo/Nebenseiten, Architecture ideas
 
