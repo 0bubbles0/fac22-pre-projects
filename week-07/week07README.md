@@ -25,16 +25,16 @@
 - [x] **W**: Functions, callbacks, async
 - [x] **W**: Fetch
 - [x] **W**: Promises
+- [x] **R**: Reading
 
 - [ ] **P**: Collab: Repo, Plan, API
 
-- [ ] **R**: Reading
 - [ ] **P**: GitHub Profile Readme
 - [ ] **P**: Portfolio: tidy, repo/Nebenseiten, Architecture ideas
 
+- [ ] **J**: CV
+- [ ] **J**: LinkedIn
 - [ ] **J**: Guest Prep
-- [ ] **J**:
-- [ ] **J**:
 
 ## Summary & Sessions
 
@@ -69,7 +69,7 @@
       }
       sayHello()();
       ```
-- [ ] Event-loop (_YouTube_): <https://www.youtube.com/watch?v=8aGhZQkoFbQ>
+- [x] Event-loop (_YouTube_): <https://www.youtube.com/watch?v=8aGhZQkoFbQ>
 
 ### Collab Project Sprint
 
