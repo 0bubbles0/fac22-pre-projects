@@ -56,7 +56,19 @@
 - [x] Fetch (E135min A180min): <https://learn.foundersandcoders.com/workshops/learn-fetch/>
 - [x] Promises (E120min ): <https://learn.foundersandcoders.com/workshops/promise-practice/>
 
-- [ ] First-class Function (_MDN_): <https://developer.mozilla.org/en-US/docs/Glossary/First-class_Function>
+- [x] First-class Function (_MDN_): <https://developer.mozilla.org/en-US/docs/Glossary/First-class_Function>
+  - **First-class Function** is treated like
+    - a **variable** &rarr; can be assigned,
+    - passed as argument to functions (i.e. **can be callbacks**)
+    - returned by a **Higher-Order Function**
+      ```javascript
+      function sayHello() {
+        return function () {
+          console.log('Hello!');
+        };
+      }
+      sayHello()();
+      ```
 - [ ] Event-loop (_YouTube_): <https://www.youtube.com/watch?v=8aGhZQkoFbQ>
 
 ### Collab Project Sprint
