@@ -24,9 +24,9 @@
 
 - [x] **W**: Functions, callbacks, async
 - [x] **W**: Fetch
-- [ ] **P**: Collab: Repo, Plan, API
+- [x] **W**: Promises
 
-- [ ] **W**: Promises
+- [ ] **P**: Collab: Repo, Plan, API
 
 - [ ] **R**: Reading
 - [ ] **P**: GitHub Profile Readme
@@ -54,7 +54,7 @@
 
 - [x] Functions, callbacks, async: <https://learn.foundersandcoders.com/workshops/functions-callbacks-async/>
 - [x] Fetch (E135min A180min): <https://learn.foundersandcoders.com/workshops/learn-fetch/>
-- [ ] Promises (E120min ): <https://learn.foundersandcoders.com/workshops/promise-practice/>
+- [x] Promises (E120min ): <https://learn.foundersandcoders.com/workshops/promise-practice/>
 
 - [ ] First-class Function (_MDN_): <https://developer.mozilla.org/en-US/docs/Glossary/First-class_Function>
 - [ ] Event-loop (_YouTube_): <https://www.youtube.com/watch?v=8aGhZQkoFbQ>

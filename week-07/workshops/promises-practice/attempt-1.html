@@ -16,6 +16,8 @@
         return new Promise((resolve) => setTimeout(resolve, ms));
       }
 
+      const wait1 = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
       // example usage of wait (feel free to delete):
       // wait(1000).then(() => {
       // console.log('this callback ran after 2000ms');
@@ -26,6 +28,8 @@
         return wait(1000).then(() => console.log(colour));
       }
 
+      const light1 = (colour) => wait(1000).then(() => console.log(colour));
+
       light('green')
         .then(() => light('amber'))
         .then(() => light('red'))
@@ -34,15 +38,6 @@
         .then(() => light('green'))
         .then(() => light('finished'));
 
-      // function light1(colour) {
-      //   return console.log(colour);
-      // }
-      // light1('green')
-      // new Promise(() => light1('green'))
-      //   .then(() => wait(1000))
-      //   .then(() => light1('amber'))
-      //   .then(() => wait(1000))
-      //   .then(() => light1('amber'));
       //"green", "amber", "red", "amber", "red", "green", "finished"
     </script>
   </body>
