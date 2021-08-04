@@ -95,8 +95,8 @@
 
 - [ ] Portfolio: Site architecture, what I want to focus/show off
   - [ ] Review with others
-  - [ ] Readme on Profile: How?, Content
-    - [ ] <https://aboutmonica.com/blog/how-to-create-a-github-profile-readme>
+  - [x] Readme on Profile: How?, Content
+    - [x] <https://aboutmonica.com/blog/how-to-create-a-github-profile-readme>
 - [ ] JS30: Object & Arrays - Reference VS Copy
 - [ ] JS30: Sorting Band Names without articles
 

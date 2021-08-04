@@ -26,10 +26,10 @@
 - [x] **W**: Fetch
 - [x] **W**: Promises
 - [x] **R**: Reading
+- [x] **P**: GitHub Profile Readme
 
 - [ ] **P**: Collab: Repo, Plan, API
 
-- [ ] **P**: GitHub Profile Readme
 - [ ] **P**: Portfolio: tidy, repo/Nebenseiten, Architecture ideas
 
 - [ ] **J**: CV
@@ -45,7 +45,8 @@
 ### Routine
 
 - Execute:
-  - [ ] Concurrency (callback, promise, async/await, event loop)
+  - [x] Concurrency (callback, promise, async/await, event loop)
+  - [x] SQL
   - [ ] Modern JS
 - Khan Academy: Computer Science
 - Twitter
@@ -75,7 +76,8 @@
 
 - Tasks: <https://learn.foundersandcoders.com/course/syllabus/pre-app-7/schedule/project.md>
 
-- Repo Set Up
+- [ ] Repo Set Up
+  - [ ] ESLint, Prettier
 - Plan
 - API: look into
 
@@ -83,7 +85,9 @@
 
 - [ ] Portfolio: Site architecture, what I want to focus/show off
   - [ ] Review with others
-  - [ ] Readme on Profile: How?, Content
+  - [x] Readme on Profile: Content
+    - [x] How?
+    - [x] Content
   - [ ] Nebenseiten
 - [ ] JS30: Object & Arrays - Reference VS Copy
 - [ ] JS30: Sorting Band Names without articles
