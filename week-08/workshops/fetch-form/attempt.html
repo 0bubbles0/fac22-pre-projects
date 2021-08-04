@@ -3,9 +3,65 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Real world fetch</title>
+    <title>Attempt fetch real world</title>
   </head>
   <body>
-    <script></script>
+    <h1>Check the console</h1>
+
+    <form>
+      <input type="text" placeholder="Name" />
+      <input type="text" placeholder="Wish" />
+      <button id="submit" type="submit">Submit</button>
+    </form>
+
+    <script>
+      /*
+      fetch('https://echo.oliverjam.workers.dev/status/404')
+        .then((response) => {
+          if (!response.ok) {
+            const error = new Error(response.status);
+            throw error;
+          }
+          console.log(response);
+        })
+        .catch(console.error);
+        Response
+        body: (...)
+        bodyUsed: false
+        headers: Headers {}
+        ok: false
+        redirected: false
+        status: 404
+        statusText: ""
+        type: "cors"
+        url: "https://echo.oliverjam.workers.dev/status/404"
+        [[Prototype]]: Response
+        */
+      //response.ok // false
+
+      const data = { name: 'oli' };
+
+      fetch('https://echo.oliverjam.workers.dev/json', {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: { 'content-type': 'application/json' },
+      })
+        .then((response) => {
+          if (!response.ok) throw new Error(response.status);
+          return response.json();
+        })
+        .then((json) => console.log(json))
+        .catch(console.error);
+      /* Returns
+        {
+          "name": "oli",
+          "id": 499,
+          "created": "2020-02-17T16:03:13.654Z"
+        }
+      */
+
+      /* Forms: form.addEventListener("submit", event => {event.preventDefault(); //handle yourself with fetch}))
+       */
+    </script>
   </body>
 </html>
