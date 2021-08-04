@@ -55,7 +55,7 @@
 
 - [x] Functions, callbacks, async: <https://learn.foundersandcoders.com/workshops/functions-callbacks-async/>
 - [x] Fetch (E135min A180min): <https://learn.foundersandcoders.com/workshops/learn-fetch/>
-- [x] Promises (E120min ): <https://learn.foundersandcoders.com/workshops/promise-practice/>
+- [x] Promises (E120min A100min): <https://learn.foundersandcoders.com/workshops/promise-practice/>
 
 - [x] First-class Function (_MDN_): <https://developer.mozilla.org/en-US/docs/Glossary/First-class_Function>
   - **First-class Function** is treated like
