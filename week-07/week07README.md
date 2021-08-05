@@ -27,6 +27,7 @@
 - [x] **W**: Promises
 - [x] **R**: Reading
 - [x] **P**: GitHub Profile Readme
+- [x] **J**: Guest Prep
 
 - [ ] **P**: Collab: Repo, Plan, API
 
@@ -34,7 +35,6 @@
 
 - [ ] **J**: CV
 - [ ] **J**: LinkedIn
-- [ ] **J**: Guest Prep
 
 ## Summary & Sessions
 
@@ -95,19 +95,22 @@
 ### Set JS Challenges
 
 - **Find**
-  - Read
-  - Write
+  - [x] Read
+  - [x] Write
 
 ### Employment
 
 - LinkedIn
+  - [x] create account
   - Set up skeleton Profile
   - Share Profile
 - Technical CV
-  - Read
-  - Start writing
+  - [x] Read
+  - [x] 1st draft
+  - [ ] gather content
+  - [ ] proper draft, content, spelling, layout
 
 ### Guest Prep
 
-- Common Knowledge (_Gemma Copeland_)
-- Ticketmaster (_Martyn Hoyer_)
+- [x] Common Knowledge (_Gemma Copeland_)
+- [x] Ticketmaster (_Martyn Hoyer_)
