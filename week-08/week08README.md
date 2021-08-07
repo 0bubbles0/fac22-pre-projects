@@ -17,9 +17,9 @@
 ## Schedule
 
 - [x] **W**: Fetch (120min)
+- [x] **R**: JS Debugging, JS Async, Network Debugging (90 min)
 
 - [ ] **W**: Forms (60min)
-- [ ] **R**: JS Debugging, JS Async, Network Debugging (90 min)
 - [ ] **J**: CV
 
 - [ ] **P**: API Collab (180min)
@@ -69,8 +69,8 @@
 
 ### Debugging network requests
 
-- [ ] Inspect Network Activity with DevTools: <https://developers.google.com/web/tools/chrome-devtools/network/>
-- [ ] Insomnia: <https://support.insomnia.rest/article/11-getting-started>
+- [x] Inspect Network Activity with DevTools: <https://developers.google.com/web/tools/chrome-devtools/network/>
+- [x] Insomnia: <https://support.insomnia.rest/article/11-getting-started>
 
 - How can we send and receive test network requests while working on an application?
 - How can we inspect any requests the browser is making on an HTML page?

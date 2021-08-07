@@ -86,9 +86,9 @@
   - `console.log()` &rarr; open source code, insert .log, reload page
   - **breakpoints** &rarr; pause code execution, examine all current values
     - Demo: <https://googlechrome.github.io/devtools-samples/debug-js/get-started>
-    - in DevTools &rarr; Sources &rarr; Event Listener Breakpoints &rarr; Mouse &rarr; click &rarr; select to insert breakpoint for any clicks
+    - in DevTools &rarr; **Sources** &rarr; Event Listener Breakpoints &rarr; Mouse &rarr; click &rarr; select to insert breakpoint for any clicks
       - step into/over, click a line, Scope, Watch Expressions (over time)
-      - Pause on specific line &rarr; try code in Console &rarr; apply in Sources &rarr; Strg+S &rarr; deactivate breakpoint blue-marker & rerun demo
+      - Pause on specific line &rarr; try code in **Console** &rarr; apply in Sources &rarr; Strg+S &rarr; deactivate breakpoint blue-marker & rerun demo
     - Further: <https://developer.chrome.com/docs/devtools/javascript/breakpoints/>
 - What **console methods** are there other than console.log? Can these help us debug?
   - console is an object, part of window-obj, supplied by BOM
@@ -109,9 +109,25 @@
 
 ## Debugging: Network
 
-- [ ] Inspect Network Activity with DevTools: <https://developers.google.com/web/tools/chrome-devtools/network/>
-- [ ] Insomnia: <https://support.insomnia.rest/article/11-getting-started>
+- [x] Inspect Network Activity with DevTools: <https://developers.google.com/web/tools/chrome-devtools/network/>
+- [x] Insomnia: <https://support.insomnia.rest/article/11-getting-started>
 
-- How can we send and receive test network requests while working on an application?
-- How can we inspect any requests the browser is making on an HTML page?
-- How can we manually send test requests outside of our browser?
+- DevTools: **Network** panel
+
+  - make sure resources are down/up-loaded as expected
+  - inspect properties: HTTP headers, content, size...
+  - NOT starting point for better load performance (Audits instead)
+  - **Throttling**: e.g. fast 3G
+  - **Hard Reload**, **Capture Screenshots**
+  - Click on file &rarr; Headers, Preview, Response (code)
+  - `/.*\.[cj]s+$/` excludes any css/js
+  - block things/files: Strg&uarr;P &rarr; block &rarr; Show Request Blocking &rarr; + main.css add &rarr; reload &rarr; shows page if main.css doesn't load
+
+- **Insomnia**: desktop app &rarr; interact/design HTTP-based APIs
+
+  - authentication helpers, code generator, environment variables (, encrypted data sync, team collab)
+  - Download: <http://insomnia.rest/download/>
+
+- How can we **send and receive** test network requests while working on an application?
+- How can we **inspect any requests** the browser is making on an HTML page?
+- How can we **manually send test requests** outside of our browser?
