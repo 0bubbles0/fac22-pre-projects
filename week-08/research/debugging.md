@@ -21,10 +21,7 @@
 
 ## JS: Async
 
-Previous:
-
-- fac Workshop Async: <https://github.com/0bubbles0/fac22-pre-projects/blob/main/week-07/workshops/async/async.md>
--
+- _Previous_: fac Workshop Async: <https://github.com/0bubbles0/fac22-pre-projects/blob/main/week-07/workshops/async/async.md>-
 
 - [x] Async concepts: <https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Concepts>
 - [x] Introduction async JS: <https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Introducing>
@@ -81,13 +78,34 @@ Previous:
 
 ## Debugging: JS
 
-- [ ] Console: <https://www.freecodecamp.org/news/how-to-get-the-most-out-of-the-javascript-console-b57ca9db3e6d/>
-- [ ] Debugging Chrome DevTools: <https://developers.google.com/web/tools/chrome-devtools/javascript/>
+- [x] Console: <https://www.freecodecamp.org/news/how-to-get-the-most-out-of-the-javascript-console-b57ca9db3e6d/>
+  - Has str substitutions `%s, %i, %d, %f`
+- [x] Debugging Chrome DevTools: <https://developers.google.com/web/tools/chrome-devtools/javascript/>
 
-- How would you effectively find out where (and why) an error is occurring in your JavaScript code?
-- What console methods are there other than console.log? Can these help us debug?
-- What does the debugger; statement do?
-- How do we use the debugger in our browser?
+- How would you effectively find out **where** (and why) an **error** is occurring in your JavaScript code?
+  - `console.log()` &rarr; open source code, insert .log, reload page
+  - **breakpoints** &rarr; pause code execution, examine all current values
+    - Demo: <https://googlechrome.github.io/devtools-samples/debug-js/get-started>
+    - in DevTools &rarr; Sources &rarr; Event Listener Breakpoints &rarr; Mouse &rarr; click &rarr; select to insert breakpoint for any clicks
+      - step into/over, click a line, Scope, Watch Expressions (over time)
+      - Pause on specific line &rarr; try code in Console &rarr; apply in Sources &rarr; Strg+S &rarr; deactivate breakpoint blue-marker & rerun demo
+    - Further: <https://developer.chrome.com/docs/devtools/javascript/breakpoints/>
+- What **console methods** are there other than console.log? Can these help us debug?
+  - console is an object, part of window-obj, supplied by BOM
+    - `window.console.log('Works');`
+    - `console.log('Works');`
+    - BOM doesn't have standard
+  - `.info()`, `.warn()`, `.error()`, `.assert(false, 'log error')`
+  - `console.time('id for timer'); console.timeEnd('id for timer')` &rarr; benchmarking
+  - `.table()` for arr, obj
+  - `.dir(document.body)` interactive obj-list
+  - `.group()` groups 3+ `.log()`
+- What does the **debugger; statement** do?
+- How do we use the debugger in our **browser**?
+
+  - **Sources** panel for JS: file navigator, code editor, debugging pane
+
+- **DevTools**: CSS, page load performance, network requests
 
 ## Debugging: Network
 

@@ -48,8 +48,8 @@
 
 ### JS Debugging
 
-- [ ] Console: <https://www.freecodecamp.org/news/how-to-get-the-most-out-of-the-javascript-console-b57ca9db3e6d/>
-- [ ] Debugging Chrome DevTools: <https://developers.google.com/web/tools/chrome-devtools/javascript/>
+- [x] Console: <https://www.freecodecamp.org/news/how-to-get-the-most-out-of-the-javascript-console-b57ca9db3e6d/>
+- [x] Debugging Chrome DevTools: <https://developers.google.com/web/tools/chrome-devtools/javascript/>
 
 - How would you effectively find out where (and why) an error is occurring in your JavaScript code?
 - What console methods are there other than console.log? Can these help us debug?
