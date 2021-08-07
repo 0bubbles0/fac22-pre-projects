@@ -16,8 +16,9 @@
 
 ## Schedule
 
+- [x] **W**: Fetch (120min)
+
 - [ ] **W**: Forms (60min)
-- [ ] **W**: Fetch (120min)
 - [ ] **R**: JS Debugging, JS Async, Network Debugging (90 min)
 - [ ] **J**: CV
 
@@ -57,8 +58,8 @@
 
 ### JS Async
 
-- [ ] Async concepts: <https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Concepts>
-- [ ] Introduction async JS: <https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Introducing>
+- [x] Async concepts: <https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Concepts>
+- [x] Introduction async JS: <https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Introducing>
 - [x] Event Loop: <https://2014.jsconf.eu/speakers/philip-roberts-what-the-heck-is-the-event-loop-anyway.html>
 
 - How does JS handle asynchronous code?
