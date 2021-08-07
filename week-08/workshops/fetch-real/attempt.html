@@ -4,41 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Attempt fetch real world</title>
+    <style>
+      output {
+        display: block;
+      }
+    </style>
   </head>
   <body>
-    <h1>Check the console</h1>
+    <h2>Form Submitter</h2>
+    <form id="my-form">
+      <input type="text" id="my-name" name="my-name" placeholder="Name" />
+      <input type="email" id="my-email" name="my-email" placeholder="Email" />
+      <button type="submit" id="my-submit">Submit</button>
+    </form>
 
-    <form>
-      <input type="text" placeholder="Name" />
-      <input type="text" placeholder="Wish" />
-      <button id="submit" type="submit">Submit</button>
+    <h2>Pokémon Searcher</h2>
+
+    <form id="poke-search-form">
+      <input
+        type="text"
+        id="poke-search-field"
+        name="poke-search-field"
+        placeholder="Search Pokémon by name"
+      />
+      <button type="submit" id="submit">Search</button>
+      <output id="poke-board"></output>
     </form>
 
     <script>
-      /*
-      fetch('https://echo.oliverjam.workers.dev/status/404')
-        .then((response) => {
-          if (!response.ok) {
-            const error = new Error(response.status);
-            throw error;
-          }
-          console.log(response);
-        })
-        .catch(console.error);
-        Response
-        body: (...)
-        bodyUsed: false
-        headers: Headers {}
-        ok: false
-        redirected: false
-        status: 404
-        statusText: ""
-        type: "cors"
-        url: "https://echo.oliverjam.workers.dev/status/404"
-        [[Prototype]]: Response
-        */
-      //response.ok // false
-
+      //1 Send
       const data = { name: 'oli' };
 
       fetch('https://echo.oliverjam.workers.dev/json', {
@@ -47,21 +41,85 @@
         headers: { 'content-type': 'application/json' },
       })
         .then((response) => {
-          if (!response.ok) throw new Error(response.status);
+          if (!response.ok) {
+            throw new Error(response.status);
+          }
+          // console.log(response);
+          // return response.blob();
           return response.json();
         })
         .then((json) => console.log(json))
         .catch(console.error);
-      /* Returns
-        {
-          "name": "oli",
-          "id": 499,
-          "created": "2020-02-17T16:03:13.654Z"
-        }
-      */
 
-      /* Forms: form.addEventListener("submit", event => {event.preventDefault(); //handle yourself with fetch}))
-       */
+      //Challenge: Send form
+      const myForm = document.querySelector('#my-form');
+
+      myForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        // const userName = document.querySelector('#fName').value;
+        // const userEmail = document.querySelector('#email').value;
+        // const userData = { userName, userEmail };
+        const userData = Object.fromEntries(new FormData(myForm));
+        fetch('https://echo.oliverjam.workers.dev/json', {
+          method: 'POST',
+          body: JSON.stringify(userData),
+          headers: { 'content-type': 'application/json' },
+        })
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error(response.status);
+            }
+            // console.log(response);
+            // return response.blob();
+            return response.json();
+          })
+          .then((json) => console.log(json))
+          .catch(console.error);
+      });
+
+      //Workshop
+      const pokeForm = document.querySelector('#poke-search-form');
+      const pokeBoard = document.querySelector('#poke-board');
+
+      function capitaliseStr1(str) {
+        let letters = str.split('');
+        letters[0] = letters[0].toUpperCase();
+        return letters.join('');
+      }
+
+      pokeForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        //Clear Result Board
+        pokeBoard.innerHTML = '';
+        //Receive User Input
+        const formData = new FormData(pokeForm);
+        let pokeName = formData.get('poke-search-field'); //name
+        // const pokeName = document.querySelector('#poke-search-field').value;
+        //Look up User Input
+        fetch(`https://pokeapi.co/api/v2/pokemon/${pokeName.toLowerCase()}`)
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error(response.status);
+            }
+            return response.json();
+          })
+          .then((poke) => {
+            console.log(poke);
+            //pokeBoard +<p>${name}</p> + <img src="${spriteURL}">
+            const pokeh2 = document.createElement('h2');
+            pokeh2.textContent = capitaliseStr1(pokeName);
+
+            const image = document.createElement('img');
+            image.src = poke.sprites.front_default;
+            image.alt = `Image of ${pokeName}`;
+
+            pokeBoard.append(pokeh2, image);
+          })
+          .catch((error) => {
+            console.log(error);
+            pokeBoard.textContent = `${pokeName} not found`;
+          });
+      });
     </script>
   </body>
 </html>

@@ -41,7 +41,7 @@
 ## Workshops
 
 - [ ] Forms (60min): <https://learn.foundersandcoders.com/workshops/html-forms/>
-- [ ] Real world Fetch (120min): <https://learn.foundersandcoders.com/workshops/real-world-fetch/>
+- [x] Real world Fetch (120min): <https://learn.foundersandcoders.com/workshops/real-world-fetch/>
 
 ## Research Spikes (90 min)
 
