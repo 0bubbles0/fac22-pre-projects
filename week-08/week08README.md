@@ -59,7 +59,7 @@
 
 - [ ] Async concepts: <https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Concepts>
 - [ ] Introduction async JS: <https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Introducing>
-- [ ] Event Loop: <https://2014.jsconf.eu/speakers/philip-roberts-what-the-heck-is-the-event-loop-anyway.html>
+- [x] Event Loop: <https://2014.jsconf.eu/speakers/philip-roberts-what-the-heck-is-the-event-loop-anyway.html>
 
 - How does JS handle asynchronous code?
 - What’s the difference between “synchronous” and “asynchronous” code? Why might synchronous code be called “blocking”?
