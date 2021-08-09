@@ -5,14 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      #img-placeholder {
+        width: 300px;
+        height: auto;
+      }
+    </style>
   </head>
   <body>
     <h1>API Practice</h1>
+
     <section>
       <h2>Try Unsplash API</h2>
       <div id="img-frame">
-        <img id="img-placeholder" />
-        <button id="img-button">Generate</button>
+        <input id="img-wish" type="text" placeholder="Search Image" />
+        <button id="img-button" type="submit">Search</button>
+        <img id="img-placeholder" alt="wish-image" />
       </div>
     </section>
 
@@ -24,27 +32,34 @@
       </p>
       <canvas id="recipe-frame"></canvas>
     </section>
+
     <script>
       const imgFrame = document.querySelector('#img-frame');
       const imgPlholder = document.querySelector('#img-placeholder');
+      const imgForm = document.querySelector('#img-form');
+      const imgWish = document.querySelector('#img-wish');
       const imgButton = document.querySelector('#img-button');
 
       imgButton.addEventListener('click', () => {
-        fetch('https://picsum.photos/200')
+        const userWish = imgWish.value;
+        console.log(userWish);
+        // fetch('https://picsum.photos/200') // random img
+        fetch(`https://source.unsplash.com/weekly?${userWish}`)
           .then((response) => {
+            console.log(response);
             console.log(response.url);
             imgPlholder.src = response.url;
           })
           .catch((error) => "Couldn't load image");
       });
 
-      const recipeFrame = document.querySelector('#recipe-frame');
-      //disable CORS: request mode: 'no-cors'
-      fetch(
-        'http://www.recipepuppy.com/api/?i=onions,garlic&q=omelet&p=3'
-      ).then((response) => {
-        console.log(response);
-      });
+      // const recipeFrame = document.querySelector('#recipe-frame');
+      // //disable CORS: request mode: 'no-cors'
+      // fetch('http://www.recipepuppy.com/api/?i=onions,garlic&q=omelet&p=3', {
+      //   mode: 'no-cors',
+      // }).then((response) => {
+      //   console.log(response);
+      // });
     </script>
   </body>
 </html>

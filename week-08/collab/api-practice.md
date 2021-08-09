@@ -4,6 +4,10 @@
 
 - [ ] CORS explanation: <https://web.dev/cross-origin-resource-sharing/>
 
+## Unsplash
+
+- [ ] Better API: <https://source.unsplash.com/>
+
 ## Recipe Puppy API
 
 - [ ] Instructions <http://www.recipepuppy.com/about/api/>
@@ -36,3 +40,5 @@ No parameters are required. Let me know if you have any questions or if you want
     {"name": "leia organa"}// json-format extra detail
 
   - CORS explanation: <https://web.dev/cross-origin-resource-sharing/>
+    `fetch('https://cors-demo.glitch.me/allow-cors', {mode:'cors'})`
+    `fetch('https://cors-demo.glitch.me/allow-cors', {mode:'no-cors'})`
