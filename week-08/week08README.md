@@ -18,8 +18,8 @@
 
 - [x] **W**: Fetch (120min)
 - [x] **R**: JS Debugging, JS Async, Network Debugging (90 min)
+- [x] **W**: Forms (60min)
 
-- [ ] **W**: Forms (60min)
 - [ ] **J**: CV
 
 - [ ] **P**: API Collab (180min)
@@ -41,7 +41,7 @@
 
 ## Workshops
 
-- [ ] Forms (60min): <https://learn.foundersandcoders.com/workshops/html-forms/>
+- [x] Forms (60min): <https://learn.foundersandcoders.com/workshops/html-forms/>
 - [x] Real world Fetch (120min): <https://learn.foundersandcoders.com/workshops/real-world-fetch/>
 
 ## Research Spikes (90 min)
