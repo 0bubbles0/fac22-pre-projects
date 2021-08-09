@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>API Practice</h1>
+    <section>
+      <h2>Try Unsplash API</h2>
+      <div id="img-frame">
+        <img id="img-placeholder" />
+        <button id="img-button">Generate</button>
+      </div>
+    </section>
+
+    <section>
+      <h2>Try Recipe Puppy API</h2>
+      <p>
+        Credits to
+        <a href="http://www.recipepuppy.com/about/api/">Recipe Puppy API</a>
+      </p>
+      <canvas id="recipe-frame"></canvas>
+    </section>
+    <script>
+      const imgFrame = document.querySelector('#img-frame');
+      const imgPlholder = document.querySelector('#img-placeholder');
+      const imgButton = document.querySelector('#img-button');
+
+      imgButton.addEventListener('click', () => {
+        fetch('https://picsum.photos/200')
+          .then((response) => {
+            console.log(response.url);
+            imgPlholder.src = response.url;
+          })
+          .catch((error) => "Couldn't load image");
+      });
+
+      const recipeFrame = document.querySelector('#recipe-frame');
+      //disable CORS: request mode: 'no-cors'
+      fetch(
+        'http://www.recipepuppy.com/api/?i=onions,garlic&q=omelet&p=3'
+      ).then((response) => {
+        console.log(response);
+      });
+    </script>
+  </body>
+</html>
