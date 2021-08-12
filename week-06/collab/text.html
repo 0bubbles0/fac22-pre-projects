@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BAgency</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <a class="nav__logo" href="#">BAgency</a>
+        <ul id="navbar-links" class="nav__links">
+          <!-- <li class="nav__item">
+            <a class="nav__link" href="#chapter-intro">Intro</a>
+          </li> -->
+          <li class="nav__item">
+            <a class="nav__link" href="#chapter-about">About us</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#chapter-team">Our team</a>
+          </li>
+          <li class="nav__item">
+            <a
+              class="nav__link nav__link--btn btn--open-modal"
+              href="#chapter-contact"
+            >
+              Work form
+            </a>
+          </li>
+          <!-- <li class="nav__item"><a class="nav__link nav__link--btn btn--open-modal" href="#chapter-team-add">Add staff</a></li> -->
+        </ul>
+      </nav>
+      <div class="header__text">
+        <h1>
+          BAgency is your partner in creating an online presence for your business or social enterprise
+        </h1>
+        <img
+          src="img/our-team.png"
+          class="header__img"
+          alt="Image of hands working at a laptop"
+          tabindex="0"
+        />
+      </div>
+    </header>
+
+    <main>
+      <!--
+            <section id="chapter-intro">
+                <h2>Intro</h2>
+            </section>
+        -->
+
+      <!--
+        -->
+      <section class="section" id="chapter-about" tabindex="0">
+        <div class="section__title">
+          <h3 class="section__header">About <span class="text-bagency">BAgency</span></h3>
+        </div>
+
+        <div class="about">
+          <img 
+            src="img/partner.png" 
+            alt="Working Partner Shaking Hands" 
+            class="about__img"
+          />
+
+          <div class="about__text">
+            <h5 class="features__header">Developing a strategy</h5>
+            <p>
+              We work with you to identify the needs of your customers and develop an online strategy to expand your reach
+            </p>
+          </div>
+
+          <div class="about__text">
+            <h5 class="about__header">Building reliable products with a vision</h5>
+            <p>
+              With our creative and technical expertise, we choose the perfect tools to create innovative and robust projects that are perfectly tailored to your design and functionality requirements
+            </p>
+          </div>
+          <img
+            src="img/susport.png"
+            alt="team work illustration"
+            class="about__img"
+          />
+            
+          <img
+          src="img/customer.png"
+          alt="Character desk illustration customer"
+          class="about__img"
+          />
+          <div class="about__text">
+            <h5 class="about__header">Launching the future</h5>
+            <p>
+              We take great pride in developing software with accessibility and sustainability at its core that makes our clients lead progress
+            </p>
+          </div>
+
+        </div>
+
+      </section>
+
+      <section class="section" id="chapter-team" tabindex="0">
+        <h3 class="section__header">Meet our dedicated team</h3>
+
+        <article tabindex="0">
+          <h3>Adriana</h3>
+          <h4>Creative and Development</h4>
+          <img
+            class="img__profile"
+            src="img/woman-1353825.png"
+            alt="Avatar for Adriana"
+          />
+          <p>Transforming your user experience</p>
+          <p>Special focus on interactive features</p>
+        </article>
+
+        <article tabindex="0">
+          <h3>Barbara</h3>
+          <h4>Content and Development</h4>
+          <img
+            class="img__profile"
+            src="img/woman-1353803.png"
+            alt="Avatar for Barbara"
+          />
+          <p>Helping you tell your story</p>
+          <p>Special focus on colour modes</p>
+        </article>
+
+        <template id="new-team-card">
+          <article tabindex="0">
+            <h3></h3>
+            <h4></h4>
+            <img class="img__profile" alt="Image of new team member">
+            <p></p>
+          </article>
+        </template>
+      </section>
+      <section>
+        <h3 class="section__header">We are always adding new members to our team</h3>
+        <img
+          src="img/new-team.jpg"
+          class="header__img"
+          alt="The BAgency team"
+          tabindex="0"
+        />
+        <form name="team-form" id="team-form" class="modal__form">
+          <label for="team-form-name">Name<span class="required"> *</span></label>
+          <input name="Staff Name" type="text" id="team-form-name" placeholder="Employee Name" data-valid="false" required>
+          <!-- <span>&nbsp;</span>
+          <span id="team-form-name-error" class="modal__form_error hidden">You need to provide a name</span> -->
+
+          <label for="team-form-email">Email Address<span class="required"> *</span></label>
+          <input name="Staff Email Adress" type="email" id="team-form-email" placeholder="Employee Email Address" data-valid="false" required>
+          <!-- <span>&nbsp;</span>
+          <span id="team-form-email-error" class="modal__form_error hidden">You need to provide a valid Email Address</span> -->
+
+          <label for="team-form-title">Job Title<span class="required"> *</span></label>
+          <input name="Staff Title" type="text" id="team-form-title" placeholder="New Team Role Title" data-valid="false" required>
+          <!-- <span>&nbsp;</span>
+          <span id="team-form-email-error" class="modal__form_error hidden">You need to provide a valid the Role Title</span> -->
+
+          <label for="team-form-desc">Description<span class="required"> *</span><span class="error"></span
+            ></label>
+          <textarea name="Staff Description" id="team-form-desc" placeholder="Describe the role of the new team member (max 149 characters)" data-valid="false" required></textarea>
+          <!-- <span>&nbsp;</span>
+          <span id="work-form-desc-error" class="modal__form_error hidden">You need to provide a message between 1 and 149 characters</span> -->
+
+          <label for="team-form-img">Profile Image</label>
+          <input name="Staff Image" type="text" id="team-form-img" placeholder="Insert URL">
+
+          <label for="team-form-pass">Admin Password<span class="required"> *</span><span class="error"></span
+            ></label>
+          <input name="Admin Password" type="password" id="team-form-pass" placeholder="Enter Admin Password" data-valid="false" required>
+          <!-- <span>&nbsp;</span>
+          <span id="work-form-pass-error" class="modal__form_error hidden">Incorrect Admin Password</span> -->
+
+          <button id="team-form-submit" type="button" class="btn">Submit</button>
+
+        </form>
+      </section>
+
+      <!--
+            <section id="chapter-contact"  tabindex="0">
+                <h2>Contact</h2>
+            </section>
+        -->
+    </main>
+
+    <footer class="footer" tabindex="0">
+      <!--Toggle Dark Mode, can go elsewhere in this HTML-->
+      <div class="switch-container">
+        <span class="switch" id="dark-mode-switch">
+          <input type="checkbox" id="dark-mode-checkbox" tabindex="0" />
+          <span class="slider"></span>
+        </span>
+        <label class="text--large" id="dark-mode-label" for="checkbox-dark-mode"
+          >To Dark Mode</label
+        >
+      </div>
+
+      <ul class="footer__navbar">
+        <li class="footer__item">
+          <a class="footer__link" href="#">Intro</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#chapter-about">About us</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#chapter-team">Team</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link btn--open-modal" href="#chapter-contact"
+            >Work form</a
+          >
+        </li>
+      </ul>
+      <p>&#169; 2021 BAgency</p>
+    </footer>
+
+    <div class="modal hidden">
+      <button class="btn--close-modal">&times;</button>
+      <h2 class="modal__header">Work form</h2>
+      <span id="work-form-results" class="hidden">&nbsp;</span>
+      <form
+        name="work-form"
+        id="work-form"
+        class="modal__form"
+      >
+        <label>Name</label>
+        <input
+          name="Name"
+          type="text"
+          id="work-form-name"
+          placeholder="Name or Company Name"
+          data-valid="false"
+        />
+        <span>&nbsp;</span>
+        <span id="work-form-name-error" class="modal__form_error hidden">
+          You need to provide a name
+        </span>
+        <label>Email Address</label>
+        <input
+          name="Email Address"
+          type="email"
+          id="work-form-email"
+          placeholder="Valid Email Address"
+          data-valid="false"
+        />
+        <span>&nbsp;</span>
+        <span id="work-form-email-error" class="modal__form_error hidden">
+          You need to provide a valid Email Address
+        </span>
+        <label>Message</label>
+        <textarea
+          name="Message"
+          id="work-form-message"
+          cols="30"
+          rows="10"
+          placeholder="Enter Description about Request (maximum length 149 characters)"
+          data-valid="false"
+        ></textarea>
+        <span>&nbsp;</span>
+        <span id="work-form-message-error" class="modal__form_error hidden">
+          You need to provide a message between 1 and 149 characters
+        </span>
+        <label>Please type<br />"I'm not a robot"</label>
+        <input
+          type="text"
+          id="work-form-robot"
+          placeholder="I'm not a robot"
+          data-valid="false"
+        ></input>
+        <span>&nbsp;</span>
+        <span id="work-form-robot-error" class="modal__form_error hidden">
+          You need to type "I'm not a robot"
+        </span>
+        <button id="work-form-send" type="button" class="btn">Send form</button>
+      </form>
+    </div>
+    <div class="overlay hidden"></div>
+  </body>
+</html>
