@@ -1,20 +1,45 @@
-# Pre-apprenticeships projects
+# Pre-apprenticeship Display and Workspace
 
-## Founders and Coders Cohort 22
-
-### June - September 2021
+## Founders and Coders Cohort 22 (June - September 2021)
 
 This repository is hosted on <https://0bubbles0.github.io/fac22-pre-projects/>.
 
-It will aim to contain:
+It is my display and working area for the fac22 pre-apprenticeship material.
 
-* **Notes**: from Sessions and own Research
-* **Planning**: Tasks, To-do lists
-* **Workshops**
-* **Projects**
-* **Ideas** as they come up
+### Contents
 
-I am excited for what this space will turn into over the coming weeks!
+#### Weekly Folders
+
+- **Planning**: tasks, to-do lists
+- **Notes**: from sessions and own research
+- **Workshops**: solutions and documentation of the process
+- **Projects**: solutions, process documentation, variation ideas
+
+#### Project Gallery Page (index.html)
+
+- **Content**:
+  - A gallery of the projects I have worked on, both guided tutorials (projects and workshops), and original partner sprints
+  - Link to my personal introduction page (on `<bubbles>` logo)
+  - Link to Glossary Page
+
+#### Glossary Page (glossary.html)
+
+- **Content**:
+  - A collection of my documentations and notes, sorted by topic for quick reference access
+
+#### Style and Scripts of the Gallery and Glossary Pages
+
+These two pages are my trial and error tests of new concepts I have learned. I'm constantly trying out different styles and scripts, so that I can get a practical idea of why certain ways have become best practices. It also gives me an opportunity to try an alternative approach to components I have built before, so that I can find out which way works best. I have noticed that this approach has a more lasting impact on my learning, as I actually spend some time trying out a path rather than just reading about it or seeing a short code example.
+
+Currently, I'm trying:
+
+- Alternative ways to build a **sticky top navbar** on my Gallery Page: grid or `position: fixed`?
+- The respective advantages of different **CSS naming approaches**: BEM and/or Composition?
+- Applying the JS30 **Flex Panels** to organise my Glossary Page:
+  - On small, it should only show the topic heading, such as "HTML".
+  - On expand, it should display the lists of resources
+
+If you can spot bugs on these trial and error missions before I do, would you like to raise it as an Issue?
 
 <!--
 ### Template Repo
