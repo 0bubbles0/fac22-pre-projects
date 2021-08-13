@@ -4,8 +4,8 @@
   --bground-color: #f4f1de;
   --top-color: #e0b589;
   --card-color: lightblue;
-  --font-color: ;
-  --accent-color: ;
+  --font-color: #000;
+  --accent-color: #004f70;
   --hover-color: ;
   --rem-s: 0.5rem;
   --rem-m: 1rem;
@@ -14,15 +14,23 @@
   --shadow: 6px 6px 10px 0 rgba(0, 0, 0, 0.2);
 }
 
+.dark {
+  --bground-color: #121212;
+  --font-color: #fff;
+  --top-color: #3c3c3c;
+  --card-color: #282828;
+  --accent-color: #00bfff;
+  --link-color: #00bfff;
+}
+
 /*Defaults*/
 * {
   box-sizing: border-box;
   margin: 0;
 }
-html {
-}
 body {
   font-family: system-ui, sans-serif;
+  color: var(--font-color);
   background: var(--bground-color);
   text-align: center;
 }
@@ -134,10 +142,11 @@ body {
 /*Deco Header, Footer*/
 .header {
   width: 100%;
-  height: 11vh;
+  /* height: 11vh; */
   position: fixed;
   top: 0;
   left: 0;
+  color: var(--accent-color);
   background: linear-gradient(
     to bottom,
     var(--top-color) 0%,
@@ -190,7 +199,7 @@ footer {
 /*Images*/
 .img__logo {
   min-width: 150px;
-  max-width: 12vw;
+  max-width: 15vw;
   height: auto;
 }
 
@@ -209,6 +218,70 @@ img {
   height: 100%;
 }
 
+/*Toggle Switch*/
+.switch-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.switch {
+  background: none;
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 35px;
+  margin-right: 0.5em;
+}
+
+.switch input {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  pointer-events: all;
+}
+
+.slider {
+  background: #ddd;
+  /*width: 100%;*/
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-radius: 35px;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.slider:before {
+  /*actual button*/
+  content: '';
+  background-color: var(--accent-color);
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  bottom: 4px;
+  left: 4px;
+  border-radius: 50%;
+  pointer-events: none;
+  transition: 0.2s;
+}
+
+/*Toggle after click*/
+input:checked + .slider {
+} /*could change toggle-color on click*/
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
 /*Hilfslinien
 article {border: 1px solid green;}
 */
+
+@media only screen and (max-width: 400px) {
+  .no-mobile {
+    display: none;
+  }
+}
