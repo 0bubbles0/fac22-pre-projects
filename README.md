@@ -36,8 +36,8 @@ Currently, I'm trying:
 - Alternative ways to build a **sticky top navbar** on my Gallery Page: grid or `position: fixed`?
 - The respective advantages of different **CSS naming approaches**: BEM and/or Composition?
 - Applying the JS30 **Flex Panels** to organise my Glossary Page:
-  - On small, it should only show the topic heading, such as "HTML".
-  - On expand, it should display the lists of resources
+  - On expand, a panel and its font size should grow bigger
+  - On second click, the panel and font should shrink back to its original
 
 If you can spot bugs on these trial and error missions before I do, would you like to raise it as an Issue?
 
