@@ -3,6 +3,7 @@
   --card-color1: lightblue;
   --card-color2: #f4f1de;
   --link-color: #2e343b;
+  --logo-color: #004f70;
   --rem-s: 0.5rem;
   --rem-m: 1rem;
   --rem-l: 2rem;
@@ -21,8 +22,20 @@ body {
   line-height: 2;
 }
 
+li {
+  font-size: 120%;
+}
+
+a {
+  color: var(--link-color);
+}
+.no-link {
+  color: var(--logo-color);
+}
+
 .header {
   padding: 0 var(--rem-m);
+  color: var(--logo-color);
   background: linear-gradient(
     to bottom,
     var(--bground-color) 0%,
@@ -47,14 +60,6 @@ body {
 
 .center-txt {
   text-align: center;
-}
-
-li {
-  font-size: 120%;
-}
-
-a {
-  color: var(--link-color);
 }
 
 .img__logo {
