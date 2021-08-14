@@ -47,7 +47,7 @@ function multiplyMany(...numbers, toMultiply) {
   return result;
 }
 */
-// console.log(multiplyMany(1, 7.7, 1000, 100));
+// console.log(multiplyMany(1, 7.7, 1000, 100)); //SyntaxError?
 
 function doubleNumbers(strings, ...values) {
   console.log(strings);
