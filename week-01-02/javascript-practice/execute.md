@@ -232,6 +232,9 @@
 | 13. | Computed properties                      | Jul 8, Thu  |
 | 14. | Tagged template literals                 | Jul 9, Fr   |
 | 15. | Basic array destructuring                | Aug 14, Sat |
+| 16. | Basic object destructuring               | Aug 14, Sat |
+| 17. | Places where destructuring is allowed    | Aug 14, Sat |
+|     |                                          |             |
 
 <!--
 | | | |
