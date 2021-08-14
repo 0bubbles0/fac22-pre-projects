@@ -43,6 +43,7 @@
 
 - **Array Destructuring**:
 
+  - pick in
   - **error** if try to destructure non-structured/non-iterables null, undefined, number
   - **undefined** for any non-existent index, can set default with `='d'`
 
@@ -60,10 +61,66 @@
   const [a, b, c] = null; // error, also for number, undefined
   const [a, b, c, d = 'd', e] = letters; // ['a', 'b', 'c', 'd', undefined]
   const [a, ...others] = letters; // others are ['b', 'c'], always arr-format
-  //strings
+  // strings
   const s = 'abc';
   const [a, b, c] = s; // b is 'b'
   const [...char] = s; // chars[2] is 'c'
+  //
+  ```
+
+- **Object Destructuring**:
+
+  - **error** trying to destructure null, undefined
+  - **undefined** if trying on non-existent key
+  - interacts well with **get**: obj-key is a getter &rarr; destructure val, getter returns value
+
+  ```javascript
+  const user = { name: 'Amir', email: 'amir@example.com', age: 36 };
+  const { name, age } = user;
+  [name, age]; // ['Amir', 36]
+  const { name } = null; // error. Also for null, undefined
+  const { height } = user; // height is undefined
+  const { height = 36 } = user; // default, height is 36
+  const { name, ...rest } = user; // rest is {email: 'amir@example', age: 36}
+  const { name: userName } = { name: 'Amir', email: 'amir@example.com' }; // userName is 'Amir'
+
+  //assign pre-declared variable
+  const key = 'name';
+  const { [key]: value } = { name: 'Amir' }; // value is 'Amir'
+
+  const user = {
+    get name() {
+      return 'Be' + 'tty';
+    },
+  };
+  const { name } = user; // name is 'Betty'
+  ```
+
+- **Destructuring application**:
+
+  ```javascript
+  //arr
+  function getFirstArrayElement([first]) {
+    return first;
+  }
+  getFirstArrayElement(['cat', 'dog', 'horse']); // 'cat'
+
+  //obj
+  function getUserName({ name }) {
+    return name;
+  }
+  getUserName({ name: 'Ebony' }); // 'Ebony'
+
+  //for-of
+  const users = [{ name: 'Amir' }, { name: 'Betty' }];
+  const names = [];
+  for (const { name } of users) {
+    names.push(name);
+  }
+  names; // ['Amir', 'Betty']
+  //rest: remove 1st arr-item
+  const rest1 = ([, ...rest]) => rest; // rest1(1, 2, 3) -> [2, 3]
+  const rest2 = (_, ...rest) => rest; // rest2(1, 2, 3) -> [2, 3]
   ```
 
 - **Object shorthand naming**
