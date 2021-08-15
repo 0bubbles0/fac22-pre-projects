@@ -43,6 +43,8 @@
 
 - **Array Destructuring**:
 
+  - destructuring makes code **predictable**: new variables are safety copy of original &rarr; can use any methods, not worry which alter orignal/which don't
+    - get property perhaps different: unwanted side-effects could change an object
   - pick in
   - **error** if try to destructure non-structured/non-iterables null, undefined, number
   - **undefined** for any non-existent index, can set default with `='d'`
@@ -94,6 +96,43 @@
     },
   };
   const { name } = user; // name is 'Betty'
+  ```
+
+- **Nested destructuring**:
+
+  ```js
+  // Arr
+  const dataPoints = [
+    [10, 20],
+    [30, 40],
+  ];
+  const [, [x2]] = dataPoints; // 30
+
+  // Obj
+  const user = {
+    name: 'Amir',
+    address: {
+      city: 'Paris',
+    },
+  };
+  const {
+    address: { city }, // use address to access city. address is not a var
+  } = user;
+  city; // RESULT: 'Paris'
+
+  // OR
+  const {
+    address,
+    address: { city },
+  } = user;
+  [city, address]; // ['Paris', {city: 'Paris'}]
+
+  // Arr & Obj
+  const users = [{ name: 'Amir' }, { name: 'Betty' }];
+  const [, { name }] = users; // name is 'Betty'
+
+  // Multiple sources
+  const [{ name }, { city }] = [user, address]; // get values from 2 obj
   ```
 
 - **Destructuring application**:
@@ -234,9 +273,11 @@
 | 15. | Basic array destructuring                | Aug 14, Sat |
 | 16. | Basic object destructuring               | Aug 14, Sat |
 | 17. | Places where destructuring is allowed    | Aug 14, Sat |
-|     |                                          |             |
+| 18. | Nested destructuring                     | Aug 15, Sun |
 
 <!--
+| | | |
+| | | |
 | | | |
 | | | |
 
