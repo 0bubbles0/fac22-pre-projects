@@ -207,6 +207,31 @@
   - declare &rarr; `function objKeyVal() { return this.key; }`
   - call &rarr; `objKeyVal.bind(obj) ();`
 
+- **Arrow functions**
+
+  - easier scoping rules than normal functions &rarr; arrow has same scope-level (this) as parent
+    - can avoid .bind()
+    - useful for callbacks that don't loose scope
+
+  ```js
+  const rest = (first, ...rest) => rest;
+  rest(1, 2, 3, 4); // [2, 3, 4]
+
+  // Make different from an object with ()
+  const getUser = () => ({ name: 'Amir', age: 36 });
+  getUser().name; // 'Amir'
+
+  // Avoid .bind() with clear this
+  const address = {
+    city: 'Paris',
+    country: 'France',
+    addressString() {
+      return () => `${this.city}, ${this.country}`;
+    },
+  };
+  address.addressString()(); // 'Paris, France'
+  ```
+
 - **get, set**
 
   - objects can hold fixed or dynamic properties (function, which gets called when property is accessed user.userFunction)
@@ -237,6 +262,7 @@
   ```
 
 - **Tagged template literals**:
+
   ```javascript
   function returnsItsArguments(strings, ...values) {
     return {
@@ -246,11 +272,59 @@
   }
   returnsItsArguments`1${2}3`; // Result: {firstArg: ['1', '3'], secondArg: [2]}
   ```
+
   - literal strings, passed as arr argument &rarr; `1, 3`
     - spaces count
-    - might be padded with ‘’, so that always #literals > #interpolatedVal
+    - might be padded with '', so that always #literals > #interpolatedVal
   - interpolated values, passed as rest parameters &rarr; ${…}
   - Real example &rarr; making strings HTML-safe, e.g. turn < into &lt; (escape) &rarr; common-tags library's safeHtml
+
+- **Classes**
+
+  - describe **shape of an object**, its properties & methods
+    - **methods**: functions on individual instance.
+      - Can access obj-properties with `this.property`
+      - need need `new Cat(...).property` to instantiate
+  - Class method definitions like literal objects &rarr; `methodName() {}`
+  - classes can have constructor &rarr; method to initialise obj
+  - construct instance of class &rarr; `new MyClass()`
+  - Similar to **object-oriented** languages (Java, C#, Python, Ruby), although JS object system is **prototype-based**
+    - **better use classes** &rarr; better understood
+
+  ```js
+  // Construct instance
+  class MsFluff {
+    name() {
+      return 'Ms. Fluff';
+    }
+  }
+  new MsFluff().name(); // 'Ms. Fluff'
+
+  // Constructor
+  class Cat {
+    constructor(name) {
+      this.name = name;
+    }
+  }
+  new Cat('Ms. Fluff').name; // Ms. Fluff is an instance of Cat if constructor()
+  new Cat('Ms. Fluff'); // Ms. Fluff is an instance of Cat if constructor(name)
+
+  // Property
+  class Cat {
+    constructor(name, vaccinated) {
+      this.name = name;
+      this.vaccinated = vaccinated;
+    }
+    needsVaccination() {
+      return !this.vaccinated;
+    }
+  }
+
+  [
+    new Cat('Ms. Fluff', true).needsVaccination(),
+    new Cat('Keanu', false).needsVaccination(),
+  ]; // RESULT: [false, true]
+  ```
 
 ### Lessons
 
@@ -274,9 +348,10 @@
 | 16. | Basic object destructuring               | Aug 14, Sat |
 | 17. | Places where destructuring is allowed    | Aug 14, Sat |
 | 18. | Nested destructuring                     | Aug 15, Sun |
+| 19. | Arrow functions                          | Aug 15, Sun |
+| 20. | Classes                                  | Aug 15, Sun |
 
 <!--
-| | | |
 | | | |
 | | | |
 | | | |
