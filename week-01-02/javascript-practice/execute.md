@@ -40,6 +40,18 @@
   - As function parameter: can only be **ONE** … at **last place** (i.e. “all remaining”)
   - As function arguments: can call `add(…numbers)` &rarr; treat each number as separate argument
 
+- **Function name property**
+
+  - if function assigned to variable &rarr; have .name property
+
+  ```js
+  function f() {}
+  const f = function () {};
+  f.name; // 'f'
+  (function () {}.name); // ''
+  const f2 = f; // f2.name still 'f'
+  ```
+
 - **Generators**:
 
   - `function* numbers(a, b) { yield 1; yield a; yield b; }`
@@ -451,9 +463,9 @@
 | 23. | Extending classes                        | Aug 16, Mon |
 | 24. | String keyed methods                     | Aug 16, Mon |
 | 25. | Sets                                     | Aug 16, Mon |
+| 26. | Function name property                   | Aug 16, Mon |
 
 <!--
-| | | |
 | | | |
 | | | |
 | | | |
