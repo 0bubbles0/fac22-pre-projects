@@ -6,6 +6,11 @@
 
 - [Modern JavaScript](#modern-javascript)
 
+## Further Reading
+
+- [ ] JSON syntax (_MDN_): <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON>
+- [ ] Classes & React: <https://reactjs.org/>
+
 ## Modern JavaScript(#modern-javascript)
 
 <https://www.executeprogram.com/courses/modern-javascript>
@@ -165,6 +170,7 @@
 - **Object shorthand naming**
 
   - if name & age are already defined variables &rarr; `const user = { name: name, age: age}` SAME AS `const user = {name, age}`
+  - `obj.method` SAME AS `obj['method name']`
 
     ```javascript
     const rectangle3D = {
@@ -279,8 +285,27 @@
   - interpolated values, passed as rest parameters &rarr; ${…}
   - Real example &rarr; making strings HTML-safe, e.g. turn < into &lt; (escape) &rarr; common-tags library's safeHtml
 
+- **Sets**
+
+  - .includes() is **O(n)** &rarr; would loop 10,000 items
+  - Set data type is a collection, ordered, of unique values
+    - other languages unordered
+  - based on Set theory (Georg Cantor)
+  - `.has()` very fast &rarr; O(1) always same time regardless of size
+
+  ```js
+  const names = new Set(['Amir', 'Betty', 'Cindy']);
+  names.has('Amir'); // true
+  names.add('Dali'); // now names.has('Dali')
+  names.delete('Dali'); // now names.has('Dali')
+  Array.from(names.values()); // ['Amir', 'Betty', 'Cindy']
+  names.size(); // 3
+  names.clear(); // []
+  ```
+
 - **Classes**
 
+  - don't use if not necessary
   - describe **shape of an object**, its properties & methods
     - **methods**: functions on individual instance.
       - Can access obj-properties with `this.property`
@@ -290,6 +315,19 @@
   - construct instance of class &rarr; `new MyClass()`
   - Similar to **object-oriented** languages (Java, C#, Python, Ruby), although JS object system is **prototype-based**
     - **better use classes** &rarr; better understood
+    - React components used to be defined with classes (this.props, this.setState easy)
+  - can use in function or if, but rarely should! &rarr; set up class outside, inside new Cat('A')
+  - **Scope**:
+    - can access everything inside function,
+    - class not visible outside (like let, const)
+    - can't class(class)
+  - **Extend**
+    - super
+    - sub: extends, super()
+    - x `instanceof` Super &rarr; understands if in Super or any of its Subs.
+      - true if x = new Super()
+    - subs can define/override super methods/properties
+    - cant inherit from multiple supers at once (unlike Python, C++)
 
   ```js
   // Construct instance
@@ -324,6 +362,64 @@
     new Cat('Ms. Fluff', true).needsVaccination(),
     new Cat('Keanu', false).needsVaccination(),
   ]; // RESULT: [false, true]
+
+  //Method volumeFunction
+  const rectangle3D = {
+    width: 3,
+    depth: 4,
+    height: 5,
+    baseArea() {
+      return this.width * this.depth;
+    },
+    volumeFunction() {
+      return () => this.height * this.baseArea();
+    },
+  };
+  rectangle3D.volumeFunction()();
+
+  // Extend
+  // super class
+  class Animal {
+    constructor(name) {
+      this.name = name;
+    }
+  }
+
+  //sub class
+  class Cat extends Animal {
+    constructor(name) {
+      super(name + ' the cat');
+    }
+  }
+  const cat = new Cat('Ms. Fluff').name; // 'Ms. Fluff the cat'
+  cat instanceof Animal; // true
+  ```
+
+- **JSON**
+
+  - **J**ava**S**cript **O**bject **N**otation
+  - JSON "keys",
+  - `undefined` become JSON-null, remain null if turned back
+  - `JSON.stringify(obj)` method turns obj &rarr; JSON-string
+  - `JSON.parse(JSONstr)` method turns JSON-string &rarr; obj
+
+  ```js
+  JSON.stringify({ a: 2 }) === '{"a":2}'; // true
+  JSON.stringify([1, undefined, 2]); // '[1,null,2]'
+  JSON.parse('{"a": 1, "b"   :   2}'); // {a: 1, b: 2}
+
+  // Customise with toJSON
+  const user = {
+    name: 'Amir',
+    toJSON: () => 'This is Amir!',
+  };
+  JSON.parse(JSON.stringify(user)); // 'This is Amir!'
+
+  //no circular obj
+  const circularObject = {};
+  circularObject.someKey = circularObject;
+  circularObject; // {someKey: (circular reference)}
+  JSON.stringify(circularObject); // TypeError
   ```
 
 ### Lessons
@@ -350,8 +446,14 @@
 | 18. | Nested destructuring                     | Aug 15, Sun |
 | 19. | Arrow functions                          | Aug 15, Sun |
 | 20. | Classes                                  | Aug 15, Sun |
+| 21. | JSON stringify and parse                 | Aug 16, Mon |
+| 22. | Class scoping                            | Aug 16, Mon |
+| 23. | Extending classes                        | Aug 16, Mon |
+| 24. | String keyed methods                     | Aug 16, Mon |
+| 25. | Sets                                     | Aug 16, Mon |
 
 <!--
+| | | |
 | | | |
 | | | |
 | | | |
