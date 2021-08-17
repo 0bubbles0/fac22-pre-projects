@@ -17,6 +17,7 @@
 ## Schedule
 
 - [ ] **W**: Learn Test
+
 - [ ] **W**: Unit Testing (90min)
 - [ ] **R**: Checking Code
 - [ ] **R**: Testing methodologies
