@@ -16,7 +16,7 @@
 
 ## Schedule
 
-- [ ] **W**: Learn Test
+- [x] **W**: Learn Test
 
 - [ ] **W**: Unit Testing (90min)
 - [ ] **R**: Checking Code
@@ -37,7 +37,7 @@
 
 ## Workshops
 
-- [ ] Learn Test helpers: <https://learn.foundersandcoders.com/workshops/learn-testing/>
+- [x] Learn Test helpers: <https://learn.foundersandcoders.com/workshops/learn-testing/>
 - [ ] Unit Testing (90 min): <https://learn.foundersandcoders.com/workshops/learn-unit-testing/>
 
 ## Research

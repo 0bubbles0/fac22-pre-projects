@@ -13,6 +13,78 @@
       function square(x) {
         return x * x;
       }
+
+      // Test the square(x)
+      function testSq(x, exp) {
+        const expected = exp;
+        const result = square(x);
+        if (expected !== result) {
+          console.error(
+            `Failed square(${x}): expected ${expected}, but got ${result}.`
+          );
+        }
+      }
+
+      // equal(), notEqual() for any function
+      function equal(actual, expected) {
+        if (actual === expected) {
+          console.info(`Pass: expected and got ${expected}.`);
+        } else {
+          console.error(`Fail: expected ${expected}, but got ${actual}.`);
+        }
+      }
+      equal(square(3.5), 12.25); // Pass
+      equal(square(3.5), 9999); // Fail
+
+      function notEqual(actual, expected) {
+        if (actual !== expected) {
+          console.info(
+            `Pass: expected ${expected} is different from ${actual}.`
+          );
+        } else {
+          console.error(`Fail: expected ${expected} is same as ${actual}.`);
+        }
+      }
+
+      // test(name, testFunction)
+      function test(name, testFunction) {
+        console.group(name);
+        testFunction;
+        console.groupEnd();
+      }
+
+      test('Correctly squares integers', () => {
+        const result = square(2);
+        const expected = 4;
+        equal(result, expected);
+      });
+
+      // The Testing Library:
+      //make equal() notEqual() take message-argument
+      function equalM(actual, expected, message) {
+        if (actual === expected) {
+          const defaultM = `Pass: expected and got ${expected}.`;
+          console.info('Pass: ' + (message || defaultM));
+        } else {
+          const defaultM = `Fail: expected ${expected}, but got ${actual}.`;
+          console.error('Fail: ' + (message || defaultM));
+        }
+      }
+      function notEqualM(actual, expected, message) {
+        if (actual !== expected) {
+          const defaultM = `Pass: expected ${expected} is different from ${actual}.`;
+          console.info('Pass: ' + (message || defaultM));
+        } else {
+          const defaultM = `Fail: expected ${expected} is same as ${actual}.`;
+          console.error('Fail: ' + (message || defaultM));
+        }
+      }
+
+      test('Correctly squares integers', () => {
+        const result = square(2);
+        const expected = 4;
+        equal(result, expected, 'square(2) should return 4');
+      });
     </script>
   </body>
 </html>
