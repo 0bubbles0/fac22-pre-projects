@@ -17,8 +17,10 @@
 ## Schedule
 
 - [x] **W**: Learn Test
+- [x] **W**: Unit Testing (90min)
 
-- [ ] **W**: Unit Testing (90min)
+- [ ] **W**: Integration Testing (90min)
+
 - [ ] **R**: Checking Code
 - [ ] **R**: Testing methodologies
 - [ ] **R**: Resources
@@ -38,7 +40,8 @@
 ## Workshops
 
 - [x] Learn Test helpers: <https://learn.foundersandcoders.com/workshops/learn-testing/>
-- [ ] Unit Testing (90 min): <https://learn.foundersandcoders.com/workshops/learn-unit-testing/>
+- [x] Unit Testing (90 min): <https://learn.foundersandcoders.com/workshops/learn-unit-testing/>
+- [ ] Integration Testing (90 min): <https://learn.foundersandcoders.com/workshops/learn-integration-testing/>
 
 ## Research
 
