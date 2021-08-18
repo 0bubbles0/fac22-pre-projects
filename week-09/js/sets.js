@@ -34,10 +34,27 @@ function hasDuplicates(numbers) {
   return false;
 }
 
-console.log([
-  // hasDuplicates([]),
-  // hasDuplicates([1, 2, 3]),
-  hasDuplicates([10, 20, 20]),
-  // hasDuplicates([100, 200, 300, 100]),
-]);
+// console.log([
+// hasDuplicates([]),
+// hasDuplicates([1, 2, 3]),
+// hasDuplicates([10, 20, 20]),
+// hasDuplicates([100, 200, 300, 100]),
+// ]);
 // GOAL: [false, false, true, true]
+
+const set1 = new Set([1, 2, 3]);
+const set2 = new Set([2, 3, 4]);
+const unionSet = new Set([...set1, ...set2]);
+[unionSet.has(1), unionSet.has(4)];
+console.log(unionSet);
+
+const intersectionSet = new Set(Array.from(set1).filter((n) => set2.has(n)));
+// console.log(intersectionSet);
+
+function setIntersection(set1, set2) {
+  return new Set(Array.from(set1).filter((n) => set2.has(n)));
+}
+
+const intersection = setIntersection(new Set([1, 2, 3]), new Set([2, 3, 4]));
+
+console.log(intersection);

@@ -155,4 +155,19 @@ class Admin extends User {
 
 const admin = new Admin('Amir', 'amir@example.com');
 // const admin = new User('Amir', 'amir@example.com');
-console.log([admin.name, admin.email, admin.isAdmin]); // ['Amir', 'amir@example.com', true];
+// console.log([admin.name, admin.email, admin.isAdmin]); // ['Amir', 'amir@example.com', true];
+
+function createCat(name) {
+  class Cat {
+    constructor() {
+      this.name = name;
+    }
+  }
+  return new Cat();
+}
+// console.log(createCat('Ms. Fluff').name);
+
+if (true) {
+  class Person {}
+}
+console.log(new Person());

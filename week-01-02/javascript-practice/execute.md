@@ -9,6 +9,7 @@
 ## Further Reading
 
 - [ ] JSON syntax (_MDN_): <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON>
+  - [ ] JSON.stringify (_MDN_): <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify>
 - [ ] Classes & React: <https://reactjs.org/>
 
 ## Modern JavaScript(#modern-javascript)
@@ -25,12 +26,24 @@
 - _Object_ keys: `for (const key of Object.keys(obj)) { helpArr.push(key) }`
 - _String_: `for (const char of str)`
 
-- **Number.isNaN(X)**
+- **Number.isNaN(x)**
 
   - old `isNaN(x)` (which converts x to number before checking) had error
     - **true** for `NaN`, `0/0`, typos, expressions with `undefined` &rarr; **but** `undefined` _is_ a number
   - new `Number.isNAN(x)` does it properly &rarr; **true** for (`NaN`) / **false** for (`undefined`)
   - configure in eslint &rarr; configure no-restricted-globals &rarr; disallow isNaN()
+
+- **Number.isFinite(x)**
+
+  - **false** for `Infinity` or `-Infinity`, `NAN` (i.e. str...)
+
+- **Number.isSafeInteger()** &rarr; false for str, n outside min-max
+
+  - safe interval for floating point arithmetic: x+1 behaves correctly
+  - `Number.MAX_SAFE_INTEGER; // 9 007 199 254 740 991`
+  - `Number.MIN_SAFE_INTEGER; // -9 007 199 254 740 991`
+
+- **Exponential**: x^y === `Math.pow(x, y) === x ** y`
 
 - **... Rest Parameter**:
 
@@ -39,6 +52,28 @@
   - `const f = (…numbers) => { can loop numbers as array }`
   - As function parameter: can only be **ONE** … at **last place** (i.e. “all remaining”)
   - As function arguments: can call `add(…numbers)` &rarr; treat each number as separate argument
+
+- **... Spread Operator**:
+
+  - can be at any place
+  - improvement on arr1.concat(arr2)
+
+  ```js
+  // As f(arguments)
+  function add(x, y) {
+    return x + y;
+  }
+  const numbers = [1, 2];
+  add(...numbers); // 3
+
+  // insert arr
+  const insertNumbers = [1, ...[2, 3], 4]; // [1, 2, 3, 4]
+
+  // Insert obj
+  const user1 = { name: 'Amir', age: 36 };
+  const user2 = { name: 'Betty', };
+  {...obj1, ...obj2} // {name: 'Betty', age: 36}
+  ```
 
 - **Function name property**
 
@@ -152,7 +187,7 @@
   const [{ name }, { city }] = [user, address]; // get values from 2 obj
   ```
 
-- **Destructuring application**:
+- **Destructuring real examples**:
 
   ```javascript
   //arr
@@ -181,6 +216,15 @@
 
 - **Object shorthand naming**
 
+  - order of obj.keys is as they were defined
+    - same key: last-assigned value wins (also with ...spread)
+  - also for `JSON.parse(`{"name": "Amir"}`);`, `JSON.stringify()`
+  - exception number keys: `{1: 'Amir'}` &rarr; come first, sorted, as str
+    ```js
+    const user = { name: 'Amir', age: 36 };
+    user.email = 'amir@example.com';
+    Object.keys(user); // ['name', 'age', 'email']
+    ```
   - if name & age are already defined variables &rarr; `const user = { name: name, age: age}` SAME AS `const user = {name, age}`
   - `obj.method` SAME AS `obj['method name']`
 
@@ -297,13 +341,24 @@
   - interpolated values, passed as rest parameters &rarr; ${…}
   - Real example &rarr; making strings HTML-safe, e.g. turn < into &lt; (escape) &rarr; common-tags library's safeHtml
 
+- **Catch & throw**
+
+  - `throw new Error('Fail!');` doesn't need return
+
 - **Sets**
 
+  - iterator that accepts iterators as arguments
   - .includes() is **O(n)** &rarr; would loop 10,000 items
   - Set data type is a collection, ordered, of unique values
     - other languages unordered
   - based on Set theory (Georg Cantor)
   - `.has()` very fast &rarr; O(1) always same time regardless of size
+  - typical common Set operations: **union**, **intersection**, **difference**
+    - **Union**
+      - could `arr1.concat(arr2)` &rarr; but would have repeats
+      - new Set() & ... spread-operator
+    - **Intersection**: arr1.filter(set2.has(n))
+    - **Difference**: all items in set1 that are NOT in set2
 
   ```js
   const names = new Set(['Amir', 'Betty', 'Cindy']);
@@ -313,6 +368,13 @@
   Array.from(names.values()); // ['Amir', 'Betty', 'Cindy']
   names.size(); // 3
   names.clear(); // []
+
+  // Union, Intersection, Difference
+  const set1 = new Set([1, 2, 3]);
+  const set2 = new Set([2, 3, 4]);
+  const unionSet = new Set([...set1, ...set2]); // Set(4) {1, 2, 3, 4}
+  const intersectionSet = new Set(Array.from(set1).filter((n) => set2.has(n))); // Set(2) {2, 3}
+  const differenceSet = new Set(Array.from(set1).filter((n) => !set2.has(n))); // Set(1) {1}
   ```
 
 - **Classes**
@@ -412,13 +474,20 @@
   - **J**ava**S**cript **O**bject **N**otation
   - JSON "keys",
   - `undefined` become JSON-null, remain null if turned back
-  - `JSON.stringify(obj)` method turns obj &rarr; JSON-string
+  - `JSON.stringify(obj, replacer)` method turns obj &rarr; JSON-string
+    - optional replacer:
+      - `['a', 'b']`: only 'a', 'b' keys will be included
+      - `f(key, value)`
+        - find key-match in any obj or its nested
+        - return current value, another value, undefined (i.e. remove key)
   - `JSON.parse(JSONstr)` method turns JSON-string &rarr; obj
 
   ```js
   JSON.stringify({ a: 2 }) === '{"a":2}'; // true
   JSON.stringify([1, undefined, 2]); // '[1,null,2]'
   JSON.parse('{"a": 1, "b"   :   2}'); // {a: 1, b: 2}
+
+  JSON.parse('&&& invalid syntax &&&'); // SyntaxError
 
   // Customise with toJSON
   const user = {
@@ -432,13 +501,30 @@
   circularObject.someKey = circularObject;
   circularObject; // {someKey: (circular reference)}
   JSON.stringify(circularObject); // TypeError
+
+  // replacer
+  JSON.parse(
+    JSON.stringify(
+      {catName: 'Ms. Fluff', city: 'Paris', name: 'Amir'},
+      (key, value) => {
+        if (key === 'catName') {
+          return undefined;
+        } else if (typeof value === 'string') {
+          return 'New ' + value;
+          } else {
+          return value;
+        }
+      }
+    )
+  );
+  {city: 'New Paris', name: 'New Amir'}
   ```
 
 ### Lessons
 
 |   # | Lesson                                   | Date        |
 | --: | ---------------------------------------- | ----------- |
-|  1. | Strict Mode                              | Jun 18, Fr  |
+|  1. | Strict Mode                              | Jun 18, Fri |
 |  2. | Let                                      | Jun 21, Mon |
 |  3. | Const                                    | Jun 22, Tue |
 |  4. | For of                                   | Jun 23, Wed |
@@ -451,7 +537,7 @@
 | 11. | f.bind()                                 | Jul 6, Tue  |
 | 12. | Generator f                              | Jul 7, Wed  |
 | 13. | Computed properties                      | Jul 8, Thu  |
-| 14. | Tagged template literals                 | Jul 9, Fr   |
+| 14. | Tagged template literals                 | Jul 9, Fri  |
 | 15. | Basic array destructuring                | Aug 14, Sat |
 | 16. | Basic object destructuring               | Aug 14, Sat |
 | 17. | Places where destructuring is allowed    | Aug 14, Sat |
@@ -464,6 +550,13 @@
 | 24. | String keyed methods                     | Aug 16, Mon |
 | 25. | Sets                                     | Aug 16, Mon |
 | 26. | Function name property                   | Aug 16, Mon |
+| 27. | Set operations                           | Aug 18, Wed |
+| 28. | Property order                           | Aug 18, Wed |
+| 29. | Customizing JSON serialization           | Aug 18, Wed |
+| 30. | New number methods                       | Aug 18, Wed |
+| 31. | Spread                                   | Aug 18, Wed |
+| 32. | Anonymous and inline classes             |             |
+| 33. | Accessor properties on classes           |             |
 
 <!--
 | | | |
