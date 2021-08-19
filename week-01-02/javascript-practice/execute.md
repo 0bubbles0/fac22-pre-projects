@@ -89,40 +89,66 @@
   class Cat {} // Cat.name is 'Cat'
   ```
 
+- **Function default parameters**
+
+  - can use **number, variable, obj...** as backup if not provided in call
+  - can change default later, because JS doesn't look at it until call (unlike Python, there can't change after declaration)
+
+  ```js
+  function add(x, y) {
+    return x + y;
+  }
+  add(1); // runs add(1, undefined) --> returns NaN
+  function add1(x, y = 0) {
+    return x + y;
+  }
+  // Destructure
+  function addObjects({ x }, yObj = { y: x }) {
+    return x + yObj.y;
+  }
+  addObjects({ x: 1 }); // 2
+  // ... Rest
+  function addToLength(x = 3, ...elements) {
+    return x + elements.length;
+  }
+  addToLength(5, 'a'); // 6
+  addToLength(); // 3
+  ```
+
 - **Generators**:
 
-  - `function* numbers(a, b) { yield 1; yield a; yield b; }`
-  - yield is like return, can be used repeatedly (function running halts temporarily)
-  - can for-of over it, make `Array.from(numbers(1, 2))`
+- `function* numbers(a, b) { yield 1; yield a; yield b; }`
+- yield is like return, can be used repeatedly (function running halts temporarily)
+- can for-of over it, make `Array.from(numbers(1, 2))`
 
 - **Array Destructuring**:
 
-  - destructuring makes code **predictable**: new variables are safety copy of original &rarr; can use any methods, not worry which alter orignal/which don't
-    - get property perhaps different: unwanted side-effects could change an object
-  - pick in
-  - **error** if try to destructure non-structured/non-iterables null, undefined, number
-  - **undefined** for any non-existent index, can set default with `='d'`
+- destructuring makes code **predictable**: new variables are safety copy of original &rarr; can use any methods, not worry which alter orignal/which don't
+  - get property perhaps different: unwanted side-effects could change an object
+- pick in
+- **error** if try to destructure non-structured/non-iterables null, undefined, number
+- **undefined** for any non-existent index, can set default with `='d'`
 
-  ```javascript
-  const letters = ['a', 'b', 'c'];
-  //want ['a', 'b', 'c']
-  //Long form
-  const a = letters[0],
-    b = letters[1],
-    c = letters[2];
-  [a, b, c];
-  //OR. These declare multiple variables, can call as arr [a, b, c]
-  const [a, b, c] = letters; //['a', 'b', 'c']
-  const [a, , c] = letters; //['a', 'c'] sparse arr destructuring
-  const [a, b, c] = null; // error, also for number, undefined
-  const [a, b, c, d = 'd', e] = letters; // ['a', 'b', 'c', 'd', undefined]
-  const [a, ...others] = letters; // others are ['b', 'c'], always arr-format
-  // strings
-  const s = 'abc';
-  const [a, b, c] = s; // b is 'b'
-  const [...char] = s; // chars[2] is 'c'
-  //
-  ```
+```javascript
+const letters = ['a', 'b', 'c'];
+//want ['a', 'b', 'c']
+//Long form
+const a = letters[0],
+  b = letters[1],
+  c = letters[2];
+[a, b, c];
+//OR. These declare multiple variables, can call as arr [a, b, c]
+const [a, b, c] = letters; //['a', 'b', 'c']
+const [a, , c] = letters; //['a', 'c'] sparse arr destructuring
+const [a, b, c] = null; // error, also for number, undefined
+const [a, b, c, d = 'd', e] = letters; // ['a', 'b', 'c', 'd', undefined]
+const [a, ...others] = letters; // others are ['b', 'c'], always arr-format
+// strings
+const s = 'abc';
+const [a, b, c] = s; // b is 'b'
+const [...char] = s; // chars[2] is 'c'
+//
+```
 
 - **Object Destructuring**:
 
@@ -591,12 +617,19 @@
 | 31. | Spread                                   | Aug 18, Wed |
 | 32. | Anonymous and inline classes             | Aug 19, Thu |
 | 33. | Accessor properties on classes           | Aug 19, Thu |
+| 34. | Default parameters                       | Aug 19, Thu |
+|     | Static methods                           |             |
+|     | Computed methods and accessors           |             |
+|     | Symbol basics                            |             |
+|     | Builtin Symbols                          |             |
+|     | Defining iterators                       |             |
+|     | Problems with obj keys                   |             |
+|     | Iterators                                |             |
+|     | Maps                                     |             |
+|     | Symbols are metadata                     |             |
+|     | Map iterators                            |             |
 
 <!--
-| | | |
-| | | |
-| | | |
-
   ```
 
   ```
