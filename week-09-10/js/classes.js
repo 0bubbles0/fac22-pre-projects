@@ -171,3 +171,28 @@ if (true) {
   class Person {}
 }
 console.log(new Person());
+
+/*
+Write a User class that:
+
+Takes an initial name as a constructor argument.
+Stores that in a names array property, representing a history of the user's names.
+Has a name getter that returns the last (most recent) name in the array.
+Has a name setter that adds a new name to the array (using this.names.push(...)).
+*/
+
+class User {
+  constructor(name) {
+    this.names = [name];
+  }
+  get name() {
+    return this.names[this.names.length - 1];
+  }
+  set name(newName) {
+    this.names.push(newName);
+  }
+}
+
+const user = new User('Amir');
+user.name = 'Betty';
+[user.name, user.names]; // ['Betty', ['Amir', 'Betty']]

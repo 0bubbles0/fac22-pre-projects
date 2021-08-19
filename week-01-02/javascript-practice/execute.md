@@ -85,6 +85,8 @@
   f.name; // 'f'
   (function () {}.name); // ''
   const f2 = f; // f2.name still 'f'
+
+  class Cat {} // Cat.name is 'Cat'
   ```
 
 - **Generators**:
@@ -380,16 +382,18 @@
 - **Classes**
 
   - don't use if not necessary
-  - describe **shape of an object**, its properties & methods
-    - **methods**: functions on individual instance.
-      - Can access obj-properties with `this.property`
-      - need need `new Cat(...).property` to instantiate
-  - Class method definitions like literal objects &rarr; `methodName() {}`
   - classes can have constructor &rarr; method to initialise obj
   - construct instance of class &rarr; `new MyClass()`
   - Similar to **object-oriented** languages (Java, C#, Python, Ruby), although JS object system is **prototype-based**
     - **better use classes** &rarr; better understood
     - React components used to be defined with classes (this.props, this.setState easy)
+  - In JS: **class is function**
+  - describe **shape of an object**, its properties & methods
+    - **methods**: functions on individual instance.
+      - Can access obj-properties with `this.property`
+      - need `new Cat(...).property` to instantiate
+      - Class method definitions like literal objects &rarr; `methodName() {}`
+    - **properties**: eg accessors like **get**, **set**
   - can use in function or if, but rarely should! &rarr; set up class outside, inside new Cat('A')
   - **Scope**:
     - can access everything inside function,
@@ -421,6 +425,13 @@
   new Cat('Ms. Fluff').name; // Ms. Fluff is an instance of Cat if constructor()
   new Cat('Ms. Fluff'); // Ms. Fluff is an instance of Cat if constructor(name)
 
+  // Inline
+  new (class {
+    speak() {
+      return 'yaong';
+    }
+  })().speak(); // has .name ''
+
   // Property
   class Cat {
     constructor(name, vaccinated) {
@@ -436,6 +447,20 @@
     new Cat('Ms. Fluff', true).needsVaccination(),
     new Cat('Keanu', false).needsVaccination(),
   ]; // RESULT: [false, true]
+
+  // Property: Accessors get, set
+  class User {
+    constructor(name) {
+      this.actualName = name;
+    }
+    get name() {
+      return `${this.actualName} the user`;
+    }
+    set name(newName) {
+    this.actualName = newName;
+  }
+  const user = new User('Betty').name; // 'Betty'
+  user.name = 'Amir'; // user.actualName is 'Amir'
 
   //Method volumeFunction
   const rectangle3D = {
@@ -467,6 +492,15 @@
   }
   const cat = new Cat('Ms. Fluff').name; // 'Ms. Fluff the cat'
   cat instanceof Animal; // true
+
+  // Example: inheritance
+  const classes = [];
+  classes.push(class {});
+  classes.push(class extends classes[0] {});
+  const ParentClass = classes[0];
+  const ChildClass = classes[1];
+  new ChildClass() instanceof ParentClass;
+  //true
   ```
 
 - **JSON**
@@ -555,8 +589,8 @@
 | 29. | Customizing JSON serialization           | Aug 18, Wed |
 | 30. | New number methods                       | Aug 18, Wed |
 | 31. | Spread                                   | Aug 18, Wed |
-| 32. | Anonymous and inline classes             |             |
-| 33. | Accessor properties on classes           |             |
+| 32. | Anonymous and inline classes             | Aug 19, Thu |
+| 33. | Accessor properties on classes           | Aug 19, Thu |
 
 <!--
 | | | |
