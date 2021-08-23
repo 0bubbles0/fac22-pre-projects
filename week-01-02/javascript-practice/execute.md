@@ -618,8 +618,8 @@ const [...char] = s; // chars[2] is 'c'
 | 32. | Anonymous and inline classes             | Aug 19, Thu |
 | 33. | Accessor properties on classes           | Aug 19, Thu |
 | 34. | Default parameters                       | Aug 19, Thu |
-| --: | ---------------------------------------- | ----------- |
 |     | Static methods                           |             |
+| --: | ---------------------------------------- | ----------- |
 |     | Computed methods and accessors           |             |
 |     | Symbol basics                            |             |
 |     | Builtin Symbols                          |             |
