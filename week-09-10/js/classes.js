@@ -181,7 +181,7 @@ Has a name getter that returns the last (most recent) name in the array.
 Has a name setter that adds a new name to the array (using this.names.push(...)).
 */
 
-class User {
+class User1 {
   constructor(name) {
     this.names = [name];
   }
@@ -193,6 +193,21 @@ class User {
   }
 }
 
-const user = new User('Amir');
+const user = new User1('Amir');
 user.name = 'Betty';
 [user.name, user.names]; // ['Betty', ['Amir', 'Betty']]
+
+// Computed Methods & Accessors
+// Write a function named classWithMethod. It takes one argument: methodName. It returns a class with a method whose name comes from methodName. The method should return `this is ${methodName}`.
+function classWithMethod(methodName) {
+  return class {
+    [methodName]() {
+      return `this is ${methodName}`;
+    }
+  };
+}
+const methodReturnValues = [
+  new (classWithMethod('aMethod'))().aMethod(),
+  new (classWithMethod('anotherMethod'))().anotherMethod(),
+];
+methodReturnValues; // ['this is aMethod', 'this is anotherMethod']

@@ -18,6 +18,8 @@
 
 ### Summary
 
+- **Equality**
+  - **!= unequal to themselves but not each other**: arr, obj, Symbols
 - **Shadowing** let & const &rarr; nested `{let x = 2;}` is not visible/has no impact on an outside `let x = 1`;
 - **const**: value can be muted, but not reassigned &rarr; e.g. can push to an array, but not assign a completely new array to variable name
 - arrays can be **sparse** &rarr; can have nothing at index 0, 1, …, 4, 7
@@ -37,7 +39,7 @@
 
   - **false** for `Infinity` or `-Infinity`, `NAN` (i.e. str...)
 
-- **Number.isSafeInteger()** &rarr; false for str, n outside min-max
+- **Number.isSafeInteger(x)** &rarr; false for str, n outside min-max
 
   - safe interval for floating point arithmetic: x+1 behaves correctly
   - `Number.MAX_SAFE_INTEGER; // 9 007 199 254 740 991`
@@ -271,6 +273,23 @@ const [...char] = s; // chars[2] is 'c'
     rectangle3D.volume(); // 60
     ```
 
+- **Symbol**
+
+  - for obj keys
+  -
+
+  ```js
+  Symbol('name').description; // 'name'
+
+  const nameString = 'name';
+  const nameSymbol = Symbol('name');
+  const user = {
+    [nameString]: 'Amir',
+    [nameSymbol]: 'Betty',
+  };
+  [user['name'], user[nameSymbol]]; // ['Amir', 'Betty']
+  ```
+
 - **Computed Properties**:
 
   - Create key &rarr; `{[x]: 5}`
@@ -413,14 +432,19 @@ const [...char] = s; // chars[2] is 'c'
   - Similar to **object-oriented** languages (Java, C#, Python, Ruby), although JS object system is **prototype-based**
     - **better use classes** &rarr; better understood
     - React components used to be defined with classes (this.props, this.setState easy)
+    - classes come up in libraries, frameworks
   - In JS: **class is function**
   - describe **shape of an object**, its properties & methods
     - **methods**: functions on individual instance.
       - Can access obj-properties with `this.property`
       - need `new Cat(...).property` to instantiate
       - Class method definitions like literal objects &rarr; `methodName() {}`
+      - **static** methods: define methods on classes themselves, not just instances (i.e. obj created with new User())
+        - **static get**: if try to access on instance (new User()), returns `undefined`
+        - `this` refers to class itself
     - **properties**: eg accessors like **get**, **set**
   - can use in function or if, but rarely should! &rarr; set up class outside, inside new Cat('A')
+  - **Computed names**: `['method' + 'name']` or pre-defined variable (but can't be renamed later)
   - **Scope**:
     - can access everything inside function,
     - class not visible outside (like let, const)
@@ -434,7 +458,7 @@ const [...char] = s; // chars[2] is 'c'
     - cant inherit from multiple supers at once (unlike Python, C++)
 
   ```js
-  // Construct instance
+  // Construct instance obj
   class MsFluff {
     name() {
       return 'Ms. Fluff';
@@ -442,6 +466,8 @@ const [...char] = s; // chars[2] is 'c'
   }
   new MsFluff().name(); // 'Ms. Fluff'
 
+  class Try { }
+  new Try(); // ReferenceError: Try undefined
   // Constructor
   class Cat {
     constructor(name) {
@@ -488,7 +514,7 @@ const [...char] = s; // chars[2] is 'c'
   const user = new User('Betty').name; // 'Betty'
   user.name = 'Amir'; // user.actualName is 'Amir'
 
-  //Method volumeFunction
+  //Method volumeFunction & 'is admin'
   const rectangle3D = {
     width: 3,
     depth: 4,
@@ -499,6 +525,9 @@ const [...char] = s; // chars[2] is 'c'
     volumeFunction() {
       return () => this.height * this.baseArea();
     },
+    'is admin'() {
+      return this.isAdmin;
+    }
   };
   rectangle3D.volumeFunction()();
 
@@ -527,6 +556,26 @@ const [...char] = s; // chars[2] is 'c'
   const ChildClass = classes[1];
   new ChildClass() instanceof ParentClass;
   //true
+
+  // Static method: can use 2-in-1
+  class User {
+    constructor(name=User.realDefaultName, isAdmin=false) {
+      this.name = name;
+      this.isAdmin = isAdmin;
+    }
+    static newAdmin(name) {
+      return new User(name, true);
+    }
+    static get defaultName() {
+      return this.realDefaultName;
+    }
+    static set ['default' + 'Name'](newDefaultName) {
+     this.realDefaultName = newDefaultName;
+    }
+  }
+  [new User('Amir').isAdmin, User.newAdmin('Betty').isAdmin] // [false, true]
+  User.defaultName = 'Amir';
+  const amir = new User(); // 'Amir'
   ```
 
 - **JSON**
@@ -618,17 +667,17 @@ const [...char] = s; // chars[2] is 'c'
 | 32. | Anonymous and inline classes             | Aug 19, Thu |
 | 33. | Accessor properties on classes           | Aug 19, Thu |
 | 34. | Default parameters                       | Aug 19, Thu |
-|     | Static methods                           |             |
+| 35. | Static methods                           | Aug 25, Wed |
+| 36. | Computed methods and accessors           | Aug 25, Wed |
+| 37. | Symbol basics                            | Aug 25, Wed |
 | --: | ---------------------------------------- | ----------- |
-|     | Computed methods and accessors           |             |
-|     | Symbol basics                            |             |
-|     | Builtin Symbols                          |             |
-|     | Defining iterators                       |             |
-|     | Problems with obj keys                   |             |
-|     | Iterators                                |             |
-|     | Maps                                     |             |
-|     | Symbols are metadata                     |             |
-|     | Map iterators                            |             |
+| 38. | Builtin Symbols                          |             |
+| 39. | Defining iterators                       |             |
+| 40. | Problems with obj keys                   |             |
+| 41. | Iterators                                |             |
+| 42. | Maps                                     |             |
+| 43. | Symbols are metadata                     |             |
+| 44. | Map iterators                            |             |
 
 <!--
   ```
