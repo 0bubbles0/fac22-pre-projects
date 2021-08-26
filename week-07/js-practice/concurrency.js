@@ -74,3 +74,18 @@ typeof interval;
 new Promise((resolve, reject) => {
   resolve('it worked');
 }); // {fulfilled: 'IT WORKED!'}
+
+// !Promise.resolve('anything'); // false
+
+const arrayM = [];
+
+arrayM.push(1);
+new Promise((resolve) => {
+  setTimeout(resolve, 1000);
+  arrayM.push(2);
+}).then(() => {
+  arrayM.push(3);
+});
+arrayM.push(4);
+
+// console.log(arrayM);
