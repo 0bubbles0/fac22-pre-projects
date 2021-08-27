@@ -276,7 +276,6 @@ const [...char] = s; // chars[2] is 'c'
 - **Symbol**
 
   - for obj keys
-  -
 
   ```js
   Symbol('name').description; // 'name'
@@ -289,6 +288,14 @@ const [...char] = s; // chars[2] is 'c'
   };
   [user['name'], user[nameSymbol]]; // ['Amir', 'Betty']
   ```
+
+  - built-in symbol &rarr; can use on for-of-loops on custom-obj like arr
+
+    ```js
+      {name: 'Dalili'}.toString(); // '[object Object]'
+      {[Symbol.toStringTag]: 'Amir'}.toString(); // '[object Amir]'
+
+    ```
 
 - **Computed Properties**:
 
@@ -670,13 +677,13 @@ const [...char] = s; // chars[2] is 'c'
 | 35. | Static methods                           | Aug 25, Wed |
 | 36. | Computed methods and accessors           | Aug 25, Wed |
 | 37. | Symbol basics                            | Aug 25, Wed |
-| --: | ---------------------------------------- | ----------- |
-| 38. | Builtin Symbols                          |             |
-| 39. | Defining iterators                       |             |
+| 38. | Builtin Symbols                          | Aug 26, Thu |
 | 40. | Problems with obj keys                   |             |
+| --: | ---------------------------------------- | ----------- |
+| 43. | Symbols are metadata                     |             |
+| 39. | Defining iterators                       |             |
 | 41. | Iterators                                |             |
 | 42. | Maps                                     |             |
-| 43. | Symbols are metadata                     |             |
 | 44. | Map iterators                            |             |
 
 <!--
