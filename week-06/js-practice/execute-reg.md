@@ -14,6 +14,7 @@
   /^(jpg|p(ng|df))$/.test('jpg'); // tests for jpg, png, pdf
   /^(a|b)+$/.test('bababa'); // true
   /^(big|fluffy) (dog|cat)$/.test('big cat'); //true
+  /^.{,100}$/.test('.{,100}'); // true, weird!
   ```
 
 - Escape: Special characters
