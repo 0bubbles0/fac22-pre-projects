@@ -11,6 +11,7 @@
 - [ ] JSON syntax (_MDN_): <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON>
   - [ ] JSON.stringify (_MDN_): <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify>
 - [ ] Classes & React: <https://reactjs.org/>
+- [ ] Iterator Protocols: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols>
 
 ## Modern JavaScript(#modern-javascript)
 
@@ -23,6 +24,7 @@
 - **Shadowing** let & const &rarr; nested `{let x = 2;}` is not visible/has no impact on an outside `let x = 1`;
 - **const**: value can be muted, but not reassigned &rarr; e.g. can push to an array, but not assign a completely new array to variable name
 - arrays can be **sparse** &rarr; can have nothing at index 0, 1, …, 4, 7
+- `Array.from(5); // []`
 - **for … in** &rarr; iterates over **object’s keys**, not its values (arrays are also objects, keys are their index, eg. ‘0’. For in skips sparse positions &rarr; can lead to bugs)
 - **for…of** &rarr; iterates over **array’s values** (similar to for-each in other languages. Sparse positions are given undefined)
 - _Object_ keys: `for (const key of Object.keys(obj)) { helpArr.push(key) }`
@@ -117,11 +119,80 @@
   addToLength(); // 3
   ```
 
+- **Iterator**:
+
+  - iteration protocols:
+    - iterable protocol &rarr; str, arr, custom obj has `Symbol.iterator` method
+    - iterator protocol &rarr; has `.next` method that returns `{value, done}`
+  - e.g.: Generator, for-loop, arr destructuring auto-collabs
+    - destructuring: calls next() a certain number of times
+  - can iterate over even incomplete data
+  - can't move backwards
+  - infinite length, given as memory available &rarr; **laziness** &rarr; produce data only when requested (e.g. finite # calls on data streaming in from network) &rarr; can pretend more RAM than actually available
+
+  ```js
+  const letters = ['a', 'b', 'c'];
+  const iterator = letters[Symbol.iterator]();
+  iterator.next(); // {done: false, value: 'a'}
+  iterator.next(); // {done: false, value: 'b'}
+  iterator.next(); // {done: false, value: 'c'}
+  iterator.next(); // {done: true, value: undefined}
+  ```
+
 - **Generators**:
 
-- `function* numbers(a, b) { yield 1; yield a; yield b; }`
-- yield is like return, can be used repeatedly (function running halts temporarily)
-- can for-of over it, make `Array.from(numbers(1, 2))`
+  - `function* numbers(a, b) { yield 1; yield a; yield b; }`
+  - yield is like return, can be used repeatedly (function running halts temporarily)
+  - can for-of over it, make `Array.from(numbers(1, 2))`
+  - are iterators
+
+    - calling generator &rarr; gives iterable
+    - calling iterables's Symbol.iterator method &rarr; gives iterator
+    - calling .next method &rarr; gives {value, done}
+
+    ```js
+    function* loneliestGenerator() {
+      yield 1;
+    }
+    const iterable = loneliestGenerator();
+    const iterator = iterable[Symbol.iterator]();
+    iterator.next(); // {done: false, value: 1}
+
+    // Find Prime numbers
+    function* primeNumbers() {
+      let i = 2;
+      while (true) {
+        // All numbers are innocent until proven guilty.
+        let prime = true;
+        /* If this number is divisible by any number less than itself, then
+         * it's not prime. For example, 4 is divisible by 2, so it's not
+         * prime. 5 isn't divisible by 2, 3, or 4, so it is prime.
+         */
+        for (let j = 2; j < i; j++) {
+          if (i % j === 0) {
+            prime = false;
+          }
+        }
+        if (prime) {
+          yield i;
+        }
+        i += 1;
+      }
+    }
+    // Prime number bad alternatives
+    Array.from(primeNumbers()); // loops forever, error
+    const [first, ...rest] = primeNumbers(); // indefinite # of rest items
+
+    // Powers of 2
+    function* powersOfTwo() {
+      let i = 1;
+      while (true) {
+        yield i;
+        i *= 2;
+      }
+    }
+    [x0, x1, x32]; // [1, 2, 2147483648]
+    ```
 
 - **Array Destructuring**:
 
@@ -246,6 +317,7 @@ const [...char] = s; // chars[2] is 'c'
 
 - **Object shorthand naming**
 
+  - key must by 'string', 5, Symbol('aSymbol'). Anything else will be converted into string
   - order of obj.keys is as they were defined
     - same key: last-assigned value wins (also with ...spread)
   - also for `JSON.parse(`{"name": "Amir"}`);`, `JSON.stringify()`
@@ -277,24 +349,32 @@ const [...char] = s; // chars[2] is 'c'
 
   - for obj keys
 
-  ```js
-  Symbol('name').description; // 'name'
+    ```js
+    Symbol('name').description; // 'name'
 
-  const nameString = 'name';
-  const nameSymbol = Symbol('name');
-  const user = {
-    [nameString]: 'Amir',
-    [nameSymbol]: 'Betty',
-  };
-  [user['name'], user[nameSymbol]]; // ['Amir', 'Betty']
-  ```
+    const nameString = 'name';
+    const nameSymbol = Symbol('name');
+    const user = {
+      [nameString]: 'Amir',
+      [nameSymbol]: 'Betty',
+    };
+    [user['name'], user[nameSymbol]]; // ['Amir', 'Betty']
+    ```
 
   - built-in symbol &rarr; can use on for-of-loops on custom-obj like arr
-
     ```js
       {name: 'Dalili'}.toString(); // '[object Object]'
       {[Symbol.toStringTag]: 'Amir'}.toString(); // '[object Amir]'
-
+    ```
+  - Symbols are metadata (out of band data) &rarr; not normal part of obj
+    - Symbol properties & values ignored in `JSON.stringify` and data serialisation
+    - use for data we don't want to include in API request/response (because large or secure)
+    ```js
+    const user = {
+      name: 'Amir',
+      [Symbol.toStringTag]: 'Amir',
+    };
+    JSON.parse(JSON.stringify(user)); // {name: 'Amir'}
     ```
 
 - **Computed Properties**:
@@ -352,6 +432,7 @@ const [...char] = s; // chars[2] is 'c'
 
   - objects can hold fixed or dynamic properties (function, which gets called when property is accessed user.userFunction)
   - getter, setter can store history of changes (e.g. by pushing them into an array)
+
     ```javascript
     function createUser(userName) {
       return {
@@ -368,6 +449,8 @@ const [...char] = s; // chars[2] is 'c'
     user.userName = 'Betty';
     user.names;
     // Result: ['Amir', 'Betty']
+
+    user.age; // undefined, because that get doesn't exist
     ```
 
 - **Template Literals**:
@@ -430,6 +513,128 @@ const [...char] = s; // chars[2] is 'c'
   const intersectionSet = new Set(Array.from(set1).filter((n) => set2.has(n))); // Set(2) {2, 3}
   const differenceSet = new Set(Array.from(set1).filter((n) => !set2.has(n))); // Set(1) {1}
   ```
+
+- **Map Data Type**
+
+  - Intro: remember from Symbols that
+
+    ```js
+    // Remember from Symbols that:
+    {name: 'Dalili'}.toString(); // '[object Object]'
+
+    // If we try complex data relationship, e.g. possible Train Connections
+    const cities = {
+      london: {name: 'London', population: 8908081},
+      brussels: {name: 'Brussels', population: 1208542},
+      antwerp: {name: 'Antwerp', population: 523248},
+    };
+
+    const connections = {
+      [cities.london]: [cities.brussels],
+      [cities.brussels]: [cities.london, cities.antwerp],
+      [cities.antwerp]: [cities.brussels],
+    };
+
+    cities.london.toString(); // '[object Object]'
+    Object.keys(connections); // ['[object Object]']
+    connections[cities.brussels]; // [{name: 'Brussels', population: 1208542}] because [cities.brussels] was last entry in connections
+    ```
+
+  - Like an obj, has key-value pairs
+  - Possible keys: arr, obj, function, maps
+
+    - other languages maybe only have maps & no obj. _Map_ in JS and Clojure; _Dictionary_ in Python and C#; _Hash_ in Perl and Ruby
+
+    ```js
+    // Assign
+    const userEmails = new Map([
+      ['Amir', 'a@ex.com'],
+      ['Betty', 'b@ex.com'],
+    ]);
+    userEmails.set('Costa', 'c@ex.com'); // Assign key-value
+    // Access
+    userEmails.get('Amir'); // 'amir@example.com'
+    userEmails['Amir']; // undefined
+    // Edit
+    userEmails.size; // 3
+    userEmails.delete('Amir');
+    userEmails.has('Betty');
+    userEmails.clear(); // empty entire map
+    ```
+
+  - Fix Train connections &rarr; make Map
+
+    - This creates **Graph** data structure with nodes (boxes, cities, facebook-user) & edges (lines, train routes, following)
+    - Map can also be **Table** (email-addresses: user-objects)
+
+    ```js
+    const connections = new Map([
+      [cities.london, [cities.brussels]],
+      [cities.brussels, [cities.london, cities.antwerp]],
+      [cities.antwerp, [cities.brussels]],
+    ]);
+
+    // Access connection properly
+    connections.get(cities.brussels); // [{name: 'London', population: 8908081}, {name: 'Antwerp', population: 523248}]
+    connections.get(cities.lille).map((city) => city.name); // ['London', 'Paris', 'Brussels']
+
+    // Add connection
+    function connect(city1, city2) {
+      // Add to Map if necessary
+      if (!connections.has(city1)) {
+        connections.set(city1, []);
+      }
+      if (!connections.has(city2)) {
+        connections.set(city2, []);
+      }
+      // Add to each other's arr
+      connections.get(city1).push(city2);
+      connections.get(city2).push(city1);
+    }
+
+    // Add
+    cities.rotterdam = { name: 'Rotterdam', population: 651446 };
+    connect(cities.rotterdam, cities.antwerp);
+    connections.get(cities.antwerp).map((city) => city.name); // ['Brussels', 'Rotterdam']
+    ```
+
+  - e.g. social network, users, friendships OR JS functions, edge f1(f2)
+
+    ```js
+    class SocialGraph {
+      constructor() {
+        this.map = new Map();
+      }
+      addFollow(user1, user2) {
+        if (!this.map.has(user1)) {
+          this.map.set(user1, []);
+        }
+        this.map.get(user1).push(user2);
+      }
+      follows(user1, user2) {
+        if (!this.map.has(user1)) {
+          return false;
+        } else {
+          return this.map.get(user1).includes(user2);
+        }
+      }
+    }
+    const amir = { name: 'Amir' };
+    const betty = { name: 'Betty' };
+    const cindy = { name: 'Cindy' };
+
+    const socialGraph = new SocialGraph();
+    socialGraph.addFollow(amir, betty);
+    socialGraph.addFollow(amir, cindy);
+    socialGraph.addFollow(betty, cindy);
+
+    [
+      socialGraph.follows(amir, betty),
+      socialGraph.follows(betty, amir),
+      socialGraph.follows(betty, cindy),
+      socialGraph.follows(cindy, betty),
+    ];
+    ```
 
 - **Classes**
 
@@ -678,12 +883,12 @@ const [...char] = s; // chars[2] is 'c'
 | 36. | Computed methods and accessors           | Aug 25, Wed |
 | 37. | Symbol basics                            | Aug 25, Wed |
 | 38. | Builtin Symbols                          | Aug 26, Thu |
-| 40. | Problems with obj keys                   |             |
+| 39. | Defining iterators                       | Aug 27, Fri |
+| 41. | Iterators                                | Aug 28, Sat |
+| 40. | Problems with obj keys                   | Aug 31, Tue |
+| 43. | Symbols are metadata                     | Aug 31, Tue |
+| 42. | Maps                                     | Aug 31, Tue |
 | --: | ---------------------------------------- | ----------- |
-| 43. | Symbols are metadata                     |             |
-| 39. | Defining iterators                       |             |
-| 41. | Iterators                                |             |
-| 42. | Maps                                     |             |
 | 44. | Map iterators                            |             |
 
 <!--
