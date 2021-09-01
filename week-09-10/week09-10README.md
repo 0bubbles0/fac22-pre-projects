@@ -42,6 +42,7 @@
 - [x] Learn Test helpers: <https://learn.foundersandcoders.com/workshops/learn-testing/>
 - [x] Unit Testing (90 min): <https://learn.foundersandcoders.com/workshops/learn-unit-testing/>
 - [x] Integration Testing (90 min): <https://learn.foundersandcoders.com/workshops/learn-integration-testing/>
+- [ ] TDD (): <https://learn.foundersandcoders.com/workshops/tdd-array-methods/>
 
 ## Research
 
