@@ -541,9 +541,9 @@ const [...char] = s; // chars[2] is 'c'
     ```
 
   - Like an obj, has key-value pairs
-  - Possible keys: arr, obj, function, maps
-
-    - other languages maybe only have maps & no obj. _Map_ in JS and Clojure; _Dictionary_ in Python and C#; _Hash_ in Perl and Ruby
+    - Possible keys: arr, obj, function, maps
+    - multiple `myMap.set('A')` **overwrite** each other
+  - other languages maybe only have maps & no obj. _Map_ in JS and Clojure; _Dictionary_ in Python and C#; _Hash_ in Perl and Ruby
 
     ```js
     // Assign
