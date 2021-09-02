@@ -124,7 +124,7 @@
   - iteration protocols:
     - iterable protocol &rarr; str, arr, custom obj has `Symbol.iterator` method
     - iterator protocol &rarr; has `.next` method that returns `{value, done}`
-  - e.g.: Generator, for-loop, arr destructuring auto-collabs
+  - e.g.: Generator, for-loop, arr destructuring auto-collabs, Maps
     - destructuring: calls next() a certain number of times
   - can iterate over even incomplete data
   - can't move backwards
@@ -543,23 +543,35 @@ const [...char] = s; // chars[2] is 'c'
   - Like an obj, has key-value pairs
     - Possible keys: arr, obj, function, maps
     - multiple `myMap.set('A')` **overwrite** each other
+  - **Methods**: `keys()`, `values()` &rarr; come out in correct order
+  - Maps are iterables
   - other languages maybe only have maps & no obj. _Map_ in JS and Clojure; _Dictionary_ in Python and C#; _Hash_ in Perl and Ruby
 
     ```js
     // Assign
-    const userEmails = new Map([
+    const emails = new Map([
       ['Amir', 'a@ex.com'],
       ['Betty', 'b@ex.com'],
     ]);
-    userEmails.set('Costa', 'c@ex.com'); // Assign key-value
+    emails.set('Costa', 'c@ex.com'); // Assign key-value
     // Access
-    userEmails.get('Amir'); // 'amir@example.com'
-    userEmails['Amir']; // undefined
+    emails.get('Amir'); // 'amir@example.com'
+    emails['Amir']; // undefined
     // Edit
-    userEmails.size; // 3
-    userEmails.delete('Amir');
-    userEmails.has('Betty');
-    userEmails.clear(); // empty entire map
+    emails.size; // 3
+    emails.delete('Amir');
+    emails.has('Betty');
+    emails.clear(); // empty entire map
+    // Methods
+    Array.from(emails); // [['Amir', 'a@ex.com'], ['Betty', 'b@ex.com']]
+    Array.from(emails.keys()); // ['Amir', 'Betty']
+    Array.from(emails.values()); // ['a@ex.com', 'b@ex.com']
+    // Destructure
+    const [firstUser] = Array.from(emails); // firstUser is ['Amir', 'a@ex.com']
+    const [, secondUser] = Array.from(emails); // secondUser is ['Betty', 'b@ex.com']
+    const [, [name, email]] = emails; // name is 'Betty', email is 'b@ex.com'
+    // Copy & paste
+    Array.from(new Map(emails)); // [['Amir', 'a@ex.com'], ['Betty', 'b@ex.com']]
     ```
 
   - Fix Train connections &rarr; make Map
@@ -634,6 +646,21 @@ const [...char] = s; // chars[2] is 'c'
       socialGraph.follows(betty, cindy),
       socialGraph.follows(cindy, betty),
     ];
+    ```
+
+  - e.g. Generator: yields 30,000 pairs, but (1,2,3) only unique keys
+    - iterator laziness &rarr; fetches 30,000 one at a time &rarr; consumes no memory (only for generator to produce one at a time & map to store individuals) &rarr; same as 3mio
+    ```js
+    function* manyDuplicates() {
+      for (let i = 0; i < 10000; i++) {
+        // Yield entries of [number, isEven]
+        yield [1, false];
+        yield [2, true];
+        yield [3, false];
+      }
+    }
+    Array.from(manyDuplicates()).length; // 30.000
+    Array.from(new Map(manyDuplicates())); // [[1, false], [2, true], [3, false]]
     ```
 
 - **Classes**
@@ -884,12 +911,11 @@ const [...char] = s; // chars[2] is 'c'
 | 37. | Symbol basics                            | Aug 25, Wed |
 | 38. | Builtin Symbols                          | Aug 26, Thu |
 | 39. | Defining iterators                       | Aug 27, Fri |
-| 41. | Iterators                                | Aug 28, Sat |
-| 40. | Problems with obj keys                   | Aug 31, Tue |
-| 43. | Symbols are metadata                     | Aug 31, Tue |
-| 42. | Maps                                     | Aug 31, Tue |
-| --: | ---------------------------------------- | ----------- |
-| 44. | Map iterators                            |             |
+| 40. | Iterators                                | Aug 28, Sat |
+| 41. | Problems with obj keys                   | Aug 31, Tue |
+| 42. | Symbols are metadata                     | Aug 31, Tue |
+| 43. | Maps                                     | Aug 31, Tue |
+| 44. | Map iterators                            | Sep 2, Thu  |
 
 <!--
   ```
