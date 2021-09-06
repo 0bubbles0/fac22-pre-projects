@@ -89,6 +89,14 @@ test('result should be <= length of arr', () => {
   equal(result.length <= arr.length, true);
 });
 
+test('filter: works for str', () => {
+  const callbackSTR = (x) => x === 'b';
+  const result4 = filter(['a', 'b', 'b'], callbackSTR);
+  equal(result4, ['b', 'b']);
+  const result5 = filter(['a', 'd', 'c'], callbackSTR);
+  equal(result5, []);
+});
+
 // Every
 test('every() requires arr and fn args', () => {
   // (1): input arr?
@@ -98,13 +106,136 @@ test('every() requires arr and fn args', () => {
 });
 
 // (3): output true/false?
-test('every() should return an arr', () => {
-  const result = every([], () => {});
-  console.log(result);
-  equal(typeof result, 'boolean');
+// test('every(1 item) should return boolean', () => {
+//   const callback = (x) => x > 5;
+//   const result1 = every([2, 11, 210], callback);
+//   equal(result1, false);
+//   const result2 = every([11, 210], callback);
+//   equal(result2, true);
+// });
+
+// (4): if any item is false, return false
+// test('if 1st item is true, return fn(2nd item)', () => {
+//   const callback = (x) => x > 5;
+//   const result1 = every([11, 210], callback);
+//   equal(result1, true);
+//   const result2 = every([11, 2], callback);
+//   equal(result2, false);
+// });
+
+// (5): loop arr: if(!fn(item_i)) return false else true
+test('return false at first !fn(i), else true', () => {
+  const callback = (x) => x > 5;
+  const result1 = every([11, 2, 210], callback);
+  equal(result1, false);
+  const result2 = every([2, 11, 2, 210], callback);
+  equal(result2, false);
+  const result3 = every([6, 11, 20, 210], callback);
+  equal(result3, true);
 });
 
-// test('', () => { const result; equal(result[0], ) })
-// test('', () => { const result; equal(result[0], ) })
+test('every(): works for str', () => {
+  const callbackSTR = (x) => x === 'b';
+  const result = every(['b', 'b', 'b'], callbackSTR);
+  equal(result, true);
+  const result1 = every(['a', 'b', 'c'], callbackSTR);
+  equal(result1, false);
+});
+
+// SOME
+// Test inputs & outputs
+test('some() requires arr and fn args', () => {
+  // (1): input arr?
+  equal(some(), 'Please pass an arr');
+  // (2): input fn?
+  equal(some([]), 'Please pass a test fn');
+});
+// (3): output true/false?
+test('some(wrong-item) should return false', () => {
+  const callback = (x) => x > 5;
+  // const result = some([2, 11, 210], callback);
+  // equal(result, false);
+  const result1 = every([2, 11, 210], callback);
+  equal(result1, false);
+  // const result2 = every([11, 210], callback);
+  // equal(result2, true);
+});
+
+// (4): if any fn(item) true => return true
+test('some: If any fn(item) true, return true', () => {
+  const callback = (x) => x > 5;
+  const result1 = some([11, 2, 210], callback);
+  equal(result1, true);
+  const result2 = some([2, 11, 210], callback);
+  equal(result2, true);
+  const result3 = some([1, 3, 1], callback);
+  equal(result3, false);
+});
+
+test('some: works for str', () => {
+  const callbackSTR = (x) => x === 'b';
+  const result4 = some(['a', 'b', 'c'], callbackSTR);
+  equal(result4, true);
+  const result5 = some(['a', 'd', 'c'], callbackSTR);
+  equal(result5, false);
+});
+
+// FIND
+// find: return an item that passes
+test('find(): if an item passes the test, return item', () => {
+  const callback = (x) => x > 5;
+  const result1 = find([11, 2, 210], callback);
+  equal(result1, 11);
+});
+
+test('find(): return 1st correct item OR undefined', () => {
+  const callback = (x) => x > 5;
+  const result1 = find([11, 2, 210], callback);
+  equal(result1, 11);
+  const result2 = find([4, 2, 210], callback);
+  equal(result2, 210);
+  const result3 = find([4, 2, 1], callback);
+  equal(result3, undefined);
+  const callbackSTR = (x) => x === 'b';
+  const result4 = find(['a', 'b', 'c'], callbackSTR);
+  equal(result4, 'b');
+});
+
+// REDUCE
+// const finalTotal = reduce(arr, (total, x) => total + x, 0);
+
+test('reduce() returns a sum (n or str)', () => {
+  const callback = (total, x) => total + x;
+  const start = 0;
+  const result = reduce([], callback, start);
+  equal(result, 0);
+  const result1 = reduce([1, 3, 10], callback, start);
+  equal(result1, 14);
+  const startStr = '';
+  const result2 = reduce(['a', 'b', 'c'], callback, startStr);
+  equal(result2, 'abc');
+});
+
+// FLAT
+test('flat() should return an array', () => {
+  const result = flat([1, [2, [3]]]);
+  equal(Array.isArray(result), true);
+  // equal(result, 1); // make n optional
+});
+
+test('flat() goes 1 level deep', () => {
+  const result = flat([1, [2, 3]], 1);
+  equal(result[0], 1);
+  equal(result[1], 2);
+  equal(result[2], 3);
+});
+
+test('flat() goes 2 levels deep', () => {
+  const result = flat([1, [2, [3]]], 2);
+  equal(result[0], 1);
+  equal(result[1], 2);
+  equal(result[2], 3);
+});
+
 // test('', () => { const result; equal(result[0], ) })
 // test();
