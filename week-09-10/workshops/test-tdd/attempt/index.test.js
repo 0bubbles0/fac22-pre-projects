@@ -89,6 +89,21 @@ test('result should be <= length of arr', () => {
   equal(result.length <= arr.length, true);
 });
 
+// Every
+test('every() requires arr and fn args', () => {
+  // (1): input arr?
+  equal(every(), 'Please pass an arr');
+  // (2): input fn?
+  equal(every([]), 'Please pass a test fn');
+});
+
+// (3): output true/false?
+test('every() should return an arr', () => {
+  const result = every([], () => {});
+  console.log(result);
+  equal(typeof result, 'boolean');
+});
+
 // test('', () => { const result; equal(result[0], ) })
 // test('', () => { const result; equal(result[0], ) })
 // test('', () => { const result; equal(result[0], ) })

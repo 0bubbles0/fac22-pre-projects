@@ -9,6 +9,7 @@ function map(arr, fn) {
   // iteration
   for (let i = 0; i < arr.length; i++) {
     const item = arr[i];
+    // could use i as index-input
     const mappedItem = fn(item);
     result.push(mappedItem);
   }
@@ -16,7 +17,7 @@ function map(arr, fn) {
 }
 
 function filter(arr, fn) {
-  // (1): Error, eg for arr=undefined would usually throw an error
+  // Errors:
   if (!Array.isArray(arr)) return 'Please pass an arr';
   if (typeof fn !== 'function') return 'Please pass a filter fn';
 
@@ -32,6 +33,7 @@ function filter(arr, fn) {
 
   for (let i = 0; i < arr.length; i++) {
     const item = arr[i];
+    // could use i as index-input
     if (fn(item)) {
       result.push(item);
     }
@@ -40,7 +42,15 @@ function filter(arr, fn) {
   return result;
 }
 
-// function every() {}
+function every(arr, fn) {
+  // Errors:
+  if (!Array.isArray(arr)) return 'Please pass an arr';
+  if (typeof fn !== 'function') return 'Please pass a filter fn';
+
+  return false;
+  return true;
+}
+
 // function some() {}
 // function find() {}
 // function reduce() {}
