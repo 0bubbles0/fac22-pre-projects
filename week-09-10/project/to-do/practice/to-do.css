@@ -40,6 +40,13 @@
 }
 
 .list__item--do label {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 50ch;
+}
+
+.list__item--done {
+  opacity: 0.5;
+}
+.list__item--done label {
+  text-decoration: line-through;
 }

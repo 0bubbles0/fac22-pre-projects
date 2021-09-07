@@ -17,21 +17,30 @@
         <form class="task-add__container">
           <label for="input__task--add" class="label__add">New Task</label>
           <textarea id="input__task--add" placeholder="New Task"></textarea>
-          <button type="submit">Add</button>
+          <button type="button">Add</button>
         </form>
         <section class="list--do">
-          <form class="list__item--do">
+          <form id="task--001-container" class="list__item--do">
             <input id="task--001" type="checkbox" />
             <label for="task--001">Laundry</label>
-            <button>X</button>
+            <button type="button">X</button>
           </form>
-          <form class="list__item--do">
+          <form
+            id="task--002-container"
+            class="list__item--do list__item--done"
+          >
             <input id="task--002" type="checkbox" />
-            <label for="task--002"
-              >Launöalskdfjölasdkfjölaskdfjölaskdfjalösdkfjasldkfjsaöldkfjasöldkfjaslödfkjasdölfkjasdölfkjdry</label
-            >
-            <button>X</button>
+            <label for="task--002">Cook</label>
+            <button type="button">X</button>
           </form>
+
+          <template id="newItem">
+            <form class="list__item--do">
+              <input type="checkbox" />
+              <label></label>
+              <button type="button">X</button>
+            </form>
+          </template>
         </section>
       </main>
     </div>
