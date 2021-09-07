@@ -9,6 +9,34 @@
     <script defer src="to-do.js"></script>
   </head>
   <body>
-    <h1>To Do List</h1>
+    <div class="page">
+      <header>
+        <h1 class="center">To Do List</h1>
+      </header>
+      <main class="">
+        <form class="task-add__container">
+          <label for="input__task--add" class="label__add">New Task</label>
+          <textarea id="input__task--add" placeholder="New Task"></textarea>
+          <button type="submit">Add</button>
+        </form>
+        <section class="list--do">
+          <form class="list__item--do">
+            <input id="task--001" type="checkbox" />
+            <label for="task--001">Laundry</label>
+            <button>X</button>
+          </form>
+          <form class="list__item--do">
+            <input id="task--002" type="checkbox" />
+            <label for="task--002"
+              >Launöalskdfjölasdkfjölaskdfjölaskdfjalösdkfjasldkfjsaöldkfjasöldkfjaslödfkjasdölfkjasdölfkjdry</label
+            >
+            <button>X</button>
+          </form>
+        </section>
+      </main>
+    </div>
+    <footer>
+      <p>Source Code, Copyright, Links</p>
+    </footer>
   </body>
 </html>

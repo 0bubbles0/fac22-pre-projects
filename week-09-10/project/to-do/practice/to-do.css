@@ -1,0 +1,45 @@
+.page {
+  max-width: 80ch;
+  margin: auto;
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  background-color: lightblue;
+  padding: ;
+}
+
+.center {
+  margin: auto;
+  text-align: center;
+}
+
+.task-add__container {
+  border: 0.5px solid grey;
+  width: min-content;
+  margin: auto;
+  padding: 0.5rem;
+}
+
+.label__add {
+  display: block;
+}
+
+.list--do {
+  width: 70ch;
+  margin: auto;
+  background-color: white;
+}
+.list__item--do {
+  background-color: lightgrey;
+  margin: 1vh auto;
+  width: 60ch;
+  border-radius: 10px;
+  padding: 0.3rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.list__item--do label {
+  border: 1px solid red;
+  width: 50ch;
+}
