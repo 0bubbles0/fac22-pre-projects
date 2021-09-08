@@ -63,19 +63,19 @@
       //make equal() notEqual() take message-argument
       function equalM(actual, expected, message) {
         if (actual === expected) {
-          const defaultM = `Pass: expected and got ${expected}.`;
+          const defaultM = `expected and got ${expected}.`;
           console.info('Pass: ' + (message || defaultM));
         } else {
-          const defaultM = `Fail: expected ${expected}, but got ${actual}.`;
+          const defaultM = `expected ${expected}, but got ${actual}.`;
           console.error('Fail: ' + (message || defaultM));
         }
       }
       function notEqualM(actual, expected, message) {
         if (actual !== expected) {
-          const defaultM = `Pass: expected ${expected} is different from ${actual}.`;
+          const defaultM = `expected ${expected} is different from ${actual}.`;
           console.info('Pass: ' + (message || defaultM));
         } else {
-          const defaultM = `Fail: expected ${expected} is same as ${actual}.`;
+          const defaultM = `expected ${expected} is same as ${actual}.`;
           console.error('Fail: ' + (message || defaultM));
         }
       }
