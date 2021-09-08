@@ -1,10 +1,10 @@
 // ADD
 /*
-addButton --> click --> let newTaskText = input.value
-toDoList --> create new Item (Template?) --> label.textContent = newTaskText
-
-- should new item be added at top or at bottom?
+- Get new text: addButton --> click --> let newTaskText = input.value
+- Fill Template: toDoList --> create new Item (Template?) --> label.textContent = newTaskText
+- Add Template at top of list:
 */
+const addButton = document.querySelector('#task-add__button');
 
 function getText(x) {
   // const source = document.querySelector()
@@ -19,14 +19,28 @@ function createItem(x) {
   // get template
   // // const template;
   // fill template
-  // attach template to target
+  // attach template at top of target
 }
+
+function placeTemplate(templ) {}
+
+addButton.addEventListener('click', () => {
+  createItem();
+});
+
+// CHECK & DELETE:
+/*
+- identify each list-item
+- proper naming to easily access checkbox, p, button in each list-item
+*/
 
 // CHECK
 /*
 item.input[checkbox] --> on change/check --> 
 - text: strikethrough
 - box: opacity OR weaker color
+
+Bonus:
 - position: move to bottom
 
 */
