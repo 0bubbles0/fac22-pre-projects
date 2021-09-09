@@ -630,6 +630,9 @@ const [...char] = s; // chars[2] is 'c'
           return this.map.get(user1).includes(user2);
         }
       }
+      follows1(user1, user2) {
+        return this.map.has(user1) && this.map.get(user1).includes(user2);
+      }
     }
     const amir = { name: 'Amir' };
     const betty = { name: 'Betty' };
