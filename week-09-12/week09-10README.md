@@ -19,6 +19,7 @@
 - [x] **W**: Learn Test
 - [x] **W**: Unit Testing (90min)
 - [x] **W**: Integration Testing (90min)
+- [x] **W**: TDD (90min)
 
 - [ ] **R**: Checking Code
 
@@ -42,7 +43,7 @@
 - [x] Learn Test helpers: <https://learn.foundersandcoders.com/workshops/learn-testing/>
 - [x] Unit Testing (90 min): <https://learn.foundersandcoders.com/workshops/learn-unit-testing/>
 - [x] Integration Testing (90 min): <https://learn.foundersandcoders.com/workshops/learn-integration-testing/>
-- [ ] TDD (): <https://learn.foundersandcoders.com/workshops/tdd-array-methods/>
+- [x] TDD (): <https://learn.foundersandcoders.com/workshops/tdd-array-methods/>
 
 ## Research
 
