@@ -54,9 +54,27 @@
 
 // console.log(Object.keys(connections));
 
-function* emptyStringGenerator() {
-  yield '';
-}
-const iterable = emptyStringGenerator();
-const iterator = iterable[Symbol.iterator]();
-console.log(iterator.next());
+// function* emptyStringGenerator() {
+//   yield '';
+// }
+// const iterable = emptyStringGenerator();
+// const iterator = iterable[Symbol.iterator]();
+// console.log(iterator.next());
+
+let canceled = false;
+
+const promiseJ = new Promise((resolve) => setTimeout(resolve, 1000)).then(
+  () => {
+    if (canceled === true) {
+      return;
+    }
+    return 'it ran';
+  }
+);
+
+// Set the canceled flag after 500 ms
+// setTimeout(() => {
+// canceled = true;
+// }, 500);
+
+console.log(promiseJ);
