@@ -26,7 +26,7 @@
 
 Describe exactly 1 character at a time:
 
-| .        | Description                                           |
+|          | Description                                           |
 | -------- | ----------------------------------------------------- |
 | [a-z]    | any a-z                                               |
 | [abc]    | any a OR b OR c                                       |
