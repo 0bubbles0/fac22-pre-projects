@@ -31,6 +31,7 @@ test('map() should transform 2 elements using fn', () => {
   const result = map([1, 2], (x) => x * 2);
   equal(result[0], 2);
   equal(result[1], 4);
+  equal(result, [2, 4]);
 });
 
 // transform any items
