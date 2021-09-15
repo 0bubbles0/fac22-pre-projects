@@ -8,6 +8,7 @@
 - [ ] A11y Palette Generator: <http://colorsafe.co/>
 - [ ] Contrast checker: <https://contrastchecker.com/>
 - [ ] A11y checker of palettes: <https://toolness.github.io/accessible-color-matrix/>
+- [ ] IBM A11y: <https://medium.com/carbondesign/because-colors-are-beautiful-52dd4cc39f09>
 
 ## Ultimate Guide
 ### Design
