@@ -61,20 +61,50 @@
 // const iterator = iterable[Symbol.iterator]();
 // console.log(iterator.next());
 
-let canceled = false;
+// let canceled = false;
 
-const promiseJ = new Promise((resolve) => setTimeout(resolve, 1000)).then(
-  () => {
-    if (canceled === true) {
-      return;
-    }
-    return 'it ran';
-  }
-);
+// const promiseJ = new Promise((resolve) => setTimeout(resolve, 1000)).then(
+//   () => {
+//     if (canceled === true) {
+//       return;
+//     }
+//     return 'it ran';
+//   }
+// );
 
 // Set the canceled flag after 500 ms
 // setTimeout(() => {
 // canceled = true;
 // }, 500);
 
-console.log(promiseJ);
+// console.log(promiseJ);
+
+// const user = {
+//   name: 'Amir',
+//   [Symbol.toStringTag]: 'Amir',
+// };
+// console.log(user.toString());
+
+// console.log(JSON.parse(JSON.stringify([1, undefined, 2])));
+
+// console.log(JSON.parse('*@& oh no &@*'));
+
+// console.log(
+//   JSON.parse(
+//     JSON.stringify({
+//       name: 'Amir',
+//       toJSON: () => ({ thisWas: 'Amir' }),
+//     })
+//   )
+// );
+
+if (true) {
+  class Person {}
+}
+// console.log(new Person());
+
+const f = () => 1;
+console.log(f.name);
+
+// console.log()
+// console.log()
